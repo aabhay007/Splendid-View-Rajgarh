@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" fill="none">
+  <g transform="translate(4, 6)">
+    <!-- Mountain Ridges Icon -->
+    <path d="M6 46 L22 18 L34 34 L42 22 L56 46 Z" fill="#3C6B52" />
+    <path d="M22 18 L34 34 L42 22 L50 36 L38 46 L14 46 Z" fill="#71A286" opacity="0.6" />
+    <circle cx="44" cy="14" r="5" fill="#E07A5F" />
+  </g>
+  <text x="74" y="30" font-family="system-ui, -apple-system, Georgia, serif" font-size="20" font-weight="700" fill="#183327" letter-spacing="0.5">SPLENDID VIEW</text>
+  <text x="75" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#C8512F" letter-spacing="3.5">RAJGARH • HIMACHAL</text>
+</svg>

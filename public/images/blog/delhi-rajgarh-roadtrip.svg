@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#284135" />
+      <stop offset="100%" stop-color="#14251E" />
+    </linearGradient>
+    <linearGradient id="mountains" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#58A4B0" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#14251E" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg)" />
+  
+  <!-- Mountain Silhouette Shapes -->
+  <path d="M0,506.25 Q300,303.75 600,472.49999999999994 T1200,438.75 L1200,675 L0,675 Z" fill="url(#mountains)" />
+  <path d="M0,573.75 Q420,405 840,540 T1200,526.5 L1200,675 L0,675 Z" fill="#14251E" opacity="0.75" />
+
+  <!-- Sun or Moon Accent -->
+  <circle cx="960" cy="168.75" r="54" fill="#58A4B0" opacity="0.6" />
+
+  <!-- Foreground Badge / Text Container -->
+  <rect x="96" y="459.00000000000006" width="1008" height="162" rx="12" fill="#183327" fill-opacity="0.85" stroke="#58A4B0" stroke-opacity="0.4" stroke-width="2" />
+  
+  <!-- Title & Subtitle -->
+  <text x="600" y="519.75" font-family="system-ui, -apple-system, sans-serif" font-size="33" font-weight="700" fill="#FAF8F5" text-anchor="middle" letter-spacing="0.5">Delhi to Rajgarh Road Trip Guide</text>
+  <text x="600" y="573.75" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="400" fill="#D9CCBA" text-anchor="middle">Route, Pitstops & Scenic Mountain Bypass Guide</text>
+</svg>

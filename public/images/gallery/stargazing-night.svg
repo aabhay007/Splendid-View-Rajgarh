@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111F24" />
+      <stop offset="100%" stop-color="#081114" />
+    </linearGradient>
+    <linearGradient id="mountains" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E9C46A" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#081114" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)" />
+  
+  <!-- Mountain Silhouette Shapes -->
+  <path d="M0,450 Q200,270 400,420 T800,390 L800,600 L0,600 Z" fill="url(#mountains)" />
+  <path d="M0,510 Q280,360 560,480 T800,468 L800,600 L0,600 Z" fill="#081114" opacity="0.75" />
+
+  <!-- Sun or Moon Accent -->
+  <circle cx="640" cy="150" r="48" fill="#E9C46A" opacity="0.6" />
+
+  <!-- Foreground Badge / Text Container -->
+  <rect x="64" y="408.00000000000006" width="672" height="144" rx="12" fill="#183327" fill-opacity="0.85" stroke="#E9C46A" stroke-opacity="0.4" stroke-width="2" />
+  
+  <!-- Title & Subtitle -->
+  <text x="400" y="462" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#FAF8F5" text-anchor="middle" letter-spacing="0.5">Pollution-Free Dark Skies</text>
+  <text x="400" y="510" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="400" fill="#D9CCBA" text-anchor="middle">Clear Stargazing & Cozy Evening Bonfires</text>
+</svg>

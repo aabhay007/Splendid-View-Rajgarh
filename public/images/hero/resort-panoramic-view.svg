@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3F31" />
+      <stop offset="100%" stop-color="#0E1F17" />
+    </linearGradient>
+    <linearGradient id="mountains" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E07A5F" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0E1F17" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)" />
+  
+  <!-- Mountain Silhouette Shapes -->
+  <path d="M0,810 Q480,486 960,756 T1920,702 L1920,1080 L0,1080 Z" fill="url(#mountains)" />
+  <path d="M0,918 Q672,648 1344,864 T1920,842.4 L1920,1080 L0,1080 Z" fill="#0E1F17" opacity="0.75" />
+
+  <!-- Sun or Moon Accent -->
+  <circle cx="1536" cy="270" r="86.4" fill="#E07A5F" opacity="0.6" />
+
+  <!-- Foreground Badge / Text Container -->
+  <rect x="153.6" y="734.4000000000001" width="1612.8" height="259.2" rx="12" fill="#183327" fill-opacity="0.85" stroke="#E07A5F" stroke-opacity="0.4" stroke-width="2" />
+  
+  <!-- Title & Subtitle -->
+  <text x="960" y="831.6" font-family="system-ui, -apple-system, sans-serif" font-size="53" font-weight="700" fill="#FAF8F5" text-anchor="middle" letter-spacing="0.5">Splendid View Rajgarh — Panoramic Valley View</text>
+  <text x="960" y="918" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="400" fill="#D9CCBA" text-anchor="middle">Village Tikkari Tali, Rajgarh, District Sirmour, Himachal Pradesh</text>
+</svg>
