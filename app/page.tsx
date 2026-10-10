@@ -55,78 +55,151 @@ export default function HomePage() {
       {/* Schema.org FAQPage structured data */}
       <JsonLd data={getFaqSchema(homeFaqs)} />
 
-      {/* 1. HERO SECTION (Optimized for LCP < 2.5s with Real Resort Cottages Photo) */}
-      <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center bg-forest-950 text-white overflow-hidden">
-        {/* LCP Hero Image with Next/Image, priority=true, explicit sizes */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero/resort-cottages.webp"
-            alt="Splendid View Rajgarh - Real Hillside Cottages with Alpine Pine Roofs overlooking Giri Valley"
-            fill
-            priority
-            quality={92}
-            sizes="100vw"
-            className="object-cover object-center filter brightness-[0.75] contrast-[1.1] scale-105"
-          />
-          {/* Subtle gradient overlay to ensure WCAG AA text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/60 to-forest-950/40" />
+      {/* 1. HERO SECTION (Full Uncropped Image on Mobile + Full-Screen Immersive on Desktop) */}
+      <section className="relative bg-forest-950 text-white overflow-hidden">
+        {/* ================= MOBILE VIEW (< md) ================= */}
+        {/* Displays the FULL 16:9 uncropped photo with organic gradient fade into text */}
+        <div className="md:hidden flex flex-col bg-forest-950">
+          {/* Photo Stage with CSS mask-image: image fades softly to 0% opacity at bottom */}
+          <div className="relative w-full aspect-[16/9] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_45%,rgba(0,0,0,0)_98%)] [-webkit-mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_45%,rgba(0,0,0,0)_98%)]">
+            <Image
+              src="/images/hero/resort-cottages.webp"
+              alt="Splendid View Eco Orchard Resort - All 6 Hillside Cottages overlooking Giri Valley"
+              fill
+              priority
+              quality={95}
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            {/* Top vignette for readability of header pill */}
+            <div className="absolute inset-x-0 top-0 h-14 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
+
+            {/* Over-image floating authority pill */}
+            <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none z-10">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-forest-950/85 backdrop-blur-md border border-white/20 text-emerald-200 text-[10px] font-semibold shadow">
+                <MapPinIcon className="w-3 h-3 text-peach-400 shrink-0" />
+                <span className="truncate">Village Tikkari Tali, Rajgarh, HP</span>
+              </span>
+              <span className="inline-block px-2 py-0.5 rounded-full bg-forest-900/85 text-emerald-300 text-[9px] font-bold border border-emerald-500/30 backdrop-blur-md shadow">
+                Full Panorama
+              </span>
+            </div>
+          </div>
+
+          {/* Mobile Content Block with bg-transparent: zero borders, zero hard edges, pure seamless blend */}
+          <div className="relative z-10 px-4 -mt-10 pt-0 pb-7 text-center space-y-3.5 bg-transparent">
+            <h1 className="font-serif text-2xl font-bold tracking-tight text-white leading-tight">
+              Resort in Rajgarh, Himachal Pradesh:{" "}
+              <span className="text-peach-300 block text-xl mt-0.5">
+                Splendid View Eco Orchard Resort
+              </span>
+            </h1>
+
+            <p className="text-xs text-warm-200 leading-relaxed max-w-sm mx-auto">
+              Hillside cottages with private balconies perched above the Giri valley.
+              Crisp mountain air, peaceful pine ridges, homestyle food, and authentic Himachali peace.
+            </p>
+
+            {/* Mobile Explore CTA (Call & WhatsApp already available in the fixed bottom bar) */}
+            <div className="pt-0.5 flex justify-center">
+              <Link
+                href="/rooms"
+                className="inline-flex items-center gap-2 bg-white text-forest-950 font-bold text-xs py-2.5 px-6 rounded-full shadow-md active:scale-95 transition-all"
+              >
+                <span>Explore Cottages & Rates</span>
+                <ArrowRightIcon className="w-3.5 h-3.5 text-forest-700" />
+              </Link>
+            </div>
+
+            {/* Quick Travel Badges */}
+            <div className="pt-1 flex flex-wrap items-center justify-center gap-1.5 text-[10px] text-warm-300">
+              <span className="bg-forest-950/70 px-2.5 py-1 rounded-lg border border-white/10">
+                🚗 Chandigarh: 2.5–3.5h
+              </span>
+              <span className="bg-forest-950/70 px-2.5 py-1 rounded-lg border border-white/10">
+                🚗 Delhi: 6.5–7.5h
+              </span>
+              <span className="bg-forest-950/70 px-2.5 py-1 rounded-lg border border-white/10">
+                🚗 Shimla: ~2h
+              </span>
+            </div>
+          </div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center space-y-5 sm:space-y-6">
-          {/* Geographic Authority Tag */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900/90 backdrop-blur-md border border-emerald-500/30 text-emerald-200 text-xs sm:text-sm font-medium shadow-lg max-w-full">
-            <MapPinIcon className="w-4 h-4 text-peach-400 shrink-0" />
-            <span className="truncate">Village Tikkari Tali, Rajgarh, District Sirmour, HP</span>
+        {/* ================= DESKTOP VIEW (md: and up) ================= */}
+        {/* Full-bleed immersive wide background */}
+        <div className="hidden md:flex relative min-h-[88vh] lg:min-h-[92vh] items-center justify-center">
+          {/* Desktop Full-Screen Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/hero/resort-cottages.webp"
+              alt="Splendid View Eco Orchard Resort - Hillside Cottages with Alpine Pine Roofs overlooking Giri Valley"
+              fill
+              priority
+              quality={95}
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            {/* Soft, minimal gradient overlay on desktop */}
+            <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-black/20 to-black/25" />
           </div>
 
-          {/* Primary H1 with target keyword */}
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-warm-50 leading-[1.15]">
-            Resort in Rajgarh, Himachal Pradesh:{" "}
-            <span className="text-peach-300 block sm:inline">
-              Splendid View Rajgarh
-            </span>
-          </h1>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 py-20 lg:py-28 text-center space-y-6">
+            {/* Geographic Authority Tag */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-950/80 backdrop-blur-md border border-white/20 text-emerald-200 text-sm font-medium shadow-lg max-w-full">
+              <MapPinIcon className="w-4 h-4 text-peach-400 shrink-0" />
+              <span>Village Tikkari Tali, Rajgarh, District Sirmour, Himachal Pradesh</span>
+            </div>
 
-          {/* Value Proposition Subtitle */}
-          <p className="text-sm sm:text-lg lg:text-xl text-warm-200 max-w-3xl mx-auto leading-relaxed">
-            Hillside cottages with private balconies perched above the Giri valley.
-            Crisp mountain air, peaceful pine ridges, homestyle Himachali food, and authentic mountain peace.
-          </p>
+            {/* Desktop H1 with target keyword & drop shadow */}
+            <h1 className="font-serif text-4xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15] drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+              Resort in Rajgarh, Himachal Pradesh:{" "}
+              <span className="text-peach-300 block sm:inline">
+                Splendid View Eco Orchard Resort
+              </span>
+            </h1>
 
-          {/* Dual Primary Conversion CTAs */}
-          <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto sm:max-w-none w-full">
-            <a
-              href={`tel:${primaryPhone}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-forest-700 hover:bg-forest-600 active:scale-95 text-white font-bold text-sm sm:text-base py-3.5 sm:py-4 px-6 sm:px-8 rounded-2xl shadow-xl transition-all border border-emerald-500/30 min-h-[48px]"
-              aria-label="Call Splendid View Rajgarh directly"
-            >
-              <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-300 shrink-0" />
-              <span>Call: {displayPhone}</span>
-            </a>
+            {/* Desktop Value Proposition Subtitle */}
+            <p className="text-lg lg:text-xl text-warm-100 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] font-medium">
+              Hillside cottages with private balconies perched above the Giri valley.
+              Crisp mountain air, peaceful pine ridges, homestyle Himachali food, and authentic mountain peace.
+            </p>
 
-            <a
-              href={businessDetails.whatsapp.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] active:scale-95 text-white font-bold text-sm sm:text-base py-3.5 sm:py-4 px-6 sm:px-8 rounded-2xl shadow-xl transition-all min-h-[48px]"
-              aria-label="Chat on WhatsApp with Splendid View Rajgarh"
-            >
-              <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
-              <span>WhatsApp Direct</span>
-            </a>
-          </div>
+            {/* Desktop Dual Primary Conversion CTAs */}
+            <div className="pt-4 flex items-center justify-center gap-4 w-full">
+              <a
+                href={`tel:${primaryPhone}`}
+                className="inline-flex items-center justify-center gap-2.5 bg-forest-800/90 hover:bg-forest-700 active:scale-95 text-white font-bold text-base py-4 px-8 rounded-2xl shadow-xl transition-all border border-emerald-500/30 min-h-[48px] backdrop-blur-sm"
+                aria-label="Call Splendid View Rajgarh directly"
+              >
+                <PhoneIcon className="w-5 h-5 text-emerald-300 shrink-0" />
+                <span>Call: {displayPhone}</span>
+              </a>
 
-          {/* Key Distance Quick Badges */}
-          <div className="pt-4 sm:pt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[11px] sm:text-xs text-warm-300">
-            <span className="bg-forest-900/80 px-3 py-1.5 rounded-lg border border-warm-100/10 backdrop-blur-sm">
-              🚗 Chandigarh: 2.5–3.5 Hours
-            </span>
-            <span className="bg-forest-900/80 px-3 py-1.5 rounded-lg border border-warm-100/10 backdrop-blur-sm">
-              🚗 Delhi / NCR: 6.5–7.5 Hours
-            </span>
-            <span className="bg-forest-900/80 px-3 py-1.5 rounded-lg border border-warm-100/10 backdrop-blur-sm">
-              🚗 Shimla: ~2.0 Hours
-            </span>
+              <a
+                href={businessDetails.whatsapp.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] active:scale-95 text-white font-bold text-base py-4 px-8 rounded-2xl shadow-xl transition-all min-h-[48px]"
+                aria-label="Chat on WhatsApp with Splendid View Rajgarh"
+              >
+                <WhatsAppIcon className="w-5 h-5 shrink-0" />
+                <span>WhatsApp Direct</span>
+              </a>
+            </div>
+
+            {/* Desktop Key Distance Quick Badges */}
+            <div className="pt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-warm-200">
+              <span className="bg-forest-950/70 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-sm">
+                🚗 Chandigarh: 2.5–3.5 Hours
+              </span>
+              <span className="bg-forest-950/70 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-sm">
+                🚗 Delhi / NCR: 6.5–7.5 Hours
+              </span>
+              <span className="bg-forest-950/70 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-sm">
+                🚗 Shimla: ~2.0 Hours
+              </span>
+            </div>
           </div>
         </div>
       </section>
