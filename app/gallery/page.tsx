@@ -5,24 +5,26 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata = constructMetadata({
-  title: "Photo Gallery | Splendid View Rajgarh Himachal",
+  title: "Photo Gallery | Splendid View Eco Orchard Resort Rajgarh",
   description:
-    "Explore photos of Splendid View Rajgarh: valley-facing rooms, balconies, Giri river basin, peach orchards, mountain sunsets & starlit skies.",
+    "Explore photos of Splendid View Eco Orchard Resort: authentic hillside cottages, private balconies, panoramic Giri valley vistas, peach orchards & Himalayan sunsets.",
   path: "/gallery",
+  image: "/images/hero/resort-cottages.webp",
   keywords: [
-    "Splendid View Rajgarh photos",
-    "Rajgarh resort gallery",
-    "Giri valley images",
+    "Splendid View Eco Orchard Resort photos",
+    "Rajgarh cottages gallery",
+    "Eco resort Himachal photos",
+    "Giri valley cottage images",
     "Rajgarh peach orchard photos",
   ],
 });
 
 const galleryItems = [
   {
-    title: "Panoramic Giri Valley Sunrise",
-    category: "Valley Views",
-    src: "/images/hero/resort-panoramic-view.svg",
-    alt: "Morning sunrise over the Giri valley viewed from Splendid View Rajgarh",
+    title: "Hillside Cottages with Alpine Pine Roofs",
+    category: "Resort & Cottages",
+    src: "/images/hero/resort-cottages.webp",
+    alt: "Real cottages of Splendid View Rajgarh perched amidst pine slopes and apple orchards",
   },
   {
     title: "Deluxe Valley View Room Interior",

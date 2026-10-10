@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Splendid View Rajgarh - Resort in Rajgarh, Himachal Pradesh";
+export const alt = "Splendid View Eco Orchard Resort - Resort in Rajgarh, Himachal Pradesh";
 export const size = {
   width: 1200,
   height: 630,
@@ -19,11 +19,11 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "60px 70px",
-          backgroundColor: "#183327",
-          color: "#FAF8F5",
+          backgroundColor: "#173725",
+          color: "#FAFBF9",
           fontFamily: "system-ui, sans-serif",
           backgroundImage:
-            "radial-gradient(circle at 80% 20%, rgba(224, 122, 95, 0.35) 0%, transparent 60%)",
+            "radial-gradient(circle at 80% 20%, rgba(205, 158, 83, 0.3) 0%, transparent 60%)",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
@@ -31,39 +31,39 @@ export default async function Image() {
             style={{
               padding: "8px 18px",
               borderRadius: "999px",
-              backgroundColor: "rgba(224, 122, 95, 0.25)",
-              color: "#F4A261",
+              backgroundColor: "rgba(205, 158, 83, 0.2)",
+              color: "#E1BC7C",
               fontSize: "18px",
               fontWeight: 700,
               letterSpacing: "2px",
               textTransform: "uppercase",
             }}
           >
-            HIMACHAL PRADESH • PEACH VALLEY
+            HIMACHAL PRADESH • ECO ORCHARD RESORT
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
           <div
             style={{
-              fontSize: "64px",
+              fontSize: "56px",
               fontWeight: 800,
-              color: "#FAF8F5",
+              color: "#FAFBF9",
               lineHeight: 1.15,
             }}
           >
-            Splendid View Rajgarh
+            Splendid View Eco Orchard Resort
           </div>
           <div
             style={{
-              fontSize: "28px",
-              color: "#D9CCBA",
-              maxWidth: "900px",
+              fontSize: "26px",
+              color: "#D1D7CC",
+              maxWidth: "920px",
               lineHeight: 1.35,
             }}
           >
-            Your Serene Mountain Haven in District Sirmour. 180° Giri Valley
-            Panoramas, Pure Pine Air & Homestyle Hospitality.
+            Cottages overlooking the Giri Valley in Rajgarh, District Sirmour.
+            Peaceful pine ridges, orchard blossom walks & authentic Himachali hospitality.
           </div>
         </div>
 

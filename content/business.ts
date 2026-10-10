@@ -49,10 +49,10 @@ export interface BusinessContact {
 }
 
 export const businessDetails: BusinessContact = {
-  name: "Splendid View Rajgarh",
-  tagline: "Your Serene Mountain Haven in Himachal's Peach Valley",
+  name: "Splendid View Eco Orchard Resort",
+  tagline: "Eco Orchard Resort & Cottages in Rajgarh, Himachal Pradesh",
   description:
-    "Perched gracefully amidst the verdant pine slopes and lush peach orchards of Rajgarh in District Sirmour, Splendid View Rajgarh offers unmatched Giri valley vistas, pure Himalayan tranquility, and heartfelt mountain hospitality for couples, families, and discerning weekend travelers.",
+    "Perched gracefully amidst the verdant pine slopes and lush peach orchards of Rajgarh in District Sirmour, Splendid View Eco Orchard Resort offers private valley-facing cottages, unmatched Giri valley vistas, pure Himalayan tranquility, and heartfelt mountain hospitality for couples, families, and nature lovers.",
   address: {
     village: "Village Tikkari Tali (Jola)",
     po: "P.O. Dahan",
@@ -65,13 +65,13 @@ export const businessDetails: BusinessContact = {
       "Village Tikkari Tali (Jola), P.O. Dahan, Tehsil Rajgarh, District Sirmour, Himachal Pradesh 173101, India",
   },
   phones: ["+918219515083", "+919816291595"],
-  displayPhones: ["+91 82195 15083", "+91 98162 91595"],
+  displayPhones: ["+91 82195 15083", "+91 9816622493"],
   whatsapp: {
     number: "918219515083",
     displayNumber: "+91 82195 15083",
     defaultMessage:
-      "Hello Splendid View Rajgarh! I am interested in planning a stay. Could you share room availability and details?",
-    url: "https://wa.me/918219515083?text=Hello%20Splendid%20View%20Rajgarh!%20I%20am%20interested%20in%20planning%20a%20stay.%20Could%20you%20share%20room%20availability%20and%20details%3F",
+      "Hello Splendid View Eco Orchard Resort! I am interested in planning a stay. Could you share cottage availability and tariff details?",
+    url: "https://wa.me/918219515083?text=Hello%20Splendid%20View%20Eco%20Orchard%20Resort!%20I%20am%20interested%20in%20planning%20a%20stay.%20Could%20you%20share%20cottage%20availability%20and%20tariff%20details%3F",
   },
   email: "{{TODO: reservations@splendidviewrajgarh.com}}",
   geo: {

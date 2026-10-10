@@ -6,16 +6,16 @@ import { CtaBanner } from "@/components/ui/CtaBanner";
 import { amenitiesList } from "@/content/amenities";
 
 export const metadata = constructMetadata({
-  title: "Amenities & Facilities | Splendid View Rajgarh",
+  title: "Amenities & Facilities | Splendid View Eco Orchard Resort Rajgarh",
   description:
-    "Explore resort amenities at Splendid View Rajgarh: valley-facing balconies, homestyle dining, bonfire, open lawn, 24/7 hot water, high-speed Wi-Fi & parking.",
+    "Explore amenities at Splendid View Eco Orchard Resort: private valley-facing cottage balconies, homestyle Himachali dining, evening bonfires, lush lawns, hot water & high-speed Wi-Fi.",
   path: "/amenities",
   keywords: [
-    "Resort amenities Rajgarh",
-    "Facilities Splendid View Rajgarh",
-    "Bonfire stay Himachal",
+    "Eco resort amenities Rajgarh",
+    "Facilities Splendid View Eco Orchard Resort",
+    "Bonfire cottage stay Himachal",
     "Wi-Fi mountain stay Rajgarh",
-    "Valley balcony resort Himachal",
+    "Valley balcony cottages Himachal",
   ],
 });
 

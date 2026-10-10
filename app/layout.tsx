@@ -34,23 +34,54 @@ export const metadata: Metadata = {
   },
   description: businessDetails.description,
   keywords: [
-    "Resort in Rajgarh",
-    "Hotel in Rajgarh",
+    "Splendid View Eco Orchard Resort",
+    "Eco Orchard Resort Rajgarh",
+    "Resort in Rajgarh Himachal Pradesh",
+    "Hotel in Rajgarh Sirmour",
     "Splendid View Rajgarh",
-    "Rajgarh Sirmour",
-    "Peach Valley Rajgarh",
-    "Himachal Pradesh stay",
-    "Weekend getaway from Chandigarh",
-    "Weekend getaway from Delhi",
+    "Rajgarh Sirmour cottages",
+    "Peach Valley Rajgarh resort",
+    "Himachal Pradesh eco resort stay",
+    "Weekend getaway from Chandigarh to Rajgarh",
+    "Weekend getaway from Delhi to Rajgarh",
+    "Places to stay near Solan Shimla",
+    "Offbeat mountain resort Himachal",
   ],
   authors: [{ name: businessDetails.name, url: SITE_URL }],
   creator: businessDetails.name,
   publisher: businessDetails.name,
+  icons: {
+    icon: "/images/logo.jpg",
+    shortcut: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
+  },
   alternates: {
     canonical: SITE_URL,
     languages: {
       "en-IN": SITE_URL,
     },
+  },
+  openGraph: {
+    title: `${businessDetails.name} | Resort in Rajgarh, Himachal Pradesh`,
+    description: businessDetails.description,
+    url: SITE_URL,
+    siteName: businessDetails.name,
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/images/hero/resort-cottages.webp`,
+        width: 1200,
+        height: 630,
+        alt: `${businessDetails.name} - Panoramic Cottages overlooking Giri Valley`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${businessDetails.name} | Resort in Rajgarh, Himachal Pradesh`,
+    description: businessDetails.description,
+    images: [`${SITE_URL}/images/hero/resort-cottages.webp`],
   },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? {
@@ -75,7 +106,7 @@ export default function RootLayout({
 
   return (
     <html lang="en-IN" className={`${sansFont.variable} ${serifFont.variable}`}>
-      <body className="min-h-screen flex flex-col bg-warm-50 text-stone-900 antialiased selection:bg-peach-500 selection:text-white">
+      <body className="min-h-screen flex flex-col bg-warm-50 text-stone-900 antialiased selection:bg-forest-800 selection:text-white overflow-x-hidden max-w-full relative">
         {/* WebSite and Organization Schema */}
         <JsonLd data={getWebSiteSchema()} />
 
@@ -91,7 +122,7 @@ export default function RootLayout({
         <Header />
 
         {/* Main Content Area */}
-        <main id="main-content" className="flex-1 flex flex-col">
+        <main id="main-content" className="flex-1 flex flex-col pb-16 md:pb-0 overflow-x-hidden max-w-full">
           {children}
         </main>
 

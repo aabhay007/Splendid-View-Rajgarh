@@ -8,13 +8,13 @@ import { blogPosts } from "@/content/blog";
 import { ClockIcon, ArrowRightIcon } from "@/components/ui/icons";
 
 export const metadata = constructMetadata({
-  title: "Travel Guides & Himachal Blog | Splendid View Rajgarh",
+  title: "Travel Guides & Himachal Blog | Splendid View Eco Orchard Resort",
   description:
-    "Explore insider travel guides for Rajgarh and District Sirmour: road trip routes, peach blossom seasons, offbeat attractions & mountain getaway tips.",
+    "Explore insider travel guides for Rajgarh and District Sirmour: road trip routes, peach blossom seasons, offbeat attractions & mountain getaway tips from Splendid View Eco Orchard Resort.",
   path: "/blog",
   keywords: [
     "Rajgarh travel guide",
-    "Himachal travel blog",
+    "Himachal eco resort blog",
     "Delhi to Rajgarh road trip",
     "Peach bowl of Asia guide",
     "Offbeat Himachal road trips",

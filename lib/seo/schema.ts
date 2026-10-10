@@ -109,7 +109,7 @@ export function getWebSiteSchema() {
       "@id": `${SITE_URL}/#organization`,
       name: businessDetails.name,
       url: SITE_URL,
-      logo: `${SITE_URL}/images/logo.svg`,
+      logo: `${SITE_URL}/images/logo.jpg`,
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -204,7 +204,7 @@ export function getArticleSchema(post: BlogPost) {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/logo.svg`,
+        url: `${SITE_URL}/images/logo.jpg`,
       },
     },
     mainEntityOfPage: {

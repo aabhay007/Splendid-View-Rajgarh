@@ -24,7 +24,7 @@ export function constructMetadata({
   path,
   keywords,
   ogType = "website",
-  image = "/images/og-default.png",
+  image = "/images/hero/resort-cottages.webp",
   noIndex = false,
 }: MetadataParams): Metadata {
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
@@ -32,20 +32,24 @@ export function constructMetadata({
   const fullImageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`;
 
   const defaultKeywords = [
+    "Splendid View Eco Orchard Resort",
     "Splendid View Rajgarh",
-    "Resort in Rajgarh",
-    "Hotel in Rajgarh",
-    "Rajgarh Sirmour",
-    "Himachal Pradesh stay",
-    "Peach Valley Rajgarh",
+    "Eco Orchard Resort Rajgarh",
+    "Resort in Rajgarh Himachal Pradesh",
+    "Best resort in Rajgarh Sirmour",
+    "Cottages in Rajgarh Himachal",
+    "Peach Valley Rajgarh resort",
+    "Himachal Pradesh eco resort stay",
+    "Giri valley cottages Rajgarh",
     "Weekend getaway from Chandigarh",
-    "Weekend getaway from Delhi",
+    "Weekend getaway from Delhi NCR",
+    "Offbeat places to stay near Shimla Solan",
   ];
 
   return {
     title: {
       default: title,
-      template: "%s | Splendid View Rajgarh",
+      template: `%s | ${businessDetails.name}`,
     },
     description,
     keywords: keywords ? [...keywords, ...defaultKeywords] : defaultKeywords,

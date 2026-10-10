@@ -22,7 +22,7 @@ interface SeoLandingPageTemplateProps {
 
 export function SeoLandingPageTemplate({
   data,
-  heroImage = "/images/hero/resort-panoramic-view.svg",
+  heroImage = "/images/hero/resort-cottages.webp",
 }: SeoLandingPageTemplateProps) {
   const primaryPhone = businessDetails.phones[0];
 

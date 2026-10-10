@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   if (!post) return {};
 
   return constructMetadata({
-    title: `${post.title} | Splendid View Rajgarh`,
+    title: `${post.title} | Splendid View Eco Orchard Resort`,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     image: post.coverImage,

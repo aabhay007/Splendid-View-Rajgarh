@@ -10,13 +10,13 @@ import { businessDetails } from "@/content/business";
 import { PhoneIcon, WhatsAppIcon } from "@/components/ui/icons";
 
 export const metadata = constructMetadata({
-  title: "Frequently Asked Questions | Splendid View Rajgarh",
+  title: "Frequently Asked Questions | Splendid View Eco Orchard Resort Rajgarh",
   description:
-    "Find answers to common questions about Splendid View Rajgarh: booking, road conditions, food, hot water, Wi-Fi, weather, and check-in policies.",
+    "Find answers to common questions about Splendid View Eco Orchard Resort: cottage booking, road conditions, food, hot water, Wi-Fi, weather & check-in policies.",
   path: "/faq",
   keywords: [
-    "Splendid View Rajgarh FAQ",
-    "Rajgarh resort queries",
+    "Splendid View Eco Orchard Resort FAQ",
+    "Rajgarh eco resort queries",
     "Himachal road conditions Rajgarh",
     "Rajgarh weather best time to visit",
   ],

@@ -36,7 +36,7 @@ export interface LandingPageData {
 export const landingPages: Record<string, LandingPageData> = {
   "resort-in-rajgarh": {
     slug: "resort-in-rajgarh",
-    metaTitle: "Resort in Rajgarh Himachal | Splendid View Rajgarh",
+    metaTitle: "Resort in Rajgarh Himachal | Splendid View Eco Orchard Resort",
     metaDescription:
       "Looking for a resort in Rajgarh? Experience serene valley rooms, pine forest views & home-cooked meals at Splendid View Rajgarh in District Sirmour.",
     primaryKeyword: "Resort in Rajgarh",
@@ -116,7 +116,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "best-hotel-in-himachal-pradesh": {
     slug: "best-hotel-in-himachal-pradesh",
-    metaTitle: "Best Hotel in Himachal Pradesh | Splendid View Rajgarh",
+    metaTitle: "Best Hotel in Himachal Pradesh | Splendid View Eco Orchard Resort",
     metaDescription:
       "Tired of crowded hill stations? Discover why discerning travelers rank Splendid View Rajgarh among the best tranquil hotels in Himachal Pradesh.",
     primaryKeyword: "Best hotel in Himachal Pradesh",
@@ -196,7 +196,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "weekend-getaway-from-delhi": {
     slug: "weekend-getaway-from-delhi",
-    metaTitle: "Weekend Getaway from Delhi | Splendid View Rajgarh",
+    metaTitle: "Weekend Getaway from Delhi | Splendid View Eco Orchard Resort",
     metaDescription:
       "Tired of Delhi pollution? Drive to Splendid View Rajgarh in 6.5 hours. Scenic Giri valley views, cool pine breeze & cozy mountain rooms.",
     primaryKeyword: "Weekend getaway from Delhi",
@@ -276,7 +276,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "weekend-getaway-from-chandigarh": {
     slug: "weekend-getaway-from-chandigarh",
-    metaTitle: "Weekend Getaway from Chandigarh | Splendid View Rajgarh",
+    metaTitle: "Weekend Getaway from Chandigarh | Splendid View Eco Orchard Resort",
     metaDescription:
       "Just 2.5-3.5 hours from Chandigarh! Escape to Splendid View Rajgarh for serene Giri valley views, cool pine air & homestyle mountain food.",
     primaryKeyword: "Weekend getaway from Chandigarh",
@@ -357,7 +357,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "romantic-getaway-himachal": {
     slug: "romantic-getaway-himachal",
-    metaTitle: "Romantic Getaway in Himachal | Splendid View Rajgarh",
+    metaTitle: "Romantic Getaway in Himachal | Splendid View Eco Orchard Resort",
     metaDescription:
       "Looking for a romantic couple getaway in Himachal? Enjoy private valley-view balconies, candlelight dinners & starry skies at Splendid View Rajgarh.",
     primaryKeyword: "Romantic getaway Himachal",
@@ -433,7 +433,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "offbeat-places-himachal": {
     slug: "offbeat-places-himachal",
-    metaTitle: "Offbeat Places in Himachal | Splendid View Rajgarh",
+    metaTitle: "Offbeat Places in Himachal | Splendid View Eco Orchard Resort",
     metaDescription:
       "Discover Rajgarh: the premier offbeat location in Himachal Pradesh. Untouched pine valleys, peach orchards, Giri river & peaceful stays.",
     primaryKeyword: "Offbeat places Himachal",
@@ -513,7 +513,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "rajgarh-peach-valley": {
     slug: "rajgarh-peach-valley",
-    metaTitle: "Rajgarh Peach Valley Himachal | Splendid View Rajgarh",
+    metaTitle: "Rajgarh Peach Valley Himachal | Splendid View Eco Orchard Resort",
     metaDescription:
       "Explore the Peach Bowl of Asia! Visit Rajgarh peach valley during blossom season or fruit harvest. Stay at Splendid View Rajgarh amidst orchards.",
     primaryKeyword: "Rajgarh peach valley",
@@ -592,7 +592,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "weekend-packages": {
     slug: "weekend-packages",
-    metaTitle: "Weekend Packages in Himachal | Splendid View Rajgarh",
+    metaTitle: "Weekend Packages in Himachal | Splendid View Eco Orchard Resort",
     metaDescription:
       "Explore curated weekend packages at Splendid View Rajgarh. 2N/3D relaxing mountain stays with valley views, bonfires & homestyle meals.",
     primaryKeyword: "Weekend packages",
@@ -672,7 +672,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "summer-getaway-himachal": {
     slug: "summer-getaway-himachal",
-    metaTitle: "Summer Getaway in Himachal | Splendid View Rajgarh",
+    metaTitle: "Summer Getaway in Himachal | Splendid View Eco Orchard Resort",
     metaDescription:
       "Beat the scorching plains heat! Escape to Splendid View Rajgarh for pleasant 22-26°C summer weather, deodar pine breezes & mountain serenity.",
     primaryKeyword: "Summer getaway Himachal",
@@ -751,7 +751,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "one-day-trip-near-rajgarh": {
     slug: "one-day-trip-near-rajgarh",
-    metaTitle: "1 Day Trip Near Rajgarh | Splendid View Rajgarh",
+    metaTitle: "1 Day Trip Near Rajgarh | Splendid View Eco Orchard Resort",
     metaDescription:
       "Planning a 1-day trip near Rajgarh? Discover top spots: Giri river, Baru Sahib, peach orchards, and relaxing day stays at Splendid View.",
     primaryKeyword: "1 day trip best place",
@@ -832,7 +832,7 @@ export const landingPages: Record<string, LandingPageData> = {
 
   "stay-near-shimla": {
     slug: "stay-near-shimla",
-    metaTitle: "Stay Near Shimla (Rajgarh) | Splendid View Rajgarh",
+    metaTitle: "Stay Near Shimla (Rajgarh) | Splendid View Eco Orchard Resort",
     metaDescription:
       "Looking for a stay near Shimla? Escape the capital's crowds. Splendid View Rajgarh is ~55 km from Shimla, offering pure peace & Giri valley views.",
     primaryKeyword: "Hotel in Shimla",

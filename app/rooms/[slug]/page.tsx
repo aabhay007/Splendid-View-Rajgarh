@@ -34,15 +34,15 @@ export async function generateMetadata({ params }: RoomPageProps) {
   if (!room) return {};
 
   return constructMetadata({
-    title: `${room.name} | Splendid View Rajgarh`,
-    description: `${room.name} at Splendid View Rajgarh. ${room.shortDescription} Valley-facing balcony, 24/7 hot water & fast Wi-Fi.`,
+    title: `${room.name} | Splendid View Eco Orchard Resort`,
+    description: `${room.name} at Splendid View Eco Orchard Resort, Rajgarh. ${room.shortDescription} Private valley-facing balcony, 24/7 hot water & fast Wi-Fi.`,
     path: `/rooms/${room.slug}`,
     image: room.image,
     keywords: [
       room.name,
-      "Room in Rajgarh",
-      "Splendid View Rajgarh rooms",
-      "Valley view room Himachal",
+      "Cottage in Rajgarh",
+      "Splendid View Eco Orchard Resort rooms",
+      "Valley view cottage Himachal",
     ],
   });
 }

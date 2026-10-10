@@ -6,13 +6,14 @@ import { CtaBanner } from "@/components/ui/CtaBanner";
 import { experiencesList } from "@/content/experiences";
 
 export const metadata = constructMetadata({
-  title: "Things to Do in Rajgarh | Splendid View Rajgarh",
+  title: "Things to Do in Rajgarh | Splendid View Eco Orchard Resort",
   description:
-    "Explore things to do in Rajgarh, Himachal Pradesh: peach orchard walks, Giri river picnics, Baru Sahib Gurdwara, Churdhar trekking & stargazing.",
+    "Explore things to do around Splendid View Eco Orchard Resort in Rajgarh: peach orchard walks, Giri river picnics, Baru Sahib Gurdwara, Churdhar trek & night stargazing.",
   path: "/experiences",
   keywords: [
     "Things to do in Rajgarh",
     "Rajgarh tourist attractions",
+    "Splendid View Eco Orchard Resort experiences",
     "Places to visit in Rajgarh Sirmour",
     "Baru Sahib Gurdwara visit",
     "Giri river picnic Rajgarh",

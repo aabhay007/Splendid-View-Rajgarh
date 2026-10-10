@@ -8,15 +8,16 @@ import { businessDetails } from "@/content/business";
 import { MapPinIcon, CheckIcon } from "@/components/ui/icons";
 
 export const metadata = constructMetadata({
-  title: "About Us | Splendid View Rajgarh Himachal",
+  title: "About Us | Splendid View Eco Orchard Resort Rajgarh",
   description:
-    "Discover the story behind Splendid View Rajgarh in District Sirmour: tranquil valley views, deodar pines, peach orchards & heartfelt Himachali hospitality.",
+    "Discover the story of Splendid View Eco Orchard Resort in Rajgarh, District Sirmour: tranquil Giri valley panoramas, alpine pine slopes, peach orchards & heartfelt Himachali hospitality.",
   path: "/about",
   keywords: [
-    "About Splendid View Rajgarh",
-    "Rajgarh Sirmour stay story",
-    "Himachal peach valley resort",
-    "Village Tikkari Tali resort",
+    "About Splendid View Eco Orchard Resort",
+    "Splendid View Rajgarh story",
+    "Eco resort Himachal Pradesh",
+    "Rajgarh Sirmour cottages",
+    "Village Tikkari Tali eco resort",
   ],
 });
 

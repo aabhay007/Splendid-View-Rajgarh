@@ -13,16 +13,16 @@ import {
 } from "@/components/ui/icons";
 
 export const metadata = constructMetadata({
-  title: "Contact Us & Bookings | Splendid View Rajgarh",
+  title: "Contact & Bookings | Splendid View Eco Orchard Resort Rajgarh",
   description:
-    "Contact Splendid View Rajgarh directly for best room tariffs, availability & directions. Call +91 8219515083 or chat on WhatsApp. Village Tikkari Tali, Rajgarh.",
+    "Contact Splendid View Eco Orchard Resort directly for best cottage tariffs, availability & directions. Call +91 8219515083 or chat on WhatsApp. Village Tikkari Tali, Rajgarh.",
   path: "/contact",
   keywords: [
-    "Contact Splendid View Rajgarh",
+    "Contact Splendid View Eco Orchard Resort",
     "Splendid View Rajgarh phone number",
-    "Rajgarh resort booking",
+    "Rajgarh eco resort booking",
     "Splendid View Rajgarh address",
-    "Direct booking Rajgarh stay",
+    "Direct cottage booking Rajgarh",
   ],
 });
 

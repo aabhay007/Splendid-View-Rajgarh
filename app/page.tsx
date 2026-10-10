@@ -23,19 +23,22 @@ import {
 } from "@/components/ui/icons";
 
 export const metadata = constructMetadata({
-  title: "Resort in Rajgarh Himachal | Splendid View Rajgarh",
+  title: "Splendid View Eco Orchard Resort | Resort in Rajgarh Himachal Pradesh",
   description:
-    "Looking for a peaceful resort in Rajgarh, Himachal Pradesh? Enjoy panoramic Giri valley views, homestyle meals & clean mountain rooms at Splendid View Rajgarh.",
+    "Discover Splendid View Eco Orchard Resort in Rajgarh, Himachal Pradesh. Experience hillside cottages with private balconies, panoramic Giri valley vistas, lush peach orchards & authentic Himachali hospitality. Book direct for best tariffs.",
   path: "/",
+  image: "/images/hero/resort-cottages.webp",
   keywords: [
+    "Splendid View Eco Orchard Resort",
+    "Eco Orchard Resort Rajgarh",
     "Resort in Rajgarh",
-    "Hotel in Rajgarh",
+    "Hotel in Rajgarh Himachal Pradesh",
     "Splendid View Rajgarh",
+    "Cottages in Rajgarh Sirmour",
     "Best resort in Sirmour",
-    "Rajgarh stay",
-    "Himachal valley resort",
-    "Weekend getaway from Chandigarh",
-    "Weekend getaway from Delhi",
+    "Rajgarh peach valley stay",
+    "Weekend getaway from Chandigarh to Rajgarh",
+    "Weekend getaway from Delhi NCR",
   ],
 });
 
@@ -52,28 +55,28 @@ export default function HomePage() {
       {/* Schema.org FAQPage structured data */}
       <JsonLd data={getFaqSchema(homeFaqs)} />
 
-      {/* 1. HERO SECTION (Optimized for LCP < 2.5s) */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center bg-forest-950 text-white overflow-hidden">
+      {/* 1. HERO SECTION (Optimized for LCP < 2.5s with Real Resort Cottages Photo) */}
+      <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center bg-forest-950 text-white overflow-hidden">
         {/* LCP Hero Image with Next/Image, priority=true, explicit sizes */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/resort-panoramic-view.svg"
-            alt="Splendid View Rajgarh - Panoramic Giri Valley and Pine Forest View"
+            src="/images/hero/resort-cottages.webp"
+            alt="Splendid View Rajgarh - Real Hillside Cottages with Alpine Pine Roofs overlooking Giri Valley"
             fill
             priority
-            quality={90}
+            quality={92}
             sizes="100vw"
-            className="object-cover object-center filter brightness-[0.8] contrast-[1.05]"
+            className="object-cover object-center filter brightness-[0.75] contrast-[1.1] scale-105"
           />
           {/* Subtle gradient overlay to ensure WCAG AA text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/60 to-forest-950/40" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center space-y-6">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center space-y-5 sm:space-y-6">
           {/* Geographic Authority Tag */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest-900/80 backdrop-blur-md border border-emerald-500/30 text-emerald-200 text-xs sm:text-sm font-medium">
-            <MapPinIcon className="w-4 h-4 text-peach-400" />
-            <span>Village Tikkari Tali, Rajgarh, District Sirmour, Himachal Pradesh</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900/90 backdrop-blur-md border border-emerald-500/30 text-emerald-200 text-xs sm:text-sm font-medium shadow-lg max-w-full">
+            <MapPinIcon className="w-4 h-4 text-peach-400 shrink-0" />
+            <span className="truncate">Village Tikkari Tali, Rajgarh, District Sirmour, HP</span>
           </div>
 
           {/* Primary H1 with target keyword */}
@@ -85,20 +88,19 @@ export default function HomePage() {
           </h1>
 
           {/* Value Proposition Subtitle */}
-          <p className="text-base sm:text-xl text-warm-200 max-w-3xl mx-auto leading-relaxed">
-            Unwind in the pristine Giri valley amidst fragrant pine slopes and
-            historic peach orchards. Pure mountain peace, private valley-facing
-            balconies, and heartfelt Himachali hospitality.
+          <p className="text-sm sm:text-lg lg:text-xl text-warm-200 max-w-3xl mx-auto leading-relaxed">
+            Hillside cottages with private balconies perched above the Giri valley.
+            Crisp mountain air, peaceful pine ridges, homestyle Himachali food, and authentic mountain peace.
           </p>
 
           {/* Dual Primary Conversion CTAs */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto sm:max-w-none">
+          <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto sm:max-w-none w-full">
             <a
               href={`tel:${primaryPhone}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-forest-700 hover:bg-forest-600 active:scale-95 text-white font-semibold text-base py-4 px-8 rounded-2xl shadow-xl transition-all border border-emerald-500/30"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-forest-700 hover:bg-forest-600 active:scale-95 text-white font-bold text-sm sm:text-base py-3.5 sm:py-4 px-6 sm:px-8 rounded-2xl shadow-xl transition-all border border-emerald-500/30 min-h-[48px]"
               aria-label="Call Splendid View Rajgarh directly"
             >
-              <PhoneIcon className="w-5 h-5 text-emerald-300" />
+              <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-300 shrink-0" />
               <span>Call: {displayPhone}</span>
             </a>
 
@@ -106,23 +108,23 @@ export default function HomePage() {
               href={businessDetails.whatsapp.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] active:scale-95 text-white font-semibold text-base py-4 px-8 rounded-2xl shadow-xl transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] active:scale-95 text-white font-bold text-sm sm:text-base py-3.5 sm:py-4 px-6 sm:px-8 rounded-2xl shadow-xl transition-all min-h-[48px]"
               aria-label="Chat on WhatsApp with Splendid View Rajgarh"
             >
-              <WhatsAppIcon className="w-5 h-5" />
+              <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
               <span>WhatsApp Direct</span>
             </a>
           </div>
 
           {/* Key Distance Quick Badges */}
-          <div className="pt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-warm-300">
-            <span className="bg-forest-900/60 px-3 py-1.5 rounded-lg border border-warm-100/10">
+          <div className="pt-4 sm:pt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[11px] sm:text-xs text-warm-300">
+            <span className="bg-forest-900/80 px-3 py-1.5 rounded-lg border border-warm-100/10 backdrop-blur-sm">
               🚗 Chandigarh: 2.5–3.5 Hours
             </span>
-            <span className="bg-forest-900/60 px-3 py-1.5 rounded-lg border border-warm-100/10">
+            <span className="bg-forest-900/80 px-3 py-1.5 rounded-lg border border-warm-100/10 backdrop-blur-sm">
               🚗 Delhi / NCR: 6.5–7.5 Hours
             </span>
-            <span className="bg-forest-900/60 px-3 py-1.5 rounded-lg border border-warm-100/10">
+            <span className="bg-forest-900/80 px-3 py-1.5 rounded-lg border border-warm-100/10 backdrop-blur-sm">
               🚗 Shimla: ~2.0 Hours
             </span>
           </div>

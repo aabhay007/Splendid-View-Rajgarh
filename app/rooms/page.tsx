@@ -7,16 +7,18 @@ import { rooms } from "@/content/rooms";
 import { CheckIcon } from "@/components/ui/icons";
 
 export const metadata = constructMetadata({
-  title: "Rooms & Suites in Rajgarh | Splendid View Rajgarh",
+  title: "Cottages, Rooms & Suites in Rajgarh | Splendid View Eco Orchard Resort",
   description:
-    "Explore our valley-view rooms and suites in Rajgarh, Himachal Pradesh. Private balconies, uninterrupted Giri valley vistas, 24/7 hot water & fast Wi-Fi.",
+    "Explore our valley-facing cottages and suites in Rajgarh, Himachal Pradesh. Private balconies, uninterrupted Giri valley panoramas, 24/7 hot water & fast Wi-Fi.",
   path: "/rooms",
+  image: "/images/hero/resort-cottages.webp",
   keywords: [
-    "Rooms in Rajgarh",
-    "Valley view rooms Rajgarh",
-    "Best rooms in Rajgarh resort",
-    "Family suite Rajgarh",
-    "Couple stay Rajgarh",
+    "Cottages in Rajgarh Himachal",
+    "Rooms in Rajgarh resort",
+    "Splendid View Eco Orchard Resort rooms",
+    "Valley view cottages Rajgarh",
+    "Best family suite Rajgarh",
+    "Himalayan cottage stay",
   ],
 });
 

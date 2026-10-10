@@ -11,12 +11,12 @@ import {
 } from "@/components/ui/icons";
 
 export const metadata = constructMetadata({
-  title: "How to Reach Rajgarh Sirmour | Splendid View Rajgarh",
+  title: "How to Reach Rajgarh Sirmour | Splendid View Eco Orchard Resort",
   description:
-    "Complete road routes to Splendid View Rajgarh from Delhi (6.5h), Chandigarh (2.5h) & Shimla (2h). Road conditions, railway stations & airport directions.",
+    "Complete driving directions to Splendid View Eco Orchard Resort from Delhi (6.5h), Chandigarh (2.5h) & Shimla (2h). Road conditions, railway stations & transit guides.",
   path: "/how-to-reach",
   keywords: [
-    "How to reach Rajgarh Himachal",
+    "How to reach Splendid View Eco Orchard Resort",
     "Delhi to Rajgarh road route",
     "Chandigarh to Rajgarh distance",
     "Driving route to Splendid View Rajgarh",

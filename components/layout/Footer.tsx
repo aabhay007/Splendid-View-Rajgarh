@@ -13,7 +13,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-forest-950 text-warm-100 border-t border-forest-900 pb-16 md:pb-0">
+    <footer className="bg-forest-950 text-warm-100 border-t border-forest-900 pb-24 md:pb-0">
       {/* Top Banner Accent */}
       <div className="h-1 bg-gradient-to-r from-forest-700 via-peach-500 to-forest-700" />
 
@@ -21,13 +21,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Column 1: Brand & Identity */}
           <div className="space-y-4">
-            <div className="relative w-52 h-14 bg-white/10 p-2 rounded-xl backdrop-blur-sm">
-              <Image
-                src="/images/logo.svg"
-                alt="Splendid View Rajgarh"
-                fill
-                className="object-contain p-1 invert contrast-200"
-              />
+            <div className="flex items-center gap-3">
+              <div className="relative w-14 h-14 shrink-0 rounded-full overflow-hidden ring-2 ring-emerald-500/30 bg-white shadow-md">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="Splendid View Eco Orchard Resort Emblem"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <span className="font-serif font-bold text-lg text-warm-50 block leading-tight">
+                  Splendid View
+                </span>
+                <span className="text-xs font-semibold text-emerald-400 tracking-wider uppercase block mt-0.5">
+                  Eco Orchard Resort
+                </span>
+              </div>
             </div>
             <p className="text-sm text-warm-300 leading-relaxed">
               {businessDetails.tagline}. Perched in Village Tikkari Tali,
