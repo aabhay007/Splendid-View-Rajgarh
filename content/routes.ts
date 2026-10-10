@@ -12,8 +12,8 @@ export interface RouteGuide {
 export const travelRoutes: RouteGuide[] = [
   {
     origin: "Delhi & NCR (Gurugram / Noida / Faridabad)",
-    distance: "{{TODO: ~330 to 360 km depending on starting point}}",
-    travelTime: "6.5 to 7.5 hours (comfortable drive with breaks)",
+    distance: "369 km",
+    travelTime: "7:30 - 8:00 hours (comfortable drive with breaks)",
     recommendedRoute:
       "Delhi -> Panipat -> Ambala Cantt -> Zirakpur / Himalayan Expressway bypass -> Kalka -> Dharampur -> Kumarhatti (Take Solan-Rajgarh State Highway) -> Giri Pul -> Rajgarh -> Village Tikkari Tali",
     roadCondition:
@@ -41,8 +41,8 @@ export const travelRoutes: RouteGuide[] = [
   },
   {
     origin: "Chandigarh, Panchkula & Mohali (Tri-City)",
-    distance: "{{TODO: ~105 to 120 km}}",
-    travelTime: "2.5 to 3.5 hours",
+    distance: "124 km",
+    travelTime: "3:30 - 4:00 hours",
     recommendedRoute:
       "Chandigarh / Panchkula -> Himalayan Expressway -> Pinjore -> Kalka -> Kumarhatti -> Sultanpur -> Giri Pul -> Rajgarh -> Village Tikkari Tali",
     roadCondition:
@@ -68,8 +68,8 @@ export const travelRoutes: RouteGuide[] = [
   },
   {
     origin: "Shimla & Kufri",
-    distance: "{{TODO: ~70 to 80 km}}",
-    travelTime: "2.0 to 2.5 hours",
+    distance: "108 km",
+    travelTime: "3:30 - 4:00 hours",
     recommendedRoute:
       "Shimla -> Kandaghat -> Solan -> Yashwant Nagar / Giri Pul -> Rajgarh OR via Chhaila / Giri valley route",
     roadCondition:

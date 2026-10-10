@@ -13,7 +13,7 @@ import {
 export const metadata = constructMetadata({
   title: "How to Reach Rajgarh Sirmour | Splendid View Eco Orchard Resort",
   description:
-    "Complete driving directions to Splendid View Eco Orchard Resort from Delhi (6.5h), Chandigarh (2.5h) & Shimla (2h). Road conditions, railway stations & transit guides.",
+    "Complete driving directions to Splendid View Eco Orchard Resort from Delhi (7:30–8:00h, 369 km), Chandigarh (3:30–4:00h, 124 km) & Shimla (3:30–4:00h, 108 km). Road conditions, railway stations & transit guides.",
   path: "/how-to-reach",
   keywords: [
     "How to reach Splendid View Eco Orchard Resort",
@@ -56,10 +56,10 @@ export default function HowToReachPage() {
             </h2>
             <div className="space-y-1 text-xs text-warm-700">
               <p>
-                <strong>Distance:</strong> ~105 to 115 km
+                <strong>Distance:</strong> 124 km
               </p>
               <p>
-                <strong>Driving Time:</strong> 2.5 to 3.5 Hours
+                <strong>Driving Time:</strong> 3:30 - 4:00 Hours
               </p>
               <p>
                 <strong>Route:</strong> Himalayan Exp. → Kumarhatti → Giri Pul
@@ -76,10 +76,10 @@ export default function HowToReachPage() {
             </h2>
             <div className="space-y-1 text-xs text-warm-700">
               <p>
-                <strong>Distance:</strong> ~330 to 360 km
+                <strong>Distance:</strong> 369 km
               </p>
               <p>
-                <strong>Driving Time:</strong> 6.5 to 7.5 Hours
+                <strong>Driving Time:</strong> 7:30 - 8:00 Hours
               </p>
               <p>
                 <strong>Route:</strong> NH44 → Ambala → Kumarhatti → Giri Pul
@@ -96,10 +96,10 @@ export default function HowToReachPage() {
             </h2>
             <div className="space-y-1 text-xs text-warm-700">
               <p>
-                <strong>Distance:</strong> ~70 to 80 km
+                <strong>Distance:</strong> 108 km
               </p>
               <p>
-                <strong>Driving Time:</strong> 2.0 to 2.5 Hours
+                <strong>Driving Time:</strong> 3:30 - 4:00 Hours
               </p>
               <p>
                 <strong>Route:</strong> Solan / Yashwant Nagar or Chhaila route

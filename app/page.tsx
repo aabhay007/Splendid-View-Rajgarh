@@ -86,39 +86,31 @@ export default function HomePage() {
 
           {/* Mobile Content Block with bg-transparent: zero borders, zero hard edges, pure seamless blend */}
           <div className="relative z-10 px-4 -mt-10 pt-0 pb-7 text-center space-y-3.5 bg-transparent">
-            <h1 className="font-serif text-2xl font-bold tracking-tight text-white leading-tight">
-              Resort in Rajgarh, Himachal Pradesh:{" "}
-              <span className="text-peach-300 block text-xl mt-0.5">
+            <h1 className="font-serif tracking-tight leading-tight">
+              <span className="block text-2xl font-bold text-white">
                 Splendid View Eco Orchard Resort
+              </span>
+              <span className="text-peach-300 block text-base sm:text-lg font-medium mt-1">
+                Resort in Rajgarh, Himachal Pradesh
               </span>
             </h1>
 
             <p className="text-xs text-warm-200 leading-relaxed max-w-sm mx-auto">
-              Hillside cottages with private balconies perched above the Giri valley.
-              Crisp mountain air, peaceful pine ridges, homestyle food, and authentic Himachali peace.
+            Swiss-style cottages nestled above The Peach Valley of Rajgarh. Breathtaking mountain views,
+            crisp Himalayan air, lush fruit orchards, homestyle Himachali cuisine, and peaceful escapes
+            where nature slows life down.
             </p>
-
-            {/* Mobile Explore CTA (Call & WhatsApp already available in the fixed bottom bar) */}
-            <div className="pt-0.5 flex justify-center">
-              <Link
-                href="/rooms"
-                className="inline-flex items-center gap-2 bg-white text-forest-950 font-bold text-xs py-2.5 px-6 rounded-full shadow-md active:scale-95 transition-all"
-              >
-                <span>Explore Cottages & Rates</span>
-                <ArrowRightIcon className="w-3.5 h-3.5 text-forest-700" />
-              </Link>
-            </div>
 
             {/* Quick Travel Badges */}
             <div className="pt-1 flex flex-wrap items-center justify-center gap-1.5 text-[10px] text-warm-300">
               <span className="bg-forest-950/70 px-2.5 py-1 rounded-lg border border-white/10">
-                🚗 Chandigarh: 2.5–3.5h
+                🚗 Chandigarh: 3:30–4:00h (124 km)
               </span>
               <span className="bg-forest-950/70 px-2.5 py-1 rounded-lg border border-white/10">
-                🚗 Delhi: 6.5–7.5h
+                🚗 Delhi: 7:30–8:00h (369 km)
               </span>
               <span className="bg-forest-950/70 px-2.5 py-1 rounded-lg border border-white/10">
-                🚗 Shimla: ~2h
+                🚗 Shimla: 3:30–4:00h (108 km)
               </span>
             </div>
           </div>
@@ -150,17 +142,20 @@ export default function HomePage() {
             </div>
 
             {/* Desktop H1 with target keyword & drop shadow */}
-            <h1 className="font-serif text-4xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15] drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
-              Resort in Rajgarh, Himachal Pradesh:{" "}
-              <span className="text-peach-300 block sm:inline">
+            <h1 className="font-serif tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+              <span className="block text-4xl lg:text-6xl font-bold text-white leading-tight">
                 Splendid View Eco Orchard Resort
+              </span>
+              <span className="text-peach-300 block text-2xl lg:text-3xl font-medium mt-3">
+                Resort in Rajgarh, Himachal Pradesh
               </span>
             </h1>
 
             {/* Desktop Value Proposition Subtitle */}
             <p className="text-lg lg:text-xl text-warm-100 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] font-medium">
-              Hillside cottages with private balconies perched above the Giri valley.
-              Crisp mountain air, peaceful pine ridges, homestyle Himachali food, and authentic mountain peace.
+            Swiss-style cottages nestled above The Peach Valley of Rajgarh. Breathtaking mountain views,
+            crisp Himalayan air, lush fruit orchards, homestyle Himachali cuisine, and peaceful escapes
+            where nature slows life down.
             </p>
 
             {/* Desktop Dual Primary Conversion CTAs */}
@@ -189,13 +184,13 @@ export default function HomePage() {
             {/* Desktop Key Distance Quick Badges */}
             <div className="pt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-warm-200">
               <span className="bg-forest-950/70 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-sm">
-                🚗 Chandigarh: 2.5–3.5 Hours
+                🚗 Chandigarh: 3:30–4:00 Hours (124 km)
               </span>
               <span className="bg-forest-950/70 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-sm">
-                🚗 Delhi / NCR: 6.5–7.5 Hours
+                🚗 Delhi / NCR: 7:30–8:00 Hours (369 km)
               </span>
               <span className="bg-forest-950/70 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-sm">
-                🚗 Shimla: ~2.0 Hours
+                🚗 Shimla: 3:30–4:00 Hours (108 km)
               </span>
             </div>
           </div>
@@ -537,21 +532,21 @@ export default function HomePage() {
                 <div className="flex items-start gap-3 text-sm">
                   <CheckIcon className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <span>
-                    <strong>From Chandigarh:</strong> 2.5 to 3.5 hours (~105 km)
+                    <strong>From Chandigarh:</strong> 3:30 to 4:00 hours (124 km)
                     via Himalayan Expressway and Kumarhatti bypass.
                   </span>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <CheckIcon className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <span>
-                    <strong>From Delhi / NCR:</strong> 6.5 to 7.5 hours (~340 km)
+                    <strong>From Delhi / NCR:</strong> 7:30 to 8:00 hours (369 km)
                     via 6-lane NH44 and Himalayan Expressway.
                   </span>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <CheckIcon className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <span>
-                    <strong>From Shimla:</strong> ~2.0 hours (~75 km) via Solan /
+                    <strong>From Shimla:</strong> 3:30 to 4:00 hours (108 km) via Solan /
                     Giri valley route.
                   </span>
                 </div>

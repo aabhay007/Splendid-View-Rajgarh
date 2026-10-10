@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
           "In the early morning, mist rises slowly from the Giri river basin, drifting through the orchards and painting the valley in ethereal pastel tones. It is a place that invites you to put down your phone, step out onto a sunlit balcony with a steaming mug of tea, and simply listen to the breeze rustling through the trees.",
         ],
         bulletPoints: [
-          "Effortless accessibility: Just 2.5 to 3.5 hours from Chandigarh and ~7 hours from Delhi.",
+          "Effortless accessibility: Just 3:30 to 4:00 hours (124 km) from Chandigarh and 7:30 to 8:00 hours (369 km) from Delhi.",
           "Authentic agro-tourism: Renowned across India as the 'Peach Bowl of Asia'.",
           "Zero commercial noise: Nighttime brings pristine silence and dazzling star-filled skies.",
         ],
@@ -115,7 +115,7 @@ export const blogPosts: BlogPost[] = [
         sectionHeading: "Planning the Perfect Delhi-to-Rajgarh Drive",
         paragraphs: [
           "For road trip enthusiasts in Delhi, Gurgaon, and Noida, the journey to Rajgarh represents the sweet spot of mountain road trips: it is long enough to feel like a genuine adventure across three states (Delhi, Haryana, and Himachal Pradesh), yet short enough to complete comfortably in daylight without driving fatigue.",
-          "Covering roughly 335 to 350 km, the drive takes approximately 6.5 to 7.5 hours, including leisurely breakfast and fuel stops along the way. Here is our comprehensive insider roadmap to make your drive smooth and memorable.",
+          "Covering roughly 369 km, the drive takes approximately 7:30 to 8:00 hours, including leisurely breakfast and fuel stops along the way. Here is our comprehensive insider roadmap to make your drive smooth and memorable.",
         ],
       },
       {

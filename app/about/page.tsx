@@ -36,9 +36,9 @@ export default function AboutPage() {
             About Splendid View Rajgarh
           </h1>
           <p className="text-base sm:text-lg text-warm-700 leading-relaxed">
-            A tranquil mountain haven perched above the Giri river valley in
-            Village Tikkari Tali, District Sirmour, crafted for travelers who
-            revere silence, fresh pine air, and genuine hospitality.
+          Splendid view ( Eco Orchard Resort) is more than a resort amidst  6 acres orchard property of 
+          apple, peach, apricot, pears, cherries. It is situated at an altitude of 7000 ft. in the lap of famous 
+          Shirgul Maharaj temple peak Churdhar on Habban Road 21 k.m from Rajgarh, Distt.Sirmour, H.P.
           </p>
         </div>
 
@@ -61,28 +61,16 @@ export default function AboutPage() {
               Rooted in the Peach Valley of Himachal Pradesh
             </h2>
             <p>
-              Rajgarh has long been celebrated across North India as the
-              &quot;Peach Bowl of Asia&quot;. Tucked into the undulating ridges of
-              District Sirmour, the valley is blessed with fertile mountain soil,
-              pure glacial streams feeding into the Giri river, and expansive
-              orchards of peach, plum, and apricot trees.
+            Splendid View Eco Orchard Resort is a serene mountain retreat nestled at an altitude of 7,000
+            feet in Rajgarh, Himachal Pradesh. Spread across six acres of lush apple, peach, apricot, pear,
+            and cherry orchards, our resort offers breathtaking valley views, fresh mountain air, and a 
+            peaceful escape from everyday life.
             </p>
             <p>
-              Splendid View Rajgarh was established with a singular, clear vision:
-              to offer travelers a peaceful alternative to commercialized,
-              traffic-heavy hill stations. Situated in Village Tikkari Tali
-              (Jola), our property commands wide, unobstructed 180-degree
-              panoramas of the entire Giri basin, where morning mist rises
-              gently through the pine slopes and evening brings crystal-clear,
-              starlit skies.
-            </p>
-            <p>
-              We believe in honest, heartfelt hospitality. There are no crowded
-              tour buses or frantic itineraries here. Instead, our guests enjoy
-              the restorative cadence of mountain life: breakfast in the morning
-              sun on a private balcony, gentle afternoon strolls through
-              terraced orchard trails, wholesome homestyle meals, and warm
-              bonfire conversations under the stars.
+            With cozy Swiss-style cottages, private balconies, authentic Himachali cuisine, and the beauty 
+            of the surrounding mountains, we invite you to slow down, reconnect with nature, and create 
+            unforgettable memories. Whether it’s a romantic getaway or a relaxing family holiday, Splendid
+            View is where the road ends and peace begins. 🌿
             </p>
 
             <div className="pt-4 space-y-3">

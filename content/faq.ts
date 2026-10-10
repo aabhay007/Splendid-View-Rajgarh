@@ -33,7 +33,7 @@ export const masterFaqList: FAQItem[] = [
     category: "Location & Reach",
     question: "How far is Splendid View Rajgarh from Delhi and Chandigarh?",
     answer:
-      "From Chandigarh, it is an easy 2.5 to 3.5 hour drive (approx. 105-120 km) via the Himalayan Expressway and Kumarhatti bypass. From Delhi/NCR, it is a comfortable 6.5 to 7.5 hour journey (approx. 330-360 km) via NH44, making it one of the most accessible offbeat weekend getaways in Himachal.",
+      "From Chandigarh, it is an easy 3:30 to 4:00 hour drive (approx. 124 km) via the Himalayan Expressway and Kumarhatti bypass. From Delhi/NCR, it is a comfortable 7:30 to 8:00 hour journey (approx. 369 km) via NH44, making it one of the most accessible offbeat weekend getaways in Himachal.",
   },
   {
     category: "Location & Reach",

@@ -127,7 +127,7 @@ export const landingPages: Record<string, LandingPageData> = {
       "Why battle the chaotic traffic of Shimla or Manali? Splendid View Rajgarh offers pristine pine air, untouched mountain valleys, and authentic Himachali warmth.",
     intro: [
       "When travelers search for the best hotel in Himachal Pradesh, they are often seeking an idyllic dream: crisp Himalayan pine breezes, panoramic valley views unmarred by construction cranes, genuine local warmth, and peaceful nights under a sky filled with stars. Yet, popular tourist capitals like Manali, Shimla, and Dharamshala often confront visitors with long traffic jams, crowded malls, and commercial noise.",
-      "Splendid View Rajgarh redefines what the best mountain stay should be. Situated in the pristine Sirmour district, just 2.5 to 3.5 hours from Chandigarh, our property provides an authentic Himalayan escape where pristine nature and heartfelt comfort take center stage.",
+      "Splendid View Rajgarh redefines what the best mountain stay should be. Situated in the pristine Sirmour district, just 3:30 to 4:00 hours (124 km) from Chandigarh, our property provides an authentic Himalayan escape where pristine nature and heartfelt comfort take center stage.",
     ],
     sections: [
       {
@@ -152,7 +152,7 @@ export const landingPages: Record<string, LandingPageData> = {
           headers: ["Feature", "Commercial Hubs (Shimla / Manali)", "Splendid View Rajgarh"],
           rows: [
             ["Atmosphere", "Crowded malls, noisy streets, commercial hustle", "Peaceful village setting, silent pine forests, bird calls"],
-            ["Drive from Chandigarh", "4.5 to 9+ hours with heavy hill traffic", "2.5 to 3.5 hours on smooth, scenic mountain roads"],
+            ["Drive from Chandigarh", "4.5 to 9+ hours with heavy hill traffic", "3:30 to 4:00 hours (124 km) on smooth, scenic mountain roads"],
             ["Nature & Views", "Obstructed concrete skyline, congested buildings", "Unobstructed Giri valley vistas & terraced orchards"],
             ["Food Experience", "Standard commercial restaurant menus", "Homestyle North Indian & authentic Himachali cooking"],
           ],
@@ -198,16 +198,16 @@ export const landingPages: Record<string, LandingPageData> = {
     slug: "weekend-getaway-from-delhi",
     metaTitle: "Weekend Getaway from Delhi | Splendid View Eco Orchard Resort",
     metaDescription:
-      "Tired of Delhi pollution? Drive to Splendid View Rajgarh in 6.5 hours. Scenic Giri valley views, cool pine breeze & cozy mountain rooms.",
+      "Tired of Delhi pollution? Drive to Splendid View Rajgarh in 7:30 to 8:00 hours (369 km). Scenic Giri valley views, cool pine breeze & cozy mountain rooms.",
     primaryKeyword: "Weekend getaway from Delhi",
     secondaryKeywords: ["Vacation spots near Delhi", "Road trip from Delhi to Himachal", "Offbeat weekend trip Delhi"],
     h1: "The Perfect Weekend Getaway from Delhi: Splendid View Rajgarh",
-    badge: "Quick Road Trip Escape",
+    badge: "Scenic Highway Road Trip",
     heroSubtitle:
-      "Leave Delhi smog and deadline pressure behind. In just 6.5 to 7 hours of smooth highway driving, arrive at your private valley haven in Himachal's peach country.",
+      "Leave Delhi smog and deadline pressure behind. In 7:30 to 8:00 hours (369 km) of smooth highway driving, arrive at your private valley haven in Himachal's peach country.",
     intro: [
       "For residents of Delhi, Gurugram, Noida, and Faridabad, planning a weekend trip often turns into an exhausting ordeal: spending eight hours stuck in bumper-to-bumper hill traffic just to reach a crowded mall road. If you yearn for genuine respite from city smog, endless horn honking, and weekly corporate fatigue, Splendid View Rajgarh is your answer.",
-      "Located in the serene hills of District Sirmour, Rajgarh is reachable in approximately 6.5 to 7.5 hours via the smooth National Highway 44 and the Himalayan Expressway. It is far enough into Himachal to guarantee cool mountain air and sweeping pine-clad ridges, yet close enough to make a 2-night weekend trip effortless and completely refreshing.",
+      "Located in the serene hills of District Sirmour, Rajgarh is reachable in approximately 7:30 to 8:00 hours (369 km) via the smooth National Highway 44 and the Himalayan Expressway. It is far enough into Himachal to guarantee cool mountain air and sweeping pine-clad ridges, yet close enough to make a 2-night weekend trip effortless and completely refreshing.",
     ],
     sections: [
       {
@@ -233,8 +233,8 @@ export const landingPages: Record<string, LandingPageData> = {
           rows: [
             ["Delhi to Ambala Cantt", "6-lane NH44 Expressway", "~200 km", "Fast highway, top food plazas (Murthal, Haveli)"],
             ["Ambala to Kumarhatti", "4-lane Himalayan Expressway", "~90 km", "Smooth bypass around Chandigarh/Zirakpur into hills"],
-            ["Kumarhatti to Rajgarh", "2-lane Hill State Highway", "~45 km", "Scenic curves through Giri Pul river basin and pine woods"],
-            ["Total Route", "Delhi to Splendid View", "~335-350 km", "Total drive time: ~6.5 to 7.5 hours"],
+            ["Kumarhatti to Rajgarh", "2-lane Hill State Highway", "~79 km", "Scenic curves through Giri Pul river basin and pine woods"],
+            ["Total Route", "Delhi to Splendid View", "369 km", "Total drive time: 7:30 to 8:00 hours"],
           ],
         },
       },
@@ -249,7 +249,7 @@ export const landingPages: Record<string, LandingPageData> = {
       {
         question: "How long does it take to drive from Delhi to Splendid View Rajgarh?",
         answer:
-          "It takes approximately 6.5 to 7.5 hours depending on your starting point in Delhi/NCR and break timings. Starting by 5:30 AM avoids Delhi rush-hour traffic.",
+          "It takes approximately 7:30 to 8:00 hours (369 km) depending on your starting point in Delhi/NCR and break timings. Starting by 5:30 AM avoids Delhi rush-hour traffic.",
       },
       {
         question: "Can I drive a hatchback or sedan car from Delhi to Rajgarh?",
@@ -278,16 +278,16 @@ export const landingPages: Record<string, LandingPageData> = {
     slug: "weekend-getaway-from-chandigarh",
     metaTitle: "Weekend Getaway from Chandigarh | Splendid View Eco Orchard Resort",
     metaDescription:
-      "Just 2.5-3.5 hours from Chandigarh! Escape to Splendid View Rajgarh for serene Giri valley views, cool pine air & homestyle mountain food.",
+      "Just 3:30–4:00 hours (124 km) from Chandigarh! Escape to Splendid View Rajgarh for serene Giri valley views, cool pine air & homestyle mountain food.",
     primaryKeyword: "Weekend getaway from Chandigarh",
     secondaryKeywords: ["Vacation spots near Chandigarh", "Short trip from Chandigarh", "Places to visit near Chandigarh"],
     h1: "The Ideal Weekend Getaway from Chandigarh: Splendid View Rajgarh",
-    badge: "Quick 3-Hour Mountain Drive",
+    badge: "Scenic Mountain Road Trip",
     heroSubtitle:
-      "Only 105 km from the Tri-City! Leave Chandigarh after breakfast and arrive in time for lunch amidst tranquil pine-forested slopes and panoramic valley views.",
+      "Only 124 km from the Tri-City! Leave Chandigarh after breakfast and arrive in time for lunch amidst tranquil pine-forested slopes and panoramic valley views.",
     intro: [
       "Residents of Chandigarh, Mohali, and Panchkula enjoy one of the greatest privileges in India: quick access to the foothills of the Himalayas. However, most travelers end up repeating the same predictable trips—Kasauli's crowded upper mall, or getting stuck in the long line of cars on the Solan-Shimla four-lane highway.",
-      "If you are seeking a fresh, peaceful, and truly offbeat vacation spot near Chandigarh, look toward Rajgarh in District Sirmour. At just 105 to 115 km from Chandigarh, Splendid View Rajgarh is reached in an effortless 2.5 to 3.5 hour drive.",
+      "If you are seeking a fresh, peaceful, and truly offbeat vacation spot near Chandigarh, look toward Rajgarh in District Sirmour. At just 124 km from Chandigarh, Splendid View Rajgarh is reached in an effortless 3:30 to 4:00 hour drive.",
     ],
     sections: [
       {
@@ -297,7 +297,7 @@ export const landingPages: Record<string, LandingPageData> = {
         ],
         bulletPoints: [
           "Zero Traffic Hassles: Bypass the long lines of weekend vehicles heading toward Shimla and Kufri.",
-          "Under 3.5 Hours Driving: You can leave on Saturday morning and return relaxed on Sunday evening without driving fatigue.",
+          "Under 4 Hours Driving (124 km): You can leave on Saturday morning and return relaxed on Sunday evening without driving fatigue.",
           "Pure Mountain Serenity: Quiet village ambience in Tikkari Tali with clear views of the Giri river basin.",
           "Delicious Homestyle Food: Fresh, piping hot meals prepared to your preference, just like a welcoming hill home.",
         ],
@@ -310,12 +310,12 @@ export const landingPages: Record<string, LandingPageData> = {
         table: {
           headers: ["Time", "Activity", "What to Expect"],
           rows: [
-            ["Saturday 9:00 AM", "Depart from Chandigarh / Panchkula", "Smooth climb on the Himalayan Expressway past Dharampur"],
+            ["Saturday 8:30 AM", "Depart from Chandigarh / Panchkula", "Smooth climb on the Himalayan Expressway past Dharampur"],
             ["Saturday 12:30 PM", "Arrive at Splendid View Rajgarh", "Check in to your valley-view room; enjoy welcome tea & fresh lunch"],
             ["Saturday 3:30 PM", "Walk through Peach Orchards", "Gentle walk through Village Tikkari Tali; breathe clean pine air"],
             ["Saturday 7:30 PM", "Bonfire & Stargazing", "Cozy evening fire on the lawn followed by hot dinner"],
             ["Sunday 10:00 AM", "Giri River Excursion", "Visit Giri Pul for cool riverbank relaxation and photography"],
-            ["Sunday 3:30 PM", "Drive Back to Chandigarh", "Reach home by 6:30 PM thoroughly recharged for the work week ahead"],
+            ["Sunday 2:30 PM", "Drive Back to Chandigarh", "Reach home by 6:30 PM thoroughly recharged for the work week ahead"],
           ],
         },
       },
@@ -330,7 +330,7 @@ export const landingPages: Record<string, LandingPageData> = {
       {
         question: "How far is Splendid View Rajgarh from Chandigarh?",
         answer:
-          "It is approximately 105 to 115 km from Chandigarh / Panchkula, which translates to a scenic 2.5 to 3.5 hour drive via Himalayan Expressway, Kumarhatti, and Giri Pul.",
+          "It is approximately 124 km from Chandigarh / Panchkula, which translates to a scenic 3:30 to 4:00 hour drive via Himalayan Expressway, Kumarhatti, and Giri Pul.",
       },
       {
         question: "Is it suitable for a quick single-night weekend trip?",
@@ -491,7 +491,7 @@ export const landingPages: Record<string, LandingPageData> = {
       {
         question: "How are the road conditions reaching offbeat Rajgarh?",
         answer:
-          "Unlike remote high-altitude offbeat valleys that require grueling 14-hour off-road journeys, Rajgarh is reached in just 2.5 to 3.5 hours from Chandigarh on smooth, paved state highways.",
+          "Unlike remote high-altitude offbeat valleys that require grueling 14-hour off-road journeys, Rajgarh is reached in 3:30 to 4:00 hours (124 km) from Chandigarh on smooth, paved state highways.",
       },
       {
         question: "Is Rajgarh suitable for long-term workations or creative writing?",
@@ -810,7 +810,7 @@ export const landingPages: Record<string, LandingPageData> = {
       {
         question: "How long does a 1-day trip from Chandigarh to Rajgarh take?",
         answer:
-          "Driving each way takes roughly 2.5 to 3.5 hours, leaving you with 5 to 6 generous hours to enjoy the mountains before heading back.",
+          "Driving each way takes roughly 3:30 to 4:00 hours (124 km), leaving you with generous hours to enjoy the mountains before heading back.",
       },
       {
         question: "Which places can I cover in a single day around Rajgarh?",
@@ -834,15 +834,15 @@ export const landingPages: Record<string, LandingPageData> = {
     slug: "stay-near-shimla",
     metaTitle: "Stay Near Shimla (Rajgarh) | Splendid View Eco Orchard Resort",
     metaDescription:
-      "Looking for a stay near Shimla? Escape the capital's crowds. Splendid View Rajgarh is ~55 km from Shimla, offering pure peace & Giri valley views.",
+      "Looking for a stay near Shimla? Escape the capital's crowds. Splendid View Rajgarh is 108 km (3:30–4:00 hours) from Shimla, offering pure peace & Giri valley views.",
     primaryKeyword: "Hotel in Shimla",
     secondaryKeywords: ["Stay near Shimla", "Resorts near Shimla", "Peaceful alternative to Shimla", "Places to stay near Shimla"],
     h1: "Looking for a Hotel in Shimla? Discover the Peaceful Alternative in Rajgarh",
     badge: "Honest Mountain Proximity",
     heroSubtitle:
-      "We are not in Shimla—and that is exactly why our guests love us. Located in serene Rajgarh (~55-70 km away), Splendid View offers zero traffic, pure pine air, and genuine tranquility.",
+      "We are not in Shimla—and that is exactly why our guests love us. Located in serene Rajgarh (108 km, ~3:30–4:00 hours away), Splendid View offers zero traffic, pure pine air, and genuine tranquility.",
     intro: [
-      "Let us be completely transparent with you: Splendid View Rajgarh is not located inside the municipal limits of Shimla city. We are proudly situated in Village Tikkari Tali in Tehsil Rajgarh, District Sirmour—approximately 55 to 70 km (about a 2 to 2.5 hour scenic drive) south-east of Shimla.",
+      "Let us be completely transparent with you: Splendid View Rajgarh is not located inside the municipal limits of Shimla city. We are proudly situated in Village Tikkari Tali in Tehsil Rajgarh, District Sirmour—approximately 108 km (about a 3:30 to 4:00 hour scenic drive) south-east of Shimla.",
       "So why do so many travelers searching for a 'hotel in Shimla' choose to stay with us instead? Because the reality of visiting Shimla today often means navigating congested narrow roads, struggling to find parking, paying inflated rates for crowded commercial rooms, and listening to city noise. Splendid View Rajgarh offers the idyllic mountain sanctuary travelers actually envisioned when dreaming of Himachal Pradesh.",
     ],
     sections: [
@@ -869,8 +869,8 @@ export const landingPages: Record<string, LandingPageData> = {
           "The drive between Rajgarh and Shimla takes you through picturesque hill routes via Kandaghat/Solan or the scenic Chhaila/Giri valley road, passing apple orchards and pine ridges.",
         ],
         bulletPoints: [
-          "Distance from Shimla: Approx. 55 to 70 km depending on route chosen.",
-          "Driving Time: Approximately 2 to 2.5 hours on scenic mountain roads.",
+          "Distance from Shimla: Approx. 108 km depending on route chosen.",
+          "Driving Time: Approximately 3:30 to 4:00 hours on scenic mountain roads.",
           "Best Route: Rajgarh -> Giri Pul -> Yashwant Nagar -> Solan bypass -> Kandaghat -> Shimla (or via Chhaila / Sainj).",
         ],
       },
@@ -885,7 +885,7 @@ export const landingPages: Record<string, LandingPageData> = {
       {
         question: "Is Splendid View located in Shimla?",
         answer:
-          "No. We are located in Rajgarh, District Sirmour, approximately 55-70 km (2 to 2.5 hours drive) from Shimla. We openly communicate this so guests know they are choosing a peaceful valley escape rather than a crowded city hotel.",
+          "No. We are located in Rajgarh, District Sirmour, approximately 108 km (3:30 to 4:00 hours drive) from Shimla. We openly communicate this so guests know they are choosing a peaceful valley escape rather than a crowded city hotel.",
       },
       {
         question: "Can I easily visit Shimla for sightseeing while staying at Rajgarh?",
@@ -895,7 +895,7 @@ export const landingPages: Record<string, LandingPageData> = {
       {
         question: "Is Rajgarh closer to Delhi and Chandigarh than Shimla?",
         answer:
-          "Yes! Rajgarh is reached in just 2.5 to 3.5 hours from Chandigarh (saving you from the heavy traffic on the upper Solan-Shimla highway) and about 6.5 to 7.5 hours from Delhi.",
+          "Yes! Rajgarh is reached in 3:30 to 4:00 hours (124 km) from Chandigarh (saving you from the heavy traffic on the upper Solan-Shimla highway) and about 7:30 to 8:00 hours (369 km) from Delhi.",
       },
     ],
     relatedLinks: [
