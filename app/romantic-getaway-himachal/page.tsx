@@ -16,7 +16,7 @@ export default function RomanticGetawayHimachalPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/rooms/room-balcony-view.svg"
+      heroImage="/resort-images/rooms/cottage-bedroom-master-bed.webp"
     />
   );
 }

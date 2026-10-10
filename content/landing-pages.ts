@@ -69,11 +69,11 @@ export const landingPages: Record<string, LandingPageData> = {
           "Every room at Splendid View Rajgarh is designed to maximize natural sunlight and spectacular landscape panoramas. We cater to couples seeking intimate quietude, small families wanting spacious layouts, and groups of friends exploring the offbeat trails of Himachal Pradesh.",
         ],
         table: {
-          headers: ["Room Category", "Ideal For", "Key Features", "View Highlights"],
+          headers: ["Accommodation Option", "Ideal For", "Key Features", "View Highlights"],
           rows: [
-            ["Deluxe Valley View Room", "Couples / Solo travelers", "King bed, private balcony, tea kettle", "Direct Giri valley & morning sunrise"],
-            ["Premium Balcony Suite", "Extended weekend getaways", "Corner terrace layout, sitting area", "180-degree orchard & mountain vistas"],
-            ["Family Valley Suite", "Families & close groups", "Double bedding, spacious living space", "Expansive panoramic valley & forest view"],
+            ["Private Valley View Cottage (1 Unit)", "Couples & Solo travelers", "Independent cottage, king bed, private balcony, tea kettle, ensuite bath", "Direct Giri valley & morning sunrise"],
+            ["Multiple Cottages (2–5 Units)", "Families & friend groups", "Side-by-side standalone cottages with private balconies and shared courtyard", "180-degree orchard & mountain vistas"],
+            ["Full Resort Booking (All 6 Cottages)", "Family reunions & corporate offsites", "Exclusive private resort access with lawn, dining hall, and bonfire pit", "Expansive panoramic valley & forest view from all cottages"],
           ],
         },
       },
@@ -264,7 +264,7 @@ export const landingPages: Record<string, LandingPageData> = {
     ],
     relatedLinks: [
       { label: "Step-by-Step Driving Guide", href: "/how-to-reach" },
-      { label: "Deluxe Valley Rooms", href: "/rooms/deluxe-valley-view-room" },
+      { label: "Valley View Cottages", href: "/rooms/valley-view-cottage" },
       { label: "Summer Getaways in Himachal", href: "/summer-getaway-himachal" },
       { label: "Weekend Packages Overview", href: "/weekend-packages" },
     ],
@@ -374,7 +374,7 @@ export const landingPages: Record<string, LandingPageData> = {
       {
         title: "What Makes Splendid View an Ideal Couple Retreat",
         content: [
-          "Our resort was deliberately conceived to emphasize privacy, natural beauty, and comfort. From our spacious Deluxe Valley View Rooms to the Premium Balcony Suite, every detail encourages couples to relax and reconnect in nature.",
+          "Our resort was deliberately conceived to emphasize privacy, natural beauty, and comfort. From our standalone private valley-facing cottages with individual balconies to peaceful orchard surroundings, every detail encourages couples to relax and reconnect in nature.",
         ],
         bulletPoints: [
           "Private Panoramic Balconies: Unobstructed views of the Giri valley where you can spend peaceful hours together without crowds.",
@@ -396,9 +396,9 @@ export const landingPages: Record<string, LandingPageData> = {
         ],
       },
       {
-        title: "Premium Balcony Suite: Crafted for Romance",
+        title: "Private Valley-Facing Cottages: Crafted for Romance",
         content: [
-          "Our Premium Balcony Suite offers an expansive corner layout with wrap-around windows, providing unmatched views of the valley. With ample lounging space, comfortable king bedding, and modern ensuite comforts, it represents the perfect retreat for couples looking to celebrate a special occasion.",
+          "Our standalone hillside cottages offer private balconies with wrap-around sightlines, providing unmatched views of the Giri valley. With cozy wooden interiors, comfortable king bedding, and modern ensuite comforts, they represent the perfect sanctuary for couples looking to celebrate a special occasion in peaceful seclusion.",
         ],
       },
     ],
@@ -420,7 +420,7 @@ export const landingPages: Record<string, LandingPageData> = {
       },
     ],
     relatedLinks: [
-      { label: "Explore Premium Balcony Suite", href: "/rooms/premium-balcony-suite" },
+      { label: "Explore Valley View Cottage", href: "/rooms/valley-view-cottage" },
       { label: "Photo Gallery & Views", href: "/gallery" },
       { label: "Contact for Couple Reservations", href: "/contact" },
       { label: "Rajgarh Peach Valley Guide", href: "/rajgarh-peach-valley" },
@@ -625,12 +625,12 @@ export const landingPages: Record<string, LandingPageData> = {
         table: {
           headers: ["Feature / Inclusions", "Standard Weekend Stay", "Tailored Group Package"],
           rows: [
-            ["Accommodation", "Deluxe Room / Premium Suite with valley balcony", "Multiple rooms / interconnected family suites"],
+            ["Accommodation", "Private Valley View Cottage with balcony", "Multiple independent cottages for group exclusivity"],
             ["Dining Options", "Fresh homestyle Breakfast & Dinner included", "Customizable full-board meal plans (Veg & Non-Veg)"],
             ["Bonfire Experience", "Complimentary evening bonfire (1 night)", "Arranged on request with mountain snacks"],
             ["Nature Walks", "Self-guided or assisted village orchard walk", "Curated Giri river excursion and local heritage trail"],
             ["Connectivity & Comfort", "High-speed Wi-Fi, 24/7 hot water, secure parking", "High-speed Wi-Fi, 24/7 hot water, secure parking"],
-            ["Pricing", "{{TODO: Contact directly for customized tariff}}", "{{TODO: Special group discounts on direct booking}}"],
+            ["Pricing", "Contact directly for customized tariff & season specials", "Special group discounts on direct booking"],
           ],
         },
       },
@@ -659,8 +659,8 @@ export const landingPages: Record<string, LandingPageData> = {
       },
     ],
     relatedLinks: [
-      { label: "Deluxe Valley View Room", href: "/rooms/deluxe-valley-view-room" },
-      { label: "Family Valley Suite", href: "/rooms/family-valley-suite" },
+      { label: "Valley View Cottages", href: "/rooms/valley-view-cottage" },
+      { label: "Resort Photo Gallery", href: "/gallery" },
       { label: "Weekend Getaway from Delhi", href: "/weekend-getaway-from-delhi" },
       { label: "Contact for Package Quotes", href: "/contact" },
     ],
@@ -738,7 +738,7 @@ export const landingPages: Record<string, LandingPageData> = {
       },
     ],
     relatedLinks: [
-      { label: "Family Valley Suite", href: "/rooms/family-valley-suite" },
+      { label: "Valley View Cottages", href: "/rooms/valley-view-cottage" },
       { label: "Rajgarh Peach Valley Guide", href: "/rajgarh-peach-valley" },
       { label: "Things to Do Around Rajgarh", href: "/experiences" },
       { label: "Contact for Summer Reservations", href: "/contact" },
@@ -822,7 +822,7 @@ export const landingPages: Record<string, LandingPageData> = {
       { label: "Local Experiences Guide", href: "/experiences" },
       { label: "Driving Routes & Distances", href: "/how-to-reach" },
       { label: "Weekend Packages", href: "/weekend-packages" },
-      { label: "Deluxe Valley View Rooms", href: "/rooms/deluxe-valley-view-room" },
+      { label: "Valley View Cottages", href: "/rooms/valley-view-cottage" },
     ],
     cta: {
       heading: "Plan Your Day Outing or Overnight Stay",

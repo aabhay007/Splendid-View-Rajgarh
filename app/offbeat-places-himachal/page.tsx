@@ -16,7 +16,7 @@ export default function OffbeatPlacesHimachalPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/gallery/churdhar-mountain.svg"
+      heroImage="/resort-images/guide/rajgarh-pine-valley-hamlet.jpeg"
     />
   );
 }

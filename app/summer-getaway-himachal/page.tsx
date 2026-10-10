@@ -16,7 +16,7 @@ export default function SummerGetawayHimachalPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/gallery/giri-river.svg"
+      heroImage="/resort-images/gallery/guests-forest-hiking-trail.webp"
     />
   );
 }

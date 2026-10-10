@@ -3,7 +3,6 @@
 import React, { useActionState } from "react";
 import { submitEnquiryAction, EnquiryState } from "@/lib/actions/enquiry";
 import { businessDetails } from "@/content/business";
-import { rooms } from "@/content/rooms";
 import {
   PhoneIcon,
   WhatsAppIcon,
@@ -192,13 +191,13 @@ export function EnquiryForm({ defaultRoom }: { defaultRoom?: string }) {
             </div>
           </div>
 
-          {/* Room Category Selection */}
+          {/* Accommodation Selection */}
           <div>
             <label
               htmlFor="roomType"
               className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5"
             >
-              Interested Room Category
+              Accommodation Preference
             </label>
             <select
               id="roomType"
@@ -206,12 +205,16 @@ export function EnquiryForm({ defaultRoom }: { defaultRoom?: string }) {
               defaultValue={defaultRoom || ""}
               className="w-full px-4 py-3 rounded-xl border border-warm-300 focus:border-forest-700 focus:ring-2 focus:ring-forest-700/20 text-sm text-forest-950 transition-all bg-warm-50/50"
             >
-              <option value="">Any available room / Not decided</option>
-              {rooms.map((room) => (
-                <option key={room.slug} value={room.name}>
-                  {room.name}
-                </option>
-              ))}
+              <option value="">Any available cottage / Not decided</option>
+              <option value="Private Valley View Cottage (1 Cottage)">
+                Private Valley View Cottage (1 Cottage)
+              </option>
+              <option value="Multiple Cottages (Family / Group Stay)">
+                Multiple Cottages (Family / Group Stay)
+              </option>
+              <option value="Full Resort Booking (All 6 Cottages)">
+                Full Resort Booking (All 6 Cottages)
+              </option>
             </select>
           </div>
 

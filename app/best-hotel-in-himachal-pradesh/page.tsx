@@ -16,7 +16,7 @@ export default function BestHotelInHimachalPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/gallery/mountain-sunset.svg"
+      heroImage="/resort-images/home/resort-peach-orchards-drone-aerial-view.webp"
     />
   );
 }

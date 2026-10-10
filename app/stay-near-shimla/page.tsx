@@ -16,7 +16,7 @@ export default function StayNearShimlaPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/hero/resort-panoramic-view.svg"
+      heroImage="/resort-images/home/six-cottages-hillside-drone-view.jpeg"
     />
   );
 }

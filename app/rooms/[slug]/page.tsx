@@ -8,14 +8,12 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { getHotelRoomSchema } from "@/lib/seo/schema";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
-import { RoomCard } from "@/components/ui/RoomCard";
 import {
   UsersIcon,
   BedIcon,
   CheckIcon,
   PhoneIcon,
   WhatsAppIcon,
-  MountainIcon,
 } from "@/components/ui/icons";
 
 interface RoomPageProps {
@@ -59,8 +57,6 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
     `Hello Splendid View! I would like to inquire about availability and seasonal tariffs for the "${room.name}".`
   )}`;
 
-  const otherRooms = rooms.filter((r) => r.slug !== room.slug);
-
   return (
     <>
       <JsonLd data={getHotelRoomSchema(room)} />
@@ -69,17 +65,13 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs
             items={[
-              { name: "Rooms & Suites", href: "/rooms" },
+              { name: "Cottages & Rooms", href: "/rooms" },
               { name: room.name, href: `/rooms/${room.slug}` },
             ]}
           />
 
           {/* Heading */}
           <div className="my-8 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-800 text-xs font-semibold">
-              <MountainIcon className="w-3.5 h-3.5" />
-              <span>{room.view}</span>
-            </div>
             <h1 className="font-serif text-3xl sm:text-5xl font-bold text-forest-950">
               {room.name}
             </h1>
@@ -223,15 +215,107 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
             </div>
           </div>
 
-          {/* Related / Other Rooms */}
+          {/* Resort Highlights & Property Showcase */}
           <div className="border-t border-warm-200 pt-16">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-forest-950 mb-8">
-              Explore Other Rooms & Suites
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {otherRooms.map((r) => (
-                <RoomCard key={r.slug} room={r} />
-              ))}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+              <div>
+                <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
+                  Resort Experience
+                </span>
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-forest-950">
+                  Resort Grounds & Surrounding Highlights
+                </h2>
+              </div>
+              <div className="flex gap-4 text-xs font-semibold text-forest-900">
+                <a href="/gallery" className="hover:text-peach-600 transition-colors">
+                  View Full Gallery &rarr;
+                </a>
+                <a href="/amenities" className="hover:text-peach-600 transition-colors">
+                  Explore Amenities &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
+                  <Image
+                    src="/resort-images/home/six-standalone-cottages-row.jpeg"
+                    alt="6 hillside cottages along the mountain ridge"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-3.5">
+                  <h3 className="font-serif text-sm font-bold text-forest-950">
+                    All 6 Hillside Cottages
+                  </h3>
+                  <p className="text-[11px] text-warm-600 mt-0.5">
+                    Individual standalone cottages perched overlooking Giri valley
+                  </p>
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
+                  <Image
+                    src="/resort-images/home/resort-peach-orchards-drone-aerial-view.webp"
+                    alt="Aerial view of resort and orchards"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-3.5">
+                  <h3 className="font-serif text-sm font-bold text-forest-950">
+                    Peach Orchards & Pines
+                  </h3>
+                  <p className="text-[11px] text-warm-600 mt-0.5">
+                    Surrounded by fruit orchards and protected mountain slopes
+                  </p>
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
+                  <Image
+                    src="/resort-images/restarunt/dining-table-valley-view-setup.jpeg"
+                    alt="Homestyle mountain dining restaurant"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-3.5">
+                  <h3 className="font-serif text-sm font-bold text-forest-950">
+                    Homestyle Dining Hall
+                  </h3>
+                  <p className="text-[11px] text-warm-600 mt-0.5">
+                    Wholesome North Indian and local Himachali food cooked fresh
+                  </p>
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
+                  <Image
+                    src="/resort-images/amenties/bonfire/evening-bonfire-pit-gathering.webp"
+                    alt="Evening bonfire at the resort"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-3.5">
+                  <h3 className="font-serif text-sm font-bold text-forest-950">
+                    Crackling Evening Bonfire
+                  </h3>
+                  <p className="text-[11px] text-warm-600 mt-0.5">
+                    Gather around the mountain fire pit under starry Himalayan skies
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

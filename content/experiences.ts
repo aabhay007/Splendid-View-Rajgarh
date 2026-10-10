@@ -27,7 +27,7 @@ export const experiencesList: ExperienceItem[] = [
       "Gentle, family-friendly walks amidst terraced mountain slopes",
     ],
     tips: "Visit between late March and April for blossoms, or June to July for fresh fruit harvest.",
-    image: "/images/gallery/peach-orchard.svg",
+    image: "/resort-images/home/resort-peach-orchards-drone-aerial-view.webp",
   },
   {
     slug: "giri-river-valley",
@@ -44,7 +44,7 @@ export const experiencesList: ExperienceItem[] = [
       "Scenic mountain drive descending from Rajgarh ridgeline",
     ],
     tips: "Carry comfortable footwear with grip; remember to carry back all trash to keep the river pristine.",
-    image: "/images/gallery/giri-river.svg",
+    image: "/resort-images/gallery/guests-forest-hiking-trail.webp",
   },
   {
     slug: "baru-sahib-valley-of-peace",
@@ -61,7 +61,7 @@ export const experiencesList: ExperienceItem[] = [
       "Picturesque mountain drive traversing scenic Sirmour passes",
     ],
     tips: "Dress modestly and cover your head when entering the Gurdwara complex. Early mornings offer utmost peace.",
-    image: "/images/gallery/baru-sahib.svg",
+    image: "/resort-images/guide/rajgarh-pine-valley-hamlet.jpeg",
   },
   {
     slug: "churdhar-peak-trekking",
@@ -78,7 +78,7 @@ export const experiencesList: ExperienceItem[] = [
       "Ancient mountain temple of Shirgul Maharaj at the summit",
     ],
     tips: "Ensure proper trekking shoes and warm windproof layers. Check local weather before setting out.",
-    image: "/images/gallery/churdhar-mountain.svg",
+    image: "/resort-images/gallery/friends-pine-forest-nature-trek.webp",
   },
   {
     slug: "village-heritage-walk-tikkari-tali",
@@ -95,23 +95,23 @@ export const experiencesList: ExperienceItem[] = [
       "Zero vehicle traffic along winding stone walking trails",
     ],
     tips: "Best enjoyed in the golden hour just before sunset when soft light bathes the entire valley.",
-    image: "/images/gallery/village-walk.svg",
+    image: "/resort-images/gallery/guests-planting-trees-rajgarh.webp",
   },
   {
     slug: "himalayan-night-stargazing",
-    title: "Pristine Himalayan Stargazing",
-    tagline: "Clear dark skies unmarred by city smog or light pollution",
+    title: "Pristine Himalayan Stargazing & Bonfire",
+    tagline: "Clear dark skies and warm crackling fire unmarred by city smog",
     category: "Relaxation",
     approxDistance: "Resort lawn and private balconies",
     duration: "Evening onwards",
     description:
-      "Far removed from the light domes of Delhi, Chandigarh, or even Shimla, nightfall over Rajgarh reveals a dazzling tapestry of stars. On clear moonless nights, trace the Milky Way arching across the valley, spot passing satellites, and enjoy an astronomical spectacle rarely seen from urban centers.",
+      "Far removed from the light domes of Delhi, Chandigarh, or even Shimla, nightfall over Rajgarh reveals a dazzling tapestry of stars. Gather around the open brick fire pit on crisp evenings, trace constellations arching across the valley, and enjoy deep mountain quiet.",
     highlights: [
       "Crystal clear mountain visibility with minimal light pollution",
-      "Watch meteor showers and bright constellation formations",
+      "Warm crackling wood fire on the stone terrace",
       "Pair with a warm cup of herbal tea from your balcony",
     ],
     tips: "Download an offline stargazing app (like Stellarium) to identify constellations right from the terrace.",
-    image: "/images/gallery/stargazing-night.svg",
+    image: "/resort-images/amenties/bonfire/evening-bonfire-pit-gathering.webp",
   },
 ];

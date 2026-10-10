@@ -16,7 +16,7 @@ export default function RajgarhPeachValleyPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/gallery/peach-orchard.svg"
+      heroImage="/resort-images/home/resort-peach-orchards-drone-aerial-view.webp"
     />
   );
 }

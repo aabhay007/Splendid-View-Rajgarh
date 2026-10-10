@@ -24,12 +24,14 @@ export function constructMetadata({
   path,
   keywords,
   ogType = "website",
-  image = "/images/hero/resort-cottages.webp",
+  image = "/resort-images/home/resort-peach-orchards-drone-aerial-view.webp",
   noIndex = false,
 }: MetadataParams): Metadata {
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
   const canonicalUrl = `${SITE_URL}${cleanPath === "/" ? "" : cleanPath}`;
-  const fullImageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`;
+  const fullImageUrl = image.startsWith("http")
+    ? image
+    : `${SITE_URL}${encodeURI(image)}`;
 
   const defaultKeywords = [
     "Splendid View Eco Orchard Resort",

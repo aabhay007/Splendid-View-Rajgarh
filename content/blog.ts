@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     author: "Splendid View Editorial Team",
     category: "Travel Guides",
     tags: ["Rajgarh", "Himachal Pradesh", "Weekend Getaway", "Offbeat Travel"],
-    coverImage: "/images/blog/rajgarh-valley-secret.svg",
+    coverImage: "/resort-images/home/resort-cottages-and-dining-overview.jpeg",
     content: [
       {
         sectionHeading: "Beyond the Tourist Crowds",
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     author: "Splendid View Editorial Team",
     category: "Agro-Tourism",
     tags: ["Peach Blossom", "Agro-Tourism", "Rajgarh", "Himachal Orchards"],
-    coverImage: "/images/blog/peach-bowl-asia.svg",
+    coverImage: "/resort-images/home/resort-peach-orchards-drone-aerial-view.webp",
     content: [
       {
         sectionHeading: "Why Rajgarh is the Peach Bowl of Asia",
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     author: "Splendid View Editorial Team",
     category: "Road Trips",
     tags: ["Delhi to Himachal", "Road Trip", "Driving Tips", "Travel Route"],
-    coverImage: "/images/blog/delhi-rajgarh-roadtrip.svg",
+    coverImage: "/resort-images/home/cottages-stone-pathway-orchard-view.webp",
     content: [
       {
         sectionHeading: "Planning the Perfect Delhi-to-Rajgarh Drive",

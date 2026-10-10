@@ -16,7 +16,7 @@ export default function OneDayTripNearRajgarhPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/gallery/village-walk.svg"
+      heroImage="/resort-images/gallery/friends-pine-forest-nature-trek.webp"
     />
   );
 }

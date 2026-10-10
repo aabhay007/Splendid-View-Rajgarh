@@ -16,7 +16,7 @@ export default function ResortInRajgarhPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/hero/resort-panoramic-view.svg"
+      heroImage="/resort-images/home/resort-peach-orchards-drone-aerial-view.webp"
     />
   );
 }

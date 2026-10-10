@@ -16,7 +16,7 @@ export default function WeekendGetawayFromDelhiPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/blog/delhi-rajgarh-roadtrip.svg"
+      heroImage="/resort-images/home/cottages-stone-pathway-orchard-view.webp"
     />
   );
 }

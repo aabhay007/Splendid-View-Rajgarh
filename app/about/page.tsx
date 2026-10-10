@@ -45,8 +45,8 @@ export default function AboutPage() {
         {/* Feature Image Banner */}
         <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 shadow-lg bg-warm-200">
           <Image
-            src="/images/hero/resort-panoramic-view.svg"
-            alt="Splendid View Rajgarh mountain panorama overlooking Giri valley"
+            src="/resort-images/home/resort-cottages-and-dining-overview.jpeg"
+            alt="Splendid View Rajgarh full resort grounds overlooking Giri valley"
             fill
             priority
             sizes="100vw"

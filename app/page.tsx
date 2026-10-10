@@ -2,14 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { businessDetails } from "@/content/business";
-import { rooms } from "@/content/rooms";
 import { amenitiesList } from "@/content/amenities";
 import { experiencesList } from "@/content/experiences";
 import { masterFaqList } from "@/content/faq";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getResortSchema, getFaqSchema } from "@/lib/seo/schema";
 import { constructMetadata } from "@/lib/seo/metadata";
-import { RoomCard } from "@/components/ui/RoomCard";
 import { AmenityCard } from "@/components/ui/AmenityCard";
 import { ExperienceCard } from "@/components/ui/ExperienceCard";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
@@ -133,12 +131,12 @@ export default function HomePage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/hero/resort-cottages.webp"
-              alt="Splendid View Eco Orchard Resort - Hillside Cottages with Alpine Pine Roofs overlooking Giri Valley"
+              alt="Splendid View Eco Orchard Resort - Hillside Cottages overlooking Giri Valley"
               fill
               priority
-              quality={95}
+              quality={90}
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-cover object-center scale-105 animate-subtle-zoom"
             />
             {/* Soft, minimal gradient overlay on desktop */}
             <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-black/20 to-black/25" />
@@ -267,36 +265,186 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. ROOMS SHOWCASE */}
+      {/* 3. COTTAGES SHOWCASE */}
       <section className="py-16 sm:py-20 bg-warm-100/60 border-y border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div className="space-y-2">
               <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
-                Accommodation
+                Hillside Accommodation
               </span>
               <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
-                Valley-Facing Rooms & Suites
+                Private Valley-Facing Cottages
               </h2>
               <p className="text-sm sm:text-base text-warm-700 max-w-xl">
-                Every room is designed with private balconies, large picture
-                windows, and modern comforts to frame the breathtaking mountain
-                panoramas.
+                All 6 of our hillside cottages are independent units featuring private
+                balconies, warm wooden interiors, and panoramic Giri river valley vistas.
               </p>
             </div>
             <Link
               href="/rooms"
               className="inline-flex items-center gap-2 text-forest-900 font-semibold text-sm hover:text-peach-600 transition-colors group"
             >
-              <span>View All Rooms</span>
+              <span>Explore All Cottages & Rates</span>
               <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {rooms.map((room) => (
-              <RoomCard key={room.slug} room={room} />
-            ))}
+          {/* Cottage Feature Card */}
+          <div className="bg-white rounded-3xl border border-warm-200/90 shadow-sm overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+              {/* Visuals (Left 7 Cols) */}
+              <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-warm-100 shadow-sm mb-4">
+                    <Image
+                      src="/resort-images/rooms/cottage-bedroom-master-bed.webp"
+                      alt="Private Valley View Cottage interior at Splendid View Rajgarh"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Thumbnails */}
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-warm-200 shadow-xs">
+                      <Image
+                        src="/resort-images/rooms/cottage-bedroom-panoramic-view.webp"
+                        alt="High sloped ceiling cottage interior"
+                        fill
+                        sizes="20vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-warm-200 shadow-xs">
+                      <Image
+                        src="/resort-images/home/two-cottages-balconies-sitout.jpeg"
+                        alt="Private balcony and stone sit-out courtyard"
+                        fill
+                        sizes="20vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-warm-200 shadow-xs">
+                      <Image
+                        src="/resort-images/home/six-standalone-cottages-row.jpeg"
+                        alt="All 6 hillside cottages along the ridge"
+                        fill
+                        sizes="20vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Specs */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-6 pt-6 border-t border-warm-100 text-xs text-warm-800">
+                  <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
+                    <CheckIcon className="w-4 h-4 text-forest-700 shrink-0" />
+                    <span className="truncate">2–3 Guests / Cottage</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
+                    <CheckIcon className="w-4 h-4 text-forest-700 shrink-0" />
+                    <span className="truncate">King / Queen Bed</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
+                    <CheckIcon className="w-4 h-4 text-forest-700 shrink-0" />
+                    <span className="truncate">24/7 Hot Water</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
+                    <CheckIcon className="w-4 h-4 text-forest-700 shrink-0" />
+                    <span className="truncate">High-Speed Wi-Fi</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content & Actions (Right 5 Cols) */}
+              <div className="lg:col-span-5 p-6 sm:p-8 bg-warm-50/40 lg:border-l border-warm-200/80 flex flex-col justify-between space-y-6">
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
+                      Independent Hillside Stay
+                    </span>
+                    <h3 className="font-serif text-2xl font-bold text-forest-950 mt-1">
+                      Private Valley View Cottage
+                    </h3>
+                    <p className="text-xs text-peach-700 font-medium mt-1">
+                      Standalone cottage with private sit-out balcony overlooking Giri Valley
+                    </p>
+                  </div>
+
+                  <p className="text-sm text-warm-700 leading-relaxed">
+                    Surrounded by peach orchards and pine forests, every cottage combines
+                    natural Himalayan timber warmth with modern essentials. Wake up to golden
+                    mountain sunrises, sip morning tea on your private balcony, and unwind
+                    in total hill peace.
+                  </p>
+
+                  <div className="space-y-2 pt-1">
+                    <h4 className="font-serif text-xs font-bold text-forest-950 uppercase tracking-wider">
+                      Included Cottage Amenities:
+                    </h4>
+                    <div className="grid grid-cols-2 gap-2 text-xs text-warm-700">
+                      <span className="flex items-center gap-1.5">
+                        <CheckIcon className="w-3.5 h-3.5 text-forest-700" />
+                        Private Balcony
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckIcon className="w-3.5 h-3.5 text-forest-700" />
+                        Ensuite Bathroom
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckIcon className="w-3.5 h-3.5 text-forest-700" />
+                        Flat Screen TV
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckIcon className="w-3.5 h-3.5 text-forest-700" />
+                        Tea & Coffee Kettle
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckIcon className="w-3.5 h-3.5 text-forest-700" />
+                        Work / Study Desk
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckIcon className="w-3.5 h-3.5 text-forest-700" />
+                        Direct Room Service
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-3.5 rounded-xl bg-forest-950 text-warm-100 text-xs space-y-1">
+                    <strong className="text-white block font-semibold">
+                      6 Standalone Cottages on Property
+                    </strong>
+                    <p className="text-[11px] text-warm-200">
+                      Book a single cottage for couples or reserve multiple cottages for family reunions and friend trips.
+                    </p>
+                  </div>
+                </div>
+
+                {/* CTAs */}
+                <div className="pt-2 border-t border-warm-200/80 flex flex-wrap gap-2.5">
+                  <Link
+                    href="/rooms"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-forest-900 text-white font-semibold text-xs py-3 px-4 rounded-xl hover:bg-forest-800 transition-colors"
+                  >
+                    <span>View Cottage Details & Tariffs</span>
+                    <ArrowRightIcon className="w-3.5 h-3.5" />
+                  </Link>
+
+                  <a
+                    href={businessDetails.whatsapp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center p-3 bg-[#25D366] text-white rounded-xl hover:bg-[#20bd5a] transition-colors"
+                    aria-label="Inquire about cottages on WhatsApp"
+                  >
+                    <WhatsAppIcon className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

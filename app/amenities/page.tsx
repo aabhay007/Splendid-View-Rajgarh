@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { constructMetadata } from "@/lib/seo/metadata";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { AmenityCard } from "@/components/ui/AmenityCard";
@@ -10,6 +11,7 @@ export const metadata = constructMetadata({
   description:
     "Explore amenities at Splendid View Eco Orchard Resort: private valley-facing cottage balconies, homestyle Himachali dining, evening bonfires, lush lawns, hot water & high-speed Wi-Fi.",
   path: "/amenities",
+  image: "/resort-images/home/resort-peach-orchards-drone-aerial-view.webp",
   keywords: [
     "Eco resort amenities Rajgarh",
     "Facilities Splendid View Eco Orchard Resort",
@@ -43,6 +45,61 @@ export default function AmenitiesPage() {
             reliable Wi-Fi, discover the comforts that make Splendid View Rajgarh
             your home in the Himalayas.
           </p>
+        </div>
+
+        {/* Real Amenity Photo Highlights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+          <div className="relative aspect-[16/11] rounded-2xl overflow-hidden shadow-xs bg-warm-200 group">
+            <Image
+              src="/resort-images/amenties/bonfire/evening-bonfire-pit-gathering.webp"
+              alt="Guests gathering around evening bonfire"
+              fill
+              sizes="(max-width: 640px) 100vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3.5">
+              <span className="text-white text-xs font-semibold">Evening Campfire Pit</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[16/11] rounded-2xl overflow-hidden shadow-xs bg-warm-200 group">
+            <Image
+              src="/resort-images/restarunt/dining-table-valley-view-setup.jpeg"
+              alt="Homestyle mountain dining restaurant"
+              fill
+              sizes="(max-width: 640px) 100vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3.5">
+              <span className="text-white text-xs font-semibold">Homestyle Dining Hall</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[16/11] rounded-2xl overflow-hidden shadow-xs bg-warm-200 group">
+            <Image
+              src="/resort-images/home/two-cottages-balconies-sitout.jpeg"
+              alt="Private cottage balconies and sit-out terrace"
+              fill
+              sizes="(max-width: 640px) 100vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3.5">
+              <span className="text-white text-xs font-semibold">Private Valley Balconies</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[16/11] rounded-2xl overflow-hidden shadow-xs bg-warm-200 group">
+            <Image
+              src="/resort-images/home/resort-peach-orchards-drone-aerial-view.webp"
+              alt="Surrounding peach orchards and mountain trails"
+              fill
+              sizes="(max-width: 640px) 100vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3.5">
+              <span className="text-white text-xs font-semibold">Peach Orchards & Trails</span>
+            </div>
+          </div>
         </div>
 
         {/* Section 1: Property & Outdoors */}

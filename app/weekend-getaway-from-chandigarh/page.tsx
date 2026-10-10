@@ -16,7 +16,7 @@ export default function WeekendGetawayFromChandigarhPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/gallery/giri-river.svg"
+      heroImage="/resort-images/home/resort-cottages-and-dining-overview.jpeg"
     />
   );
 }

@@ -52,6 +52,22 @@ export const legacyRedirects: LegacyRedirect[] = [
     destination: "/how-to-reach",
     permanent: true,
   },
+  // Legacy room category redirects to unified cottage page
+  {
+    source: "/rooms/deluxe-valley-view-room",
+    destination: "/rooms/valley-view-cottage",
+    permanent: true,
+  },
+  {
+    source: "/rooms/premium-balcony-suite",
+    destination: "/rooms/valley-view-cottage",
+    permanent: true,
+  },
+  {
+    source: "/rooms/family-valley-suite",
+    destination: "/rooms/valley-view-cottage",
+    permanent: true,
+  },
   // Add any specific old blog posts or WordPress category URLs here:
   // {
   //   source: "/old-blog-post-slug",

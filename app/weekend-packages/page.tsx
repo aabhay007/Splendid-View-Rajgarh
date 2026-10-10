@@ -16,7 +16,7 @@ export default function WeekendPackagesPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/images/rooms/family-valley-suite.svg"
+      heroImage="/resort-images/home/six-standalone-cottages-row.jpeg"
     />
   );
 }

@@ -21,9 +21,9 @@ export function getResortSchema() {
     telephone: businessDetails.phones,
     priceRange: businessDetails.pricing.priceRangePlaceholder,
     image: [
-      `${SITE_URL}/images/hero/resort-panoramic-view.svg`,
-      `${SITE_URL}/images/rooms/deluxe-valley-view.svg`,
-      `${SITE_URL}/images/gallery/giri-river.svg`,
+      `${SITE_URL}/resort-images/home/resort-peach-orchards-drone-aerial-view.webp`,
+      `${SITE_URL}/resort-images/rooms/cottage-bedroom-master-bed.webp`,
+      `${SITE_URL}/resort-images/gallery/guests-forest-hiking-trail.webp`,
     ],
     address: {
       "@type": "PostalAddress",
