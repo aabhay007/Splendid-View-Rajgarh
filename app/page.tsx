@@ -18,7 +18,68 @@ import {
   MapPinIcon,
   ArrowRightIcon,
   CheckIcon,
+  StarIcon,
+  GoogleIcon,
+  UsersIcon,
+  BedIcon,
+  DropletIcon,
+  MountainIcon,
+  UtensilsIcon,
+  FlameIcon,
+  WifiIcon,
+  CarIcon,
 } from "@/components/ui/icons";
+
+function getAmenityIcon(iconName: string) {
+  switch (iconName) {
+    case "mountain":
+      return <MountainIcon className="w-4 h-4 text-forest-700" />;
+    case "utensils":
+      return <UtensilsIcon className="w-4 h-4 text-forest-700" />;
+    case "flame":
+      return <FlameIcon className="w-4 h-4 text-peach-600" />;
+    case "wifi":
+      return <WifiIcon className="w-4 h-4 text-forest-700" />;
+    case "car":
+      return <CarIcon className="w-4 h-4 text-forest-700" />;
+    case "droplet":
+      return <DropletIcon className="w-4 h-4 text-sky-600" />;
+    default:
+      return <MountainIcon className="w-4 h-4 text-forest-700" />;
+  }
+}
+import { googleReviewsList } from "@/content/reviews";
+import { CottageImageSlider } from "@/components/ui/CottageImageSlider";
+import { ReviewsSlider } from "@/components/ui/ReviewsSlider";
+
+const cottageImages = [
+  {
+    src: "/resort-images/rooms/cottage-bedroom-master-bed.webp",
+    alt: "Master bedroom in wooden hillside cottage",
+    title: "Master Bedroom & King Bed",
+  },
+  {
+    src: "/resort-images/rooms/cottage-bedroom-panoramic-view.webp",
+    alt: "Valley window panoramic view from cottage bed",
+    title: "Panoramic Valley View Window",
+  },
+  {
+    src: "/resort-images/home/two-cottages-balconies-sitout.jpeg",
+    alt: "Private balcony and stone sit-out courtyard",
+    title: "Private Balconies & Sit-Out",
+  },
+  {
+    src: "/resort-images/views/Sunrise-view.jpeg",
+    alt: "Private balcony and stone sit-out courtyard",
+    title: "Private Balconies & Sit-Out",
+  },
+  {
+    src: "/resort-images/views/Morning-view.jpeg",
+    alt: "Row of 6 standalone Swiss cottages amidst orchards",
+    title: "6 Standalone Cottages on Ridge",
+  },
+];
+
 
 export const metadata = constructMetadata({
   title: "Splendid View Eco Orchard Resort | Resort in Rajgarh Himachal Pradesh",
@@ -197,90 +258,158 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. VALUE PROPOSITION & TRANQUILITY HIGHLIGHTS */}
-      <section className="py-16 sm:py-20 bg-warm-50">
+      {/* 2. ABOUT SPLENDID VIEW (WHAT WE HAVE IN ABOUT PAGE) */}
+      <section className="py-12 sm:py-20 bg-warm-50 border-t border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
+          <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
             <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
-              Escape The Commercial Noise
+              Our Mountain Sanctuary • 7,000 Ft Elevation
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
-              Why Discerning Travelers Choose Rajgarh
+              About Splendid View Rajgarh
             </h2>
-            <p className="text-sm sm:text-base text-warm-700 leading-relaxed">
-              Unlike congested tourist hubs, Rajgarh in District Sirmour retains
-              its pristine natural charm, clean mountain air, and peaceful agrarian
-              tranquility.
+            <p className="text-sm sm:text-base text-olive-800 leading-relaxed">
+              Splendid View (Eco Orchard Resort) is more than a resort amidst a 6-acre orchard property of
+              apple, peach, apricot, pears, and cherries. It is situated at an altitude of 7,000 ft in the lap
+              of the famous Shirgul Maharaj temple peak Churdhar on Habban Road, 21 km from Rajgarh, Distt. Sirmour, H.P.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 border border-warm-200/90 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-forest-100 text-forest-800 flex items-center justify-center font-bold text-lg">
-                01
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Visual Overview */}
+            <div className="lg:col-span-6 space-y-4">
+              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-md bg-warm-200">
+                <Image
+                  src="/resort-images/home/resort-cottages-and-dining-overview.jpeg"
+                  alt="Splendid View Rajgarh full resort grounds overlooking Giri valley"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
+                  <span className="bg-forest-950/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 font-medium">
+                    Altitude: 7,000 ft • Churdhar Lap
+                  </span>
+                  <span className="bg-peach-700/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 font-medium">
+                    6 Acres Fruit Orchards
+                  </span>
+                </div>
               </div>
-              <h3 className="font-serif text-xl font-bold text-forest-950">
-                180° Panoramic Giri Valley Views
-              </h3>
-              <p className="text-sm text-warm-700 leading-relaxed">
-                Positioned on an elevated ridge in Village Tikkari Tali, every
-                room features a private balcony overlooking the dramatic Giri
-                river valley and rolling Himalayan pine ridges.
-              </p>
+
+              {/* Property Overview Badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center text-xs">
+                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
+                  <strong className="block text-forest-950 font-bold text-sm">7,000 ft</strong>
+                  <span className="text-warm-600 text-[11px]">Elevation</span>
+                </div>
+                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
+                  <strong className="block text-forest-950 font-bold text-sm">6 Acres</strong>
+                  <span className="text-warm-600 text-[11px]">Fruit Orchards</span>
+                </div>
+                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
+                  <strong className="block text-forest-950 font-bold text-sm">6 Units</strong>
+                  <span className="text-warm-600 text-[11px]">Swiss Cottages</span>
+                </div>
+                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
+                  <strong className="block text-forest-950 font-bold text-sm">180° Views</strong>
+                  <span className="text-warm-600 text-[11px]">Giri River Valley</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 border border-warm-200/90 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-forest-100 text-forest-800 flex items-center justify-center font-bold text-lg">
-                02
+            {/* Story & Guiding Hospitality Pillars */}
+            <div className="lg:col-span-6 space-y-6 text-warm-800">
+              <div>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-forest-950 mb-2">
+                  Rooted in the Peach Valley of Himachal Pradesh
+                </h3>
+                <p className="text-sm sm:text-base text-olive-800 leading-relaxed mb-3">
+                  Splendid View Eco Orchard Resort is a serene mountain retreat nestled at an altitude of 7,000
+                  feet in Rajgarh, Himachal Pradesh. Spread across six acres of lush apple, peach, apricot, pear,
+                  and cherry orchards, our resort offers breathtaking valley views, fresh mountain air, and a
+                  peaceful escape from everyday life.
+                </p>
+                <p className="text-sm sm:text-base text-olive-800 leading-relaxed">
+                  With cozy Swiss-style cottages, private balconies, authentic Himachali cuisine, and the beauty
+                  of the surrounding mountains, we invite you to slow down, reconnect with nature, and create
+                  unforgettable memories. Whether it’s a romantic getaway or a relaxing family holiday, Splendid
+                  View is where the road ends and peace begins. 🌿
+                </p>
               </div>
-              <h3 className="font-serif text-xl font-bold text-forest-950">
-                Heart of the Peach Bowl of Asia
-              </h3>
-              <p className="text-sm text-warm-700 leading-relaxed">
-                Surrounded by thousands of acres of terraced peach and apple
-                orchards. Marvel at delicate pink blossoms in spring and taste
-                fresh tree-ripened fruit during summer harvests.
-              </p>
-            </div>
 
-            <div className="bg-white rounded-2xl p-8 border border-warm-200/90 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-forest-100 text-forest-800 flex items-center justify-center font-bold text-lg">
-                03
+              <div className="space-y-3 pt-1">
+                <h4 className="font-serif text-xs font-bold text-forest-950 uppercase tracking-wider">
+                  What Guides Our Hospitality:
+                </h4>
+                <ul className="space-y-2.5 text-xs sm:text-sm text-olive-800">
+                  <li className="flex items-start gap-2.5">
+                    <CheckIcon className="w-5 h-5 text-forest-700 shrink-0 mt-0.5" />
+                    <span>
+                      <strong className="text-forest-950">Peace Over Crowds:</strong> We deliberately preserve a
+                      quiet, calm residential atmosphere for couples and families.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckIcon className="w-5 h-5 text-forest-700 shrink-0 mt-0.5" />
+                    <span>
+                      <strong className="text-forest-950">Wholesome, Fresh Food:</strong> Every meal is cooked
+                      fresh in our kitchen using quality regional ingredients and pure mountain water.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckIcon className="w-5 h-5 text-forest-700 shrink-0 mt-0.5" />
+                    <span>
+                      <strong className="text-forest-950">Direct, Transparent Service:</strong> We communicate
+                      directly with our guests—no inflated intermediary markups or hidden service fees.
+                    </span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="font-serif text-xl font-bold text-forest-950">
-                Homestyle Mountain Comfort
-              </h3>
-              <p className="text-sm text-warm-700 leading-relaxed">
-                Enjoy piping hot North Indian and Himachali meals cooked with
-                fresh regional ingredients, 24/7 hot running water, high-speed
-                Wi-Fi, and cozy evening bonfires.
-              </p>
+
+              <div className="pt-2 flex flex-wrap gap-3">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 bg-forest-900 text-white font-semibold text-xs py-3 px-5 rounded-xl hover:bg-forest-800 transition-colors shadow-sm"
+                >
+                  <span>Read Our Full Story</span>
+                  <ArrowRightIcon className="w-3.5 h-3.5" />
+                </Link>
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center gap-2 bg-white text-forest-900 font-semibold text-xs py-3 px-5 rounded-xl border border-warm-300 hover:border-forest-700 transition-colors shadow-xs"
+                >
+                  <span>View Resort Gallery</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. COTTAGES SHOWCASE */}
-      <section className="py-16 sm:py-20 bg-warm-100/60 border-y border-warm-200">
+      {/* 3. COTTAGES SHOWCASE (ROOMS) */}
+      <section className="py-12 sm:py-20 bg-warm-100/60 border-t border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div className="space-y-2">
               <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
-                Hillside Accommodation
+                Tranquil Hillside Accommodation
               </span>
               <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
                 Private Valley-Facing Cottages
               </h2>
-              <p className="text-sm sm:text-base text-warm-700 max-w-xl">
-                All 6 of our hillside cottages are independent units featuring private
-                balconies, warm wooden interiors, and panoramic Giri river valley vistas.
+              <p className="text-sm sm:text-base text-olive-800 max-w-2xl leading-relaxed">
+              Perched on a scenic mountain ridge in Village Tikkari Tali, Splendid View Eco Orchard Resort 
+              offers six independent hillside cottages with breathtaking Himalayan views. From your private 
+              balcony or window, admire distant hill towns including Shimla, Solan, Chail, Kufri, Chhabra, and 
+              Rajgarh on clear days. With warm wooden interiors, modern attached bathrooms, and peaceful 
+              surroundings, each cottage is a cozy retreat to unwind and enjoy unforgettable mountain sunsets.
               </p>
             </div>
             <Link
               href="/rooms"
-              className="inline-flex items-center gap-2 text-forest-900 font-semibold text-sm hover:text-peach-600 transition-colors group"
+              className="inline-flex items-center gap-2 text-forest-900 font-semibold text-sm hover:text-peach-600 transition-colors group shrink-0"
             >
-              <span>Explore All Cottages & Rates</span>
+              <span>Explore All Cottages</span>
               <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -291,60 +420,21 @@ export default function HomePage() {
               {/* Visuals (Left 7 Cols) */}
               <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-warm-100 shadow-sm mb-4">
-                    <Image
-                      src="/resort-images/rooms/cottage-bedroom-master-bed.webp"
-                      alt="Private Valley View Cottage interior at Splendid View Rajgarh"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 60vw"
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* Thumbnails */}
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-warm-200 shadow-xs">
-                      <Image
-                        src="/resort-images/rooms/cottage-bedroom-panoramic-view.webp"
-                        alt="High sloped ceiling cottage interior"
-                        fill
-                        sizes="20vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-warm-200 shadow-xs">
-                      <Image
-                        src="/resort-images/home/two-cottages-balconies-sitout.jpeg"
-                        alt="Private balcony and stone sit-out courtyard"
-                        fill
-                        sizes="20vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-warm-200 shadow-xs">
-                      <Image
-                        src="/resort-images/home/six-standalone-cottages-row.jpeg"
-                        alt="All 6 hillside cottages along the ridge"
-                        fill
-                        sizes="20vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
+                  <CottageImageSlider images={cottageImages} />
                 </div>
 
                 {/* Specs */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-6 pt-6 border-t border-warm-100 text-xs text-warm-800">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-6 pt-6 border-t border-warm-100 text-xs text-olive-800">
                   <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
-                    <CheckIcon className="w-4 h-4 text-forest-700 shrink-0" />
+                    <UsersIcon className="w-4 h-4 text-forest-700 shrink-0" />
                     <span className="truncate">2–3 Guests / Cottage</span>
                   </div>
                   <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
-                    <CheckIcon className="w-4 h-4 text-forest-700 shrink-0" />
+                    <BedIcon className="w-4 h-4 text-forest-700 shrink-0" />
                     <span className="truncate">King / Queen Bed</span>
                   </div>
                   <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
-                    <CheckIcon className="w-4 h-4 text-forest-700 shrink-0" />
+                    <DropletIcon className="w-4 h-4 text-sky-600 shrink-0" />
                     <span className="truncate">24/7 Hot Water</span>
                   </div>
                   <div className="p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60 flex items-center gap-1.5">
@@ -354,33 +444,14 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Content & Actions (Right 5 Cols) */}
-              <div className="lg:col-span-5 p-6 sm:p-8 bg-warm-50/40 lg:border-l border-warm-200/80 flex flex-col justify-between space-y-6">
+              {/* Content & Amenities (Right 5 Cols) */}
+              <div className="lg:col-span-5 p-6 sm:p-8 bg-warm-50/40 lg:border-l border-warm-200/80 flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <div>
-                    <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
-                      Independent Hillside Stay
-                    </span>
-                    <h3 className="font-serif text-2xl font-bold text-forest-950 mt-1">
-                      Private Valley View Cottage
+                  <div className="space-y-3">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-forest-950">
+                      Cottage Amenities:
                     </h3>
-                    <p className="text-xs text-peach-700 font-medium mt-1">
-                      Standalone cottage with private sit-out balcony overlooking Giri Valley
-                    </p>
-                  </div>
-
-                  <p className="text-sm text-warm-700 leading-relaxed">
-                    Surrounded by peach orchards and pine forests, every cottage combines
-                    natural Himalayan timber warmth with modern essentials. Wake up to golden
-                    mountain sunrises, sip morning tea on your private balcony, and unwind
-                    in total hill peace.
-                  </p>
-
-                  <div className="space-y-2 pt-1">
-                    <h4 className="font-serif text-xs font-bold text-forest-950 uppercase tracking-wider">
-                      Included Cottage Amenities:
-                    </h4>
-                    <div className="grid grid-cols-2 gap-2 text-xs text-warm-700">
+                    <div className="grid grid-cols-2 gap-2.5 text-xs text-olive-800">
                       <span className="flex items-center gap-1.5">
                         <CheckIcon className="w-3.5 h-3.5 text-forest-700" />
                         Private Balcony
@@ -408,41 +479,140 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-forest-950 text-warm-100 text-xs space-y-1">
-                    <strong className="text-white block font-semibold">
+                  <div className="p-4 rounded-2xl bg-forest-950 text-warm-100 text-xs space-y-1.5">
+                    <strong className="text-white block font-semibold text-sm">
                       6 Standalone Cottages on Property
                     </strong>
-                    <p className="text-[11px] text-warm-200">
-                      Book a single cottage for couples or reserve multiple cottages for family reunions and friend trips.
+                    <p className="text-xs text-warm-200 leading-relaxed">
+                    Book a single cottage for up to 3 guests or reserve all six cottages for couples, families, and groups of up to 18 guests.
                     </p>
                   </div>
-                </div>
-
-                {/* CTAs */}
-                <div className="pt-2 border-t border-warm-200/80 flex flex-wrap gap-2.5">
-                  <Link
-                    href="/rooms"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-forest-900 text-white font-semibold text-xs py-3 px-4 rounded-xl hover:bg-forest-800 transition-colors"
-                  >
-                    <span>View Cottage Details & Tariffs</span>
-                    <ArrowRightIcon className="w-3.5 h-3.5" />
-                  </Link>
-
-                  <a
-                    href={businessDetails.whatsapp.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center p-3 bg-[#25D366] text-white rounded-xl hover:bg-[#20bd5a] transition-colors"
-                    aria-label="Inquire about cottages on WhatsApp"
-                  >
-                    <WhatsAppIcon className="w-4 h-4" />
-                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* 4. GOOGLE REVIEWS SHOWCASE */}
+      <section className="py-12 sm:py-20 bg-warm-50 border-t border-warm-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-warm-200 text-xs font-semibold shadow-xs">
+                <GoogleIcon className="w-4 h-4 shrink-0" />
+                <span className="text-forest-950">Google Verified Guest Reviews</span>
+                <span className="flex items-center text-amber-500 gap-0.5 ml-1">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                </span>
+                <span className="font-bold text-forest-900 ml-0.5">5.0</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
+                What Our Guests Say on Google
+              </h2>
+              <p className="text-sm sm:text-base text-olive-800 max-w-2xl leading-relaxed">
+                Real experiences from couples, families, and travelers who found peace
+                in the peach orchards of Rajgarh.
+              </p>
+            </div>
+
+            <a
+              href={businessDetails.googleMaps.cidUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-forest-900 font-semibold text-xs py-3 px-5 rounded-xl border border-warm-300 hover:border-forest-700 transition-colors shadow-sm shrink-0"
+            >
+              <GoogleIcon className="w-4 h-4 shrink-0" />
+              <span>View Google Business Profile</span>
+              <ArrowRightIcon className="w-3.5 h-3.5 text-forest-700" />
+            </a>
+          </div>
+
+          {/* Mobile View: Auto + Manual Slider */}
+          <div className="md:hidden">
+            <ReviewsSlider reviews={googleReviewsList} />
+          </div>
+
+          {/* Desktop View: 2-Column Grid */}
+          <div className="hidden md:grid md:grid-cols-2 gap-5 sm:gap-6">
+            {googleReviewsList.map((review) => (
+              <div
+                key={review.id}
+                className="bg-white rounded-2xl p-6 sm:p-7 border border-warm-200/90 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4"
+              >
+                <div className="space-y-3">
+                  {/* Top Bar: Stars + Tag */}
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <StarIcon key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <span className="inline-block text-[11px] font-semibold text-forest-800 bg-forest-50 px-2.5 py-0.5 rounded-full border border-forest-100">
+                      {review.tag}
+                    </span>
+                  </div>
+
+                  {/* Comment */}
+                  <p className="text-xs sm:text-sm text-olive-800 leading-relaxed italic">
+                    &ldquo;{review.comment}&rdquo;
+                  </p>
+                </div>
+
+                {/* Reviewer Meta */}
+                <div className="pt-3 border-t border-warm-100 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-forest-800 text-white font-bold text-sm flex items-center justify-center shrink-0 shadow-xs">
+                      {review.avatarInitial}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-xs sm:text-sm text-forest-950">
+                        {review.author}
+                      </h4>
+                      <p className="text-[11px] text-olive-700">
+                        {review.location}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-warm-500 text-[11px]">
+                    <GoogleIcon className="w-3.5 h-3.5 shrink-0 opacity-80" />
+                    <span>{review.date}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Social Proof Stats Footer */}
+          <div className="mt-8 p-4 sm:p-5 rounded-2xl bg-forest-950 text-warm-100 flex flex-wrap items-center justify-between gap-4 text-xs">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+              <span className="flex items-center gap-1.5">
+                <StarIcon className="w-4 h-4 fill-amber-400 text-amber-400 shrink-0" />
+                <strong className="text-white">5.0 Star Rating</strong> on Location & Cleanliness
+              </span>
+              <span className="hidden sm:inline text-warm-400">•</span>
+              <span className="flex items-center gap-1.5">
+                <CheckIcon className="w-4 h-4 text-emerald-400 shrink-0" />
+                <strong className="text-white">100% Genuine</strong> Guest Feedback
+              </span>
+              <span className="hidden sm:inline text-warm-400">•</span>
+              <span>Authentic Himachali Food & Valley Views</span>
+            </div>
+            <a
+              href={businessDetails.googleMaps.cidUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-peach-300 hover:text-peach-200 font-semibold underline underline-offset-4 text-xs whitespace-nowrap"
+            >
+              Read all Google reviews →
+            </a>
+          </div>
+        </div>
+      </section>
+
 
       {/* 4. PROPERTY AMENITIES */}
       <section className="py-16 sm:py-20 bg-warm-50">
@@ -454,13 +624,33 @@ export default function HomePage() {
             <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
               Thoughtful Mountain Amenities
             </h2>
-            <p className="text-sm text-warm-700">
+            <p className="text-sm text-olive-800">
               Everything you need for a restful, seamless mountain stay in
               District Sirmour.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Mobile View: Minimized Single Block with Icons and Title (No Cards/Descriptions) */}
+          <div className="sm:hidden bg-white rounded-2xl p-4 border border-warm-200/90 shadow-sm">
+            <div className="grid grid-cols-2 gap-2.5">
+              {featuredAmenities.map((amenity) => (
+                <div
+                  key={amenity.id}
+                  className="flex items-center gap-2.5 p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-forest-100 text-forest-800 flex items-center justify-center shrink-0 shadow-2xs">
+                    {getAmenityIcon(amenity.icon)}
+                  </div>
+                  <span className="text-xs font-semibold text-forest-950 leading-snug">
+                    {amenity.title}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop & Tablet View: Explanatory Cards Grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredAmenities.map((amenity) => (
               <AmenityCard key={amenity.id} amenity={amenity} />
             ))}
@@ -481,7 +671,7 @@ export default function HomePage() {
       {/* 5. LOCAL EXPERIENCES & ATTRACTIONS */}
       <section className="py-16 sm:py-20 bg-warm-100/60 border-t border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div className="space-y-2">
               <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
                 Discover Sirmour
@@ -489,24 +679,40 @@ export default function HomePage() {
               <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
                 Experiences Around Rajgarh
               </h2>
-              <p className="text-sm sm:text-base text-warm-700 max-w-xl">
+              <p className="text-sm sm:text-base text-olive-800 max-w-xl">
                 From wandering through peach orchards to riverside walks along the
                 Giri river, explore authentic Himachal Pradesh.
               </p>
             </div>
             <Link
               href="/experiences"
-              className="inline-flex items-center gap-2 text-forest-900 font-semibold text-sm hover:text-peach-600 transition-colors group"
+              className="hidden md:inline-flex items-center gap-2 text-forest-900 font-semibold text-sm hover:text-peach-600 transition-colors group"
             >
               <span>View All Experiences</span>
               <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {experiencesList.slice(0, 3).map((exp) => (
-              <ExperienceCard key={exp.slug} experience={exp} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {experiencesList.slice(0, 3).map((exp, idx) => (
+              <div
+                key={exp.slug}
+                className={idx === 2 ? "hidden md:flex flex-col h-full" : "flex flex-col h-full"}
+              >
+                <ExperienceCard experience={exp} />
+              </div>
             ))}
+          </div>
+
+          {/* Mobile "View All Experiences" button on last */}
+          <div className="mt-8 text-center md:hidden">
+            <Link
+              href="/experiences"
+              className="inline-flex items-center justify-center gap-2 w-full bg-white text-forest-900 font-semibold text-sm py-3.5 px-6 rounded-xl border border-warm-300 hover:border-forest-700 active:scale-[0.98] transition-all shadow-sm"
+            >
+              <span>View All Experiences</span>
+              <ArrowRightIcon className="w-4 h-4 text-forest-700" />
+            </Link>
           </div>
         </div>
       </section>
@@ -602,7 +808,7 @@ export default function HomePage() {
       </section>
 
       {/* 7. FREQUENTLY ASKED QUESTIONS */}
-      <section className="py-16 sm:py-20 bg-warm-50">
+      <section className="hidden md:block py-16 sm:py-20 bg-warm-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-3 mb-12">
             <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
@@ -611,7 +817,7 @@ export default function HomePage() {
             <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
               Frequently Asked Questions
             </h2>
-            <p className="text-sm text-warm-700">
+            <p className="text-sm text-olive-800">
               Everything you need to know about booking, amenities, routes, and
               our property.
             </p>

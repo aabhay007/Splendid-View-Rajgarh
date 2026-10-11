@@ -34,7 +34,7 @@ const navItems: NavItem[] = [
     icon: HomeIcon,
   },
   {
-    label: "Rooms & Cottages",
+    label: "Accommodation",
     href: "/rooms",
     description: "Private balconies & valley panoramas",
     icon: BedIcon,

@@ -35,7 +35,7 @@ export default function AboutPage() {
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-forest-950 leading-tight">
             About Splendid View Rajgarh
           </h1>
-          <p className="text-base sm:text-lg text-warm-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-olive-800 leading-relaxed">
           Splendid view ( Eco Orchard Resort) is more than a resort amidst  6 acres orchard property of 
           apple, peach, apricot, pears, cherries. It is situated at an altitude of 7000 ft. in the lap of famous 
           Shirgul Maharaj temple peak Churdhar on Habban Road 21 k.m from Rajgarh, Distt.Sirmour, H.P.
@@ -111,7 +111,7 @@ export default function AboutPage() {
               Property Overview
             </h3>
 
-            <div className="space-y-4 text-sm text-warm-700">
+            <div className="space-y-4 text-sm text-olive-800">
               <div className="flex items-start gap-3">
                 <MapPinIcon className="w-5 h-5 text-forest-700 shrink-0 mt-0.5" />
                 <div>

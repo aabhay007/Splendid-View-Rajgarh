@@ -45,7 +45,7 @@ export function AmenityCard({ amenity }: AmenityCardProps) {
         <h3 className="font-serif text-lg font-bold text-forest-950 mb-2">
           {amenity.title}
         </h3>
-        <p className="text-sm text-warm-700 leading-relaxed">
+        <p className="text-sm text-olive-800 leading-relaxed">
           {amenity.description}
         </p>
       </div>

@@ -49,46 +49,6 @@ export default function ExperiencesPage() {
           ))}
         </div>
 
-        {/* Practical Mountain Travel Tips */}
-        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-warm-200/90 shadow-sm mb-16 space-y-6">
-          <h2 className="font-serif text-2xl font-bold text-forest-950">
-            Insider Tips for Exploring Rajgarh
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-warm-800">
-            <div className="space-y-2">
-              <strong className="block text-forest-950 font-serif text-base">
-                Footwear & Packing
-              </strong>
-              <p className="text-warm-700 leading-relaxed">
-                Pack sturdy sneakers or hiking shoes with good traction for
-                village orchard paths and pebbled river banks. Bring a light
-                windbreaker or fleece even in summer, as evenings cool down.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <strong className="block text-forest-950 font-serif text-base">
-                Respectful Cultural Travel
-              </strong>
-              <p className="text-warm-700 leading-relaxed">
-                When visiting sacred sites like Baru Sahib Gurdwara, cover your
-                head with a scarf or handkerchief and dress modestly. Please
-                preserve the quiet sanctity of local village hamlets.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <strong className="block text-forest-950 font-serif text-base">
-                Eco-Conscious Mountain Ethics
-              </strong>
-              <p className="text-warm-700 leading-relaxed">
-                Rajgarh and the Giri river basin remain clean and unspoiled.
-                Always carry back any plastic bottles or wrappers and help keep
-                our mountain trails pristine for future generations.
-              </p>
-            </div>
-          </div>
-        </div>
 
         <CtaBanner
           heading="Ready to Explore District Sirmour?"

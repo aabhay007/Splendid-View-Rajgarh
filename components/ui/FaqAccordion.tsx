@@ -29,7 +29,7 @@ export function FaqAccordion({
               <ChevronDownIcon className="w-4 h-4 text-forest-800 group-open:text-peach-700" />
             </span>
           </summary>
-          <div className="px-5 sm:px-6 pb-6 text-sm text-warm-700 leading-relaxed border-t border-warm-100 pt-4">
+          <div className="px-5 sm:px-6 pb-6 text-sm text-olive-800 leading-relaxed border-t border-warm-100 pt-4">
             {item.answer}
           </div>
         </details>

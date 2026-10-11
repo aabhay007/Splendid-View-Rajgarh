@@ -8,6 +8,7 @@ import {
   MapPinIcon,
   ClockIcon,
 } from "@/components/ui/icons";
+import { ViewCounter } from "@/components/ui/ViewCounter";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -73,7 +74,7 @@ export function Footer() {
                   href="/rooms"
                   className="hover:text-peach-400 transition-colors"
                 >
-                  Rooms & Suites
+                  Accommodation
                 </Link>
               </li>
               <li>
@@ -253,29 +254,32 @@ export function Footer() {
 
         {/* Bottom Legal & Copyright Bar */}
         <div className="mt-12 pt-8 border-t border-forest-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-400">
-          <p>
+          <p className="text-center sm:text-left">
             © {currentYear} {businessDetails.name}. All rights reserved. Village
             Tikkari Tali, Rajgarh, Himachal Pradesh.
           </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/privacy-policy"
-              className="hover:text-warm-200 transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="hover:text-warm-200 transition-colors"
-            >
-              Terms of Stay
-            </Link>
-            <Link
-              href="/contact"
-              className="hover:text-warm-200 transition-colors"
-            >
-              Contact Us
-            </Link>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <ViewCounter />
+            <div className="flex items-center gap-4 sm:gap-6">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-warm-200 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="hover:text-warm-200 transition-colors"
+              >
+                Terms of Stay
+              </Link>
+              <Link
+                href="/contact"
+                className="hover:text-warm-200 transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </div>

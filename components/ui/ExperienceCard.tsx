@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ExperienceItem } from "@/content/experiences";
-import { ClockIcon, MapPinIcon, CheckIcon } from "@/components/ui/icons";
+import { CheckIcon } from "@/components/ui/icons";
 
 interface ExperienceCardProps {
   experience: ExperienceItem;
@@ -31,21 +31,9 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           <p className="text-xs text-peach-700 font-medium">
             {experience.tagline}
           </p>
-          <p className="text-sm text-warm-700 leading-relaxed">
+          <p className="text-sm text-olive-800 leading-relaxed">
             {experience.description}
           </p>
-        </div>
-
-        {/* Distance & Duration specs */}
-        <div className="grid grid-cols-2 gap-2 text-xs text-warm-800 py-3 border-y border-warm-100 bg-warm-50/60 rounded-xl px-3">
-          <div className="flex items-center gap-1.5">
-            <ClockIcon className="w-4 h-4 text-forest-700 shrink-0" />
-            <span className="truncate">{experience.duration}</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <MapPinIcon className="w-4 h-4 text-forest-700 shrink-0" />
-            <span className="truncate">{experience.approxDistance}</span>
-          </div>
         </div>
 
         {/* Highlights */}

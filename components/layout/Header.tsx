@@ -15,7 +15,7 @@ import { MobileNav } from "./MobileNav";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Rooms", href: "/rooms" },
+  { label: "Accommodation", href: "/rooms" },
   { label: "Amenities", href: "/amenities" },
   { label: "Experiences", href: "/experiences" },
   { label: "How to Reach", href: "/how-to-reach" },
@@ -25,7 +25,7 @@ const navLinks = [
 ];
 
 const mobileQuickLinks = [
-  { label: "Rooms", href: "/rooms", icon: BedIcon },
+  { label: "Accommodation", href: "/rooms", icon: BedIcon },
   { label: "Photos", href: "/gallery", icon: CameraIcon },
   { label: "Amenities", href: "/amenities", icon: UtensilsIcon },
   { label: "Route", href: "/how-to-reach", icon: MapPinIcon },
