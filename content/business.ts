@@ -50,7 +50,7 @@ export interface BusinessContact {
 
 export const businessDetails: BusinessContact = {
   name: "Splendid View Eco Orchard Resort",
-  tagline: "Eco Orchard Resort & Cottages in Rajgarh, Himachal Pradesh",
+  tagline: "Splendid View Eco Orchard Resort is nestled in Rajgarh, Himachal Pradesh",
   description:
     "Perched gracefully amidst the verdant pine slopes and lush peach orchards of Rajgarh in District Sirmour, Splendid View Eco Orchard Resort offers private valley-facing cottages, unmatched Giri valley vistas, pure Himalayan tranquility, and heartfelt mountain hospitality for couples, families, and nature lovers.",
   address: {

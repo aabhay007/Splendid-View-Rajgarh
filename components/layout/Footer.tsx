@@ -41,9 +41,9 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-warm-300 leading-relaxed">
-              {businessDetails.tagline}. Perched in Village Tikkari Tali,
-              offering panoramic Giri valley views, fresh pine air, and
-              authentic Himachali hospitality.
+              {businessDetails.tagline}. the Peach Bowl of Asia, in Village Tikkari Tali, Himachal Pradesh.
+              A green mountain retreat with gracious 
+              hospitality.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a

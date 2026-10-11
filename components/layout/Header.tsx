@@ -41,31 +41,31 @@ export function Header() {
     <header className="sticky top-0 z-30 w-full bg-white/95 backdrop-blur-md border-b border-warm-200/90 shadow-sm transition-shadow">
       {/* Top micro announcement bar (Desktop & Tablet) */}
       <div className="bg-forest-950 text-warm-100 text-xs py-1.5 px-4 hidden md:block border-b border-forest-900">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <p className="flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-warm-200">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <p className="flex items-center gap-2 truncate">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span className="text-warm-200 truncate">
               Village Tikkari Tali, Rajgarh, District Sirmour, Himachal Pradesh 173101
             </span>
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 shrink-0">
             <a
               href={`tel:${primaryPhone}`}
-              className="flex items-center gap-1.5 hover:text-white transition-colors"
+              className="flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap shrink-0"
               aria-label={`Call ${displayPhone}`}
             >
-              <PhoneIcon className="w-3.5 h-3.5 text-emerald-400" />
-              <span>{displayPhone}</span>
+              <PhoneIcon className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <span className="whitespace-nowrap">{displayPhone}</span>
             </a>
             <a
               href={businessDetails.whatsapp.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors"
+              className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors whitespace-nowrap shrink-0"
               aria-label="Direct WhatsApp Chat"
             >
-              <WhatsAppIcon className="w-3.5 h-3.5" />
-              <span className="font-medium">WhatsApp Direct</span>
+              <WhatsAppIcon className="w-3.5 h-3.5 shrink-0" />
+              <span className="font-medium whitespace-nowrap">WhatsApp Direct</span>
             </a>
           </div>
         </div>
@@ -73,11 +73,11 @@ export function Header() {
 
       {/* Main Nav Bar */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-3 xl:gap-6">
           {/* Official Emblem Logo & Typography */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-forest-700 rounded-lg py-1 px-0.5"
+            className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 group focus:outline-none focus:ring-2 focus:ring-forest-700 rounded-lg py-1 px-0.5 shrink-0"
             aria-label="Splendid View Eco Orchard Resort Home"
           >
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 shrink-0 rounded-full overflow-hidden shadow-sm ring-1 ring-forest-900/15 group-hover:ring-forest-700/40 transition-all bg-white">
@@ -90,10 +90,10 @@ export function Header() {
               />
             </div>
             <div className="flex flex-col justify-center">
-              <span className="font-serif font-bold text-base sm:text-lg md:text-xl text-forest-950 leading-tight tracking-tight group-hover:text-forest-700 transition-colors">
+              <span className="font-serif font-bold text-base sm:text-lg md:text-xl text-forest-950 leading-tight tracking-tight group-hover:text-forest-700 transition-colors whitespace-nowrap">
                 Splendid View
               </span>
-              <span className="text-[9px] sm:text-[11px] font-semibold text-forest-700 uppercase tracking-wider leading-tight">
+              <span className="text-[9px] sm:text-[11px] font-semibold text-forest-700 uppercase tracking-wider leading-tight whitespace-nowrap">
                 Eco Orchard Resort
               </span>
             </div>
@@ -102,13 +102,13 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center gap-6 text-sm font-medium text-forest-900"
+            className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6 text-[13px] xl:text-sm font-medium text-forest-900"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-forest-700 text-stone-800 font-medium transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-forest-700 after:transition-all"
+                className="whitespace-nowrap hover:text-forest-700 text-stone-800 font-medium transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-forest-700 after:transition-all"
               >
                 {link.label}
               </Link>
@@ -116,18 +116,18 @@ export function Header() {
           </nav>
 
           {/* Action CTAs (Desktop) */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 shrink-0">
             <a
               href={`tel:${primaryPhone}`}
-              className="hidden xl:inline-flex items-center gap-2 text-forest-900 hover:text-forest-700 font-semibold text-sm px-3 py-2"
+              className="hidden xl:inline-flex items-center gap-1.5 2xl:gap-2 text-forest-900 hover:text-forest-700 font-semibold text-xs xl:text-sm px-2.5 py-2 whitespace-nowrap shrink-0"
             >
-              <PhoneIcon className="w-4 h-4 text-forest-700" />
-              <span>{displayPhone}</span>
+              <PhoneIcon className="w-4 h-4 text-forest-700 shrink-0" />
+              <span className="whitespace-nowrap">{displayPhone}</span>
             </a>
 
             <Link
               href="/contact#enquiry"
-              className="bg-forest-900 text-white font-medium text-sm px-5 py-2.5 rounded-xl hover:bg-forest-800 transition-all shadow-sm active:scale-95"
+              className="whitespace-nowrap shrink-0 bg-forest-900 text-white font-medium text-xs xl:text-sm px-3.5 sm:px-4 xl:px-5 py-2 sm:py-2.5 rounded-xl hover:bg-forest-800 transition-all shadow-sm active:scale-95"
             >
               Enquire Stay
             </Link>
@@ -137,7 +137,7 @@ export function Header() {
           <div className="flex lg:hidden items-center gap-2">
             <Link
               href="/contact#enquiry"
-              className="sm:hidden text-[11px] font-bold text-forest-900 bg-sage-100 hover:bg-sage-200 border border-sage-300 px-2.5 py-1.5 rounded-full transition-colors active:scale-95"
+              className="sm:hidden text-[11px] font-bold text-forest-900 bg-sage-100 hover:bg-sage-200 border border-sage-300 px-2.5 py-1.5 rounded-full transition-colors active:scale-95 whitespace-nowrap"
             >
               Enquire
             </Link>

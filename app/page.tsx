@@ -4,13 +4,11 @@ import Link from "next/link";
 import { businessDetails } from "@/content/business";
 import { amenitiesList } from "@/content/amenities";
 import { experiencesList } from "@/content/experiences";
-import { masterFaqList } from "@/content/faq";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getResortSchema, getFaqSchema } from "@/lib/seo/schema";
+import { getResortSchema } from "@/lib/seo/schema";
 import { constructMetadata } from "@/lib/seo/metadata";
 import { AmenityCard } from "@/components/ui/AmenityCard";
 import { ExperienceCard } from "@/components/ui/ExperienceCard";
-import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { CtaBanner } from "@/components/ui/CtaBanner";
 import {
   PhoneIcon,
@@ -105,14 +103,11 @@ export default function HomePage() {
   const primaryPhone = businessDetails.phones[0];
   const displayPhone = businessDetails.displayPhones[0];
   const featuredAmenities = amenitiesList.filter((a) => a.featured).slice(0, 6);
-  const homeFaqs = masterFaqList.slice(0, 6);
 
   return (
     <>
       {/* Schema.org LodgingBusiness / Resort structured data */}
       <JsonLd data={getResortSchema()} />
-      {/* Schema.org FAQPage structured data */}
-      <JsonLd data={getFaqSchema(homeFaqs)} />
 
       {/* 1. HERO SECTION (Full Uncropped Image on Mobile + Full-Screen Immersive on Desktop) */}
       <section className="relative bg-forest-950 text-white overflow-hidden">
@@ -807,37 +802,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. FREQUENTLY ASKED QUESTIONS */}
-      <section className="hidden md:block py-16 sm:py-20 bg-warm-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-3 mb-12">
-            <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
-              Guest Inquiries
-            </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-forest-950">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-sm text-olive-800">
-              Everything you need to know about booking, amenities, routes, and
-              our property.
-            </p>
-          </div>
-
-          <FaqAccordion items={homeFaqs} defaultOpenFirst={true} />
-
-          <div className="text-center mt-10">
-            <Link
-              href="/faq"
-              className="inline-flex items-center gap-2 text-forest-900 font-semibold text-sm hover:text-peach-600 transition-colors"
-            >
-              <span>View All Frequently Asked Questions</span>
-              <ArrowRightIcon className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. HIGH-CONVERSION CTA BANNER */}
+      {/* 7. HIGH-CONVERSION CTA BANNER */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <CtaBanner
           heading="Ready to Experience Splendid View Rajgarh?"
