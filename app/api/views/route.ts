@@ -4,70 +4,122 @@ import path from "path";
 
 export const dynamic = "force-dynamic";
 
-const START_VIEWS = 930;
+// Baseline offset: when cloud counter is 1, total is 929 + 1 = 930
+const START_OFFSET = 929;
+let inMemoryLatestViews = 930;
 
 function getCounterFilePath(): string {
   const dir = path.join(process.cwd(), "data");
-  if (!fs.existsSync(dir)) {
-    try {
-      fs.mkdirSync(dir, { recursive: true });
-    } catch {
-      // directory creation handled or already exists
-    }
-  }
   return path.join(dir, "views.json");
 }
 
-function readViews(): number {
+function readLocalViews(): number {
   try {
     const filePath = getCounterFilePath();
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, "utf-8");
       const parsed = JSON.parse(content);
-      if (typeof parsed.views === "number" && parsed.views >= START_VIEWS) {
-        return parsed.views;
+      if (typeof parsed.views === "number" && parsed.views >= 930) {
+        inMemoryLatestViews = Math.max(parsed.views, inMemoryLatestViews);
+        return inMemoryLatestViews;
+      }
+    }
+  } catch {
+    // Vercel serverless environment fallback
+  }
+  return inMemoryLatestViews;
+}
+
+function writeLocalViews(count: number): void {
+  inMemoryLatestViews = Math.max(inMemoryLatestViews, count);
+  try {
+    const dir = path.join(process.cwd(), "data");
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    const filePath = path.join(dir, "views.json");
+    fs.writeFileSync(filePath, JSON.stringify({ views: count }), "utf-8");
+  } catch {
+    // Serverless read-only filesystem handled gracefully
+  }
+}
+
+async function recordCloudVisit(): Promise<number> {
+  try {
+    // Persistent cloud-backed counter that survives Vercel builds & git redeployments
+    const res = await fetch(
+      "https://api.visitorbadge.io/api/visitors?path=splendid-view-rajgarh-official",
+      {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+          "Accept-Language": "en-US,en;q=0.9",
+        },
+        cache: "no-store",
+      }
+    );
+
+    if (res.ok) {
+      const text = await res.text();
+      const match = text.match(/VISITORS:\s*(\d+)/i);
+      if (match) {
+        const raw = parseInt(match[1], 10);
+        if (!isNaN(raw) && raw > 0) {
+          const totalViews = START_OFFSET + raw;
+          writeLocalViews(totalViews);
+          return totalViews;
+        }
       }
     }
   } catch (err) {
-    console.error("Error reading views counter:", err);
+    console.error("Cloud counter error, using fallback:", err);
   }
-  return START_VIEWS;
-}
 
-function writeViews(count: number): void {
-  try {
-    const filePath = getCounterFilePath();
-    fs.writeFileSync(filePath, JSON.stringify({ views: count }), "utf-8");
-  } catch (err) {
-    console.error("Error writing views counter:", err);
-  }
+  // Graceful local fallback if external service is temporarily unreachable
+  const current = readLocalViews();
+  const next = current + 1;
+  writeLocalViews(next);
+  return next;
 }
 
 export async function GET() {
-  const views = readViews();
+  // If memory/local is at base default, attempt to fetch current cloud count
+  if (inMemoryLatestViews <= 930) {
+    try {
+      const views = await recordCloudVisit();
+      return NextResponse.json(
+        { views },
+        {
+          headers: {
+            "Cache-Control": "no-store, no-cache, must-revalidate",
+            Pragma: "no-cache",
+          },
+        }
+      );
+    } catch {
+      // ignore
+    }
+  }
+
+  const views = readLocalViews();
   return NextResponse.json(
     { views },
     {
       headers: {
-        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
         Pragma: "no-cache",
-        Expires: "0",
       },
     }
   );
 }
 
 export async function POST() {
-  const current = readViews();
-  const next = current + 1;
-  writeViews(next);
+  const views = await recordCloudVisit();
   return NextResponse.json(
-    { views: next },
+    { views },
     {
       headers: {
-        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
         Pragma: "no-cache",
-        Expires: "0",
       },
     }
   );

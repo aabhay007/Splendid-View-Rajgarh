@@ -59,7 +59,7 @@ const navItems: NavItem[] = [
     icon: CameraIcon,
   },
   {
-    label: "How to Reach",
+    label: "Route",
     href: "/how-to-reach",
     description: "Driving route from Chandigarh & Delhi",
     icon: MapPinIcon,
