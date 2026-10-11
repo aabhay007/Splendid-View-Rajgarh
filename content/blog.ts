@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
       {
         sectionHeading: "The Magic of the Giri Valley",
         paragraphs: [
-          "Rajgarh is perched on an elevated ridge overlooking the fertile Giri river valley. Unlike high-altitude barren passes, this region is lush, verdant, and deeply connected to traditional agriculture. Here, terraced fields cascade down mountain flanks in orderly green steps, interspersed with fragrant groves of cheer pine, blue pine, and deodars.",
+          "Rajgarh is perched on an elevated ridge overlooking the fertile Panoramic Valley View. Unlike high-altitude barren passes, this region is lush, verdant, and deeply connected to traditional agriculture. Here, terraced fields cascade down mountain flanks in orderly green steps, interspersed with fragrant groves of cheer pine, blue pine, and deodars.",
           "In the early morning, mist rises slowly from the Giri river basin, drifting through the orchards and painting the valley in ethereal pastel tones. It is a place that invites you to put down your phone, step out onto a sunlit balcony with a steaming mug of tea, and simply listen to the breeze rustling through the trees.",
         ],
         bulletPoints: [

@@ -139,7 +139,7 @@ export const landingPages: Record<string, LandingPageData> = {
         bulletPoints: [
           "Zero Tourist Chaos: Enjoy quiet mountain ridges without traffic bottlenecks or crowded streets.",
           "Authentic Warmth: Direct host hospitality and staff that treat you like family rather than a room number.",
-          "Stunning Topography: Overlooking the scenic Giri river valley with views stretching toward the outer Himalayan ranges.",
+          "Stunning Topography: Overlooking the scenic panoramic valley view with views stretching toward the outer Himalayan ranges.",
           "Quick Weekend Proximity: Located closer to Delhi and Chandigarh than northern Himachal destinations.",
         ],
       },
@@ -444,7 +444,7 @@ export const landingPages: Record<string, LandingPageData> = {
       "Tired of commercialized hill stations? Discover Rajgarh and District Sirmour—where ancient deodar forests, peach orchards, and clean rivers remain pure and unhurried.",
     intro: [
       "In an era where most popular hill stations in Himachal Pradesh have become replicas of the crowded cities people seek to escape, true travelers are searching for offbeat places in Himachal. They seek destinations where the mountain air smells of damp pine needles rather than exhaust fumes, where locals greet you with genuine warmth, and where the landscape remains untouched by rapid commercialization.",
-      "Rajgarh, situated in District Sirmour, is one of the state's finest hidden gems. Known historically as the 'Peach Bowl of Asia' and cradled by the majestic Giri river valley, Rajgarh combines breathtaking natural beauty with easy accessibility, making it the ultimate destination for offbeat exploration.",
+      "Rajgarh, situated in District Sirmour, is one of the state's finest hidden gems. Known historically as the 'Peach Bowl of Asia' and cradled by the majestic panoramic valley view, Rajgarh combines breathtaking natural beauty with easy accessibility, making it the ultimate destination for offbeat exploration.",
     ],
     sections: [
       {
@@ -613,7 +613,7 @@ export const landingPages: Record<string, LandingPageData> = {
         ],
         bulletPoints: [
           "2 Nights / 3 Days 'Valley Rejuvenation' Package: Ideal for Delhi and Chandigarh travelers arriving Friday evening or Saturday midday. Includes valley-view room stay, daily breakfast and dinner, evening bonfire session (weather permitting), and a guided orchard walk in Tikkari Tali.",
-          "3 Nights / 4 Days 'Slow Mountain Retreat': Recommended for long weekends, workations, and families wanting to explore both Rajgarh and the Giri river valley at an unhurried pace.",
+          "3 Nights / 4 Days 'Slow Mountain Retreat': Recommended for long weekends, workations, and families wanting to explore both Rajgarh and the panoramic valley view at an unhurried pace.",
           "Corporate & Small Group Nature Retreats: Custom arrangements for close teams (10-20 people) needing peaceful brainstorming sessions with reliable Wi-Fi, open lawn space, and homestyle dining.",
         ],
       },

@@ -65,7 +65,7 @@ export const experiencesList: ExperienceItem[] = [
   },
   {
     slug: "giri-river-valley",
-    title: "Giri River Valley",
+    title: "Panoramic Valley View",
     tagline: "Scenic riverside beauty, fresh mountain air & clear waters",
     category: "Relaxation",
     approxDistance: "~12-15 km from resort near Giripul",

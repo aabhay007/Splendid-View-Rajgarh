@@ -27,7 +27,7 @@ export const masterFaqList: FAQItem[] = [
     category: "Location & Reach",
     question: "Where is Splendid View Rajgarh situated?",
     answer:
-      "We are located in Village Tikkari Tali (Jola), P.O. Dahan, Tehsil Rajgarh, District Sirmour, Himachal Pradesh (PIN: 173101). Our property commands elevated views of the Giri river valley and surrounding pine-clad mountain ridges.",
+      "We are located in Village Tikkari Tali (Jola), P.O. Dahan, Tehsil Rajgarh, District Sirmour, Himachal Pradesh (PIN: 173101). Our property commands elevated views of the panoramic valley view and surrounding pine-clad mountain ridges.",
   },
   {
     category: "Location & Reach",

@@ -13,7 +13,7 @@ export const metadata = constructMetadata({
   description:
     "Explore photos of Splendid View Eco Orchard Resort: authentic hillside cottages, private balconies, panoramic Giri valley vistas, dining hall, evening bonfires & happy guest moments.",
   path: "/gallery",
-  image: "/resort-images/gallery/09-family-viewpoint-terrace-portrait.webp",
+  image: "/resort-images/gallery/12-family-viewpoint-terrace-portrait.webp",
   keywords: [
     "Splendid View Eco Orchard Resort photos",
     "Rajgarh cottages gallery",

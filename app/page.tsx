@@ -312,7 +312,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
                   <strong className="block text-forest-950 font-bold text-sm">180° Views</strong>
-                  <span className="text-warm-600 text-[11px]">Giri River Valley</span>
+                  <span className="text-warm-600 text-[11px]">Panoramic Valley View</span>
                 </div>
               </div>
             </div>

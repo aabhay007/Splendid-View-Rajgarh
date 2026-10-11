@@ -16,7 +16,7 @@ export default function SummerGetawayHimachalPage() {
   return (
     <SeoLandingPageTemplate
       data={pageData}
-      heroImage="/resort-images/gallery/19-guests-forest-hiking-trail.webp"
+      heroImage="/resort-images/gallery/22-guests-forest-hiking-trail.webp"
     />
   );
 }
