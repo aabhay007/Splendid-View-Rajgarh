@@ -95,7 +95,7 @@ export function ReviewsSlider({
               key={review.id}
               className="w-full shrink-0 px-0.5"
             >
-              <div className="bg-white rounded-2xl p-5 sm:p-6 border border-warm-200/90 shadow-sm flex flex-col justify-between min-h-[290px] sm:min-h-[270px]">
+              <div className="bg-beige-50 rounded-2xl p-5 sm:p-6 border border-warm-300/80 shadow-sm flex flex-col justify-between min-h-[290px] sm:min-h-[270px]">
                 <div className="space-y-3">
                   {/* Top Bar: Stars + Tag */}
                   <div className="flex items-center justify-between gap-2 flex-wrap">
@@ -152,9 +152,9 @@ export function ReviewsSlider({
           type="button"
           onClick={prevSlide}
           aria-label="Previous review"
-          className="w-8 h-8 rounded-full bg-white hover:bg-warm-100 active:scale-95 text-forest-950 flex items-center justify-center transition-all border border-warm-300 shadow-xs focus:outline-none"
+          className="w-8 h-8 rounded-full bg-forest-900 hover:bg-forest-800 active:scale-95 text-white flex items-center justify-center transition-all shadow-xs focus:outline-none"
         >
-          <ChevronLeftIcon className="w-4 h-4 text-forest-900" />
+          <ChevronLeftIcon className="w-4 h-4 text-white" />
         </button>
 
         {/* Indicator Dots */}
@@ -179,9 +179,9 @@ export function ReviewsSlider({
           type="button"
           onClick={nextSlide}
           aria-label="Next review"
-          className="w-8 h-8 rounded-full bg-white hover:bg-warm-100 active:scale-95 text-forest-950 flex items-center justify-center transition-all border border-warm-300 shadow-xs focus:outline-none"
+          className="w-8 h-8 rounded-full bg-forest-900 hover:bg-forest-800 active:scale-95 text-white flex items-center justify-center transition-all shadow-xs focus:outline-none"
         >
-          <ChevronRightIcon className="w-4 h-4 text-forest-900" />
+          <ChevronRightIcon className="w-4 h-4 text-white" />
         </button>
       </div>
     </div>

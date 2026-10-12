@@ -106,7 +106,7 @@ export default function RootLayout({
 
   return (
     <html lang="en-IN" className={`${sansFont.variable} ${serifFont.variable}`}>
-      <body className="min-h-screen flex flex-col bg-warm-50 text-stone-900 antialiased selection:bg-forest-800 selection:text-white overflow-x-hidden max-w-full relative">
+      <body className="min-h-screen flex flex-col bg-beige-100 text-stone-900 antialiased selection:bg-forest-800 selection:text-white overflow-x-hidden max-w-full relative">
         {/* WebSite and Organization Schema */}
         <JsonLd data={getWebSiteSchema()} />
 

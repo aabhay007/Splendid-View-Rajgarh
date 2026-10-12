@@ -34,7 +34,7 @@ export function AmenityCard({ amenity }: AmenityCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 border border-warm-200/90 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+    <div className="bg-beige-50 rounded-2xl p-6 border border-warm-300/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
       <div>
         <div className="w-12 h-12 rounded-xl bg-forest-50 border border-forest-100 flex items-center justify-center mb-4">
           {getIcon(amenity.icon)}

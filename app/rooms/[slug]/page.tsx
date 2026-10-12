@@ -115,7 +115,7 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
             <div className="lg:col-span-7 space-y-10">
               {/* Quick Specs Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-white p-6 rounded-2xl border border-warm-200 shadow-sm text-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-beige-50 p-6 rounded-2xl border border-warm-300/80 shadow-sm text-xs">
                 <div>
                   <span className="text-warm-500 block mb-1">Capacity:</span>
                   <strong className="text-forest-950 font-semibold flex items-center gap-1.5 text-sm">
@@ -237,7 +237,7 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+              <div className="group bg-beige-50 rounded-2xl overflow-hidden border border-warm-300/80 shadow-xs">
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
                   <Image
                     src="/resort-images/home/six-standalone-cottages-row.jpeg"
@@ -257,7 +257,7 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
                 </div>
               </div>
 
-              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+              <div className="group bg-beige-50 rounded-2xl overflow-hidden border border-warm-300/80 shadow-xs">
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
                   <Image
                     src="/resort-images/home/resort-peach-orchards-drone-aerial-view.webp"
@@ -277,7 +277,7 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
                 </div>
               </div>
 
-              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+              <div className="group bg-beige-50 rounded-2xl overflow-hidden border border-warm-300/80 shadow-xs">
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
                   <Image
                     src="/resort-images/restarunt/dining-table-valley-view-setup.jpeg"
@@ -297,7 +297,7 @@ export default async function SingleRoomPage({ params }: RoomPageProps) {
                 </div>
               </div>
 
-              <div className="group bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-xs">
+              <div className="group bg-beige-50 rounded-2xl overflow-hidden border border-warm-300/80 shadow-xs">
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
                   <Image
                     src="/resort-images/amenties/bonfire/evening-bonfire-pit-gathering.webp"

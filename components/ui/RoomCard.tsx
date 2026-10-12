@@ -22,7 +22,7 @@ export function RoomCard({ room, priority = false }: RoomCardProps) {
   )}`;
 
   return (
-    <article className="group bg-white rounded-2xl overflow-hidden border border-warm-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+    <article className="group bg-beige-50 rounded-2xl overflow-hidden border border-warm-300/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
       {/* Room Image */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-warm-100">
         <Image

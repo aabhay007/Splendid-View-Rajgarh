@@ -144,7 +144,7 @@ export function MobileNav() {
 
       {/* Slide-out Drawer */}
       <aside
-        className={`fixed top-0 right-0 bottom-0 w-[88%] max-w-sm bg-warm-50 z-50 shadow-2xl flex flex-col transform transition-all duration-300 ease-in-out border-l border-warm-200 ${
+        className={`fixed top-0 right-0 bottom-0 w-[88%] max-w-sm bg-beige-100 z-50 shadow-2xl flex flex-col transform transition-all duration-300 ease-in-out border-l border-warm-300/80 ${
           isOpen
             ? "translate-x-0 opacity-100 visible pointer-events-auto"
             : "translate-x-full opacity-0 invisible pointer-events-none"

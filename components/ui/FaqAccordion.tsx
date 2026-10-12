@@ -21,7 +21,7 @@ export function FaqAccordion({
         <details
           key={index}
           open={index === 0 && defaultOpenFirst}
-          className="group bg-white rounded-2xl border border-warm-200/90 shadow-sm overflow-hidden transition-all duration-200 [&_summary::-webkit-details-marker]:hidden"
+          className="group bg-beige-50 rounded-2xl border border-warm-300/80 shadow-sm overflow-hidden transition-all duration-200 [&_summary::-webkit-details-marker]:hidden"
         >
           <summary className="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none font-serif text-base sm:text-lg font-bold text-forest-950 group-open:text-peach-700 transition-colors select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-700">
             <span className="pr-4">{item.question}</span>

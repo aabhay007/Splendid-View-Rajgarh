@@ -29,7 +29,7 @@ export default function TermsPage() {
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-warm-200 shadow-sm space-y-8 text-warm-800 text-sm sm:text-base leading-relaxed">
+        <div className="bg-beige-50 rounded-3xl p-8 sm:p-12 border border-warm-300/80 shadow-sm space-y-8 text-warm-800 text-sm sm:text-base leading-relaxed">
           <section className="space-y-3">
             <h2 className="font-serif text-xl font-bold text-forest-950">
               1. Check-In & Check-Out Timings

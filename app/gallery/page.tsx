@@ -89,7 +89,7 @@ export default function GalleryPage() {
   const galleryImages = getGalleryImages();
 
   return (
-    <div className="py-8 sm:py-12">
+    <div className="bg-beige-100 flex-1 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ name: "Gallery", href: "/gallery" }]} />
 
@@ -129,29 +129,22 @@ export default function GalleryPage() {
         </div>
 
         {/* ================= DESKTOP & TABLET VIEW (hidden sm:grid) ================= */}
-        {/* Responsive 2/3 column card grid */}
+        {/* Direct clean 2/3 column image grid with NO cards, NO titles, and NO text */}
         <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {galleryImages.map((item, idx) => (
-            <figure
+            <div
               key={item.src}
-              className="group bg-white rounded-2xl overflow-hidden border border-warm-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+              className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-warm-200/80 border border-warm-300/50 shadow-xs hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative aspect-[16/11] w-full overflow-hidden bg-warm-200">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 33vw"
-                  loading={idx < 6 ? "eager" : "lazy"}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <figcaption className="p-4 bg-white border-t border-warm-100 flex-1 flex flex-col justify-center">
-                <h2 className="font-serif text-base font-bold text-forest-950 group-hover:text-forest-700 transition-colors">
-                  {item.title}
-                </h2>
-              </figcaption>
-            </figure>
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                sizes="(max-width: 1024px) 50vw, 33vw"
+                loading={idx < 6 ? "eager" : "lazy"}
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           ))}
         </div>
 

@@ -74,7 +74,7 @@ export function SeoLandingPageTemplate({
 
               <Link
                 href="/rooms"
-                className="inline-flex items-center gap-2 bg-white hover:bg-warm-100 text-forest-900 font-medium text-xs sm:text-sm py-3 px-5 rounded-xl border border-warm-300 transition-all shadow-sm"
+                className="inline-flex items-center gap-2 bg-forest-900 hover:bg-forest-800 text-white font-medium text-xs sm:text-sm py-3 px-5 rounded-xl transition-all shadow-sm"
               >
                 <span>View Rooms & Suites</span>
                 <ArrowRightIcon className="w-4 h-4" />
@@ -122,7 +122,7 @@ export function SeoLandingPageTemplate({
 
                 {/* Optional Structured Table */}
                 {section.table && (
-                  <div className="overflow-x-auto my-6 rounded-2xl border border-warm-200 bg-white shadow-sm">
+                  <div className="overflow-x-auto my-6 rounded-2xl border border-warm-300/80 bg-beige-50 shadow-sm">
                     <table className="w-full text-left border-collapse text-xs sm:text-sm">
                       <thead>
                         <tr className="bg-forest-900 text-white font-serif">
@@ -141,7 +141,7 @@ export function SeoLandingPageTemplate({
                           <tr
                             key={rIdx}
                             className={
-                              rIdx % 2 === 0 ? "bg-white" : "bg-warm-50/70"
+                              rIdx % 2 === 0 ? "bg-beige-50" : "bg-beige-100/70"
                             }
                           >
                             {row.map((cell, cIdx) => (
@@ -161,7 +161,7 @@ export function SeoLandingPageTemplate({
 
                 {/* Optional Highlight Bullet Points */}
                 {section.bulletPoints && (
-                  <div className="bg-white p-6 sm:p-8 rounded-2xl border border-warm-200/90 shadow-sm space-y-3 my-4">
+                  <div className="bg-beige-50 p-6 sm:p-8 rounded-2xl border border-warm-300/80 shadow-sm space-y-3 my-4">
                     <h3 className="font-serif text-lg font-bold text-forest-950">
                       Key Highlights & Takeaways:
                     </h3>
@@ -209,7 +209,7 @@ export function SeoLandingPageTemplate({
                 <Link
                   key={idx}
                   href={link.href}
-                  className="inline-flex items-center gap-1.5 bg-white text-forest-900 hover:text-peach-700 hover:border-peach-300 font-medium text-xs py-2 px-3.5 rounded-xl border border-warm-300 transition-colors shadow-sm"
+                  className="inline-flex items-center gap-1.5 bg-beige-50 text-forest-950 hover:bg-forest-900 hover:text-white font-medium text-xs py-2 px-3.5 rounded-xl border border-warm-300/80 transition-colors shadow-2xs"
                 >
                   <span>{link.label}</span>
                   <ArrowRightIcon className="w-3 h-3 text-warm-400" />

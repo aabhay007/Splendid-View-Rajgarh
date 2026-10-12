@@ -38,7 +38,7 @@ export function Header() {
   const displayPhone = businessDetails.displayPhones[0];
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-white/95 backdrop-blur-md border-b border-warm-200/90 shadow-sm transition-shadow">
+    <header className="sticky top-0 z-30 w-full bg-beige-100/95 backdrop-blur-md border-b border-warm-300/80 shadow-xs transition-shadow">
       {/* Top micro announcement bar (Desktop & Tablet) */}
       <div className="bg-forest-950 text-warm-100 text-xs py-1.5 px-4 hidden md:block border-b border-forest-900">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
@@ -147,7 +147,7 @@ export function Header() {
       </div>
 
       {/* Mobile Top Quick-Navigation Bar (Solves "in mobile its on the last") */}
-      <div className="lg:hidden border-t border-warm-200/70 bg-warm-50/90 backdrop-blur-md px-3 py-1.5">
+      <div className="lg:hidden border-t border-warm-300/70 bg-beige-100/95 backdrop-blur-md px-3 py-1.5">
         <nav
           aria-label="Mobile Quick Navigation"
           className="flex items-center gap-1.5 overflow-x-auto no-scrollbar scroll-smooth py-0.5 -mx-1 px-1"
@@ -158,7 +158,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold px-3 py-1.5 rounded-full bg-white text-forest-900 hover:bg-forest-100 hover:text-forest-800 border border-warm-200/90 shadow-2xs transition-all active:scale-95 shrink-0"
+                className="inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold px-3 py-1.5 rounded-full bg-beige-50 text-forest-950 hover:bg-forest-900 hover:text-white border border-warm-300/80 shadow-2xs transition-all active:scale-95 shrink-0"
               >
                 <IconComponent className="w-3.5 h-3.5 text-forest-700 shrink-0" />
                 <span>{link.label}</span>

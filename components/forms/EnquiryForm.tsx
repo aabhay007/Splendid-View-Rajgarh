@@ -21,7 +21,7 @@ export function EnquiryForm({ defaultRoom }: { defaultRoom?: string }) {
   );
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-warm-200/80 p-6 sm:p-8">
+    <div className="bg-beige-50 rounded-2xl shadow-xl border border-warm-300/80 p-6 sm:p-8">
       {state.success ? (
         <div className="py-8 text-center space-y-4">
           <div className="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">

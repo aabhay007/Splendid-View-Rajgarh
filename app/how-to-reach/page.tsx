@@ -47,7 +47,7 @@ export default function HowToReachPage() {
 
         {/* Quick Distance Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-          <div className="bg-white rounded-2xl p-6 border border-warm-200/90 shadow-sm space-y-3">
+          <div className="bg-beige-50 rounded-2xl p-6 border border-warm-300/80 shadow-sm space-y-3">
             <span className="text-xs font-bold text-peach-600 uppercase tracking-wider block">
               Tri-City Escape
             </span>
@@ -67,7 +67,7 @@ export default function HowToReachPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 border border-warm-200/90 shadow-sm space-y-3">
+          <div className="bg-beige-50 rounded-2xl p-6 border border-warm-300/80 shadow-sm space-y-3">
             <span className="text-xs font-bold text-peach-600 uppercase tracking-wider block">
               Delhi NCR Weekend
             </span>
@@ -87,7 +87,7 @@ export default function HowToReachPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 border border-warm-200/90 shadow-sm space-y-3">
+          <div className="bg-beige-50 rounded-2xl p-6 border border-warm-300/80 shadow-sm space-y-3">
             <span className="text-xs font-bold text-peach-600 uppercase tracking-wider block">
               Tranquil Alternative
             </span>
@@ -123,7 +123,7 @@ export default function HowToReachPage() {
           {travelRoutes.map((route, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl p-8 sm:p-10 border border-warm-200/90 shadow-sm space-y-6"
+              className="bg-beige-50 rounded-3xl p-8 sm:p-10 border border-warm-300/80 shadow-sm space-y-6"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-warm-100 pb-4">
                 <div>

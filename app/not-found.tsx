@@ -6,7 +6,7 @@ import { businessDetails } from "@/content/business";
 export default function NotFound() {
   return (
     <div className="flex-1 flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-xl w-full text-center space-y-8 bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-warm-200">
+      <div className="max-w-xl w-full text-center space-y-8 bg-beige-50 p-8 sm:p-12 rounded-3xl shadow-xl border border-warm-300/80">
         <div className="w-20 h-20 bg-forest-100 text-forest-800 rounded-3xl flex items-center justify-center mx-auto shadow-inner">
           <MountainIcon className="w-10 h-10 text-forest-700" />
         </div>

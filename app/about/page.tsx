@@ -62,7 +62,7 @@ export default function AboutPage() {
             </h2>
             <p>
             Splendid View Eco Orchard Resort is a serene mountain retreat nestled at an altitude of 7,000
-            feet in Rajgarh, Himachal Pradesh. Spread across six acres of lush apple, peach, apricot, pear,
+            feet in Rajgarh(The Peach Valley of Asia), Himachal Pradesh. Spread across six acres of lush apple, peach, apricot, pear,
             and cherry orchards, our resort offers breathtaking valley views, fresh mountain air, and a 
             peaceful escape from everyday life.
             </p>
@@ -72,6 +72,15 @@ export default function AboutPage() {
             unforgettable memories. Whether it’s a romantic getaway or a relaxing family holiday, Splendid
             View is where the road ends and peace begins. 🌿
             </p>
+            <p>At Splendid View Eco Orchard Resort, our hospitality reflects the warmth and traditions of 
+            Himachal Pradesh. We believe in making every guest feel at home through personalised care 
+            and gracious service.
+
+            From fresh farm produce to delicious, home-style Himachali meals, we bring nature’s goodness
+            straight to your table whether be diary products, fruits, vegetables, etc. Surrounded by orchards 
+            and mountains, every meal and every moment is an experience of comfort, freshness, and heartfelt hospitality.
+
+            Fresh from the farm, served with love.</p>
 
             <div className="pt-4 space-y-3">
               <h3 className="font-serif text-xl font-bold text-forest-950">

@@ -254,7 +254,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. ABOUT SPLENDID VIEW (WHAT WE HAVE IN ABOUT PAGE) */}
-      <section className="py-12 sm:py-20 bg-warm-50 border-t border-warm-200">
+      <section className="py-12 sm:py-20 bg-beige-100 border-t border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
             <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
@@ -293,20 +293,20 @@ export default function HomePage() {
 
               {/* Property Overview Badges */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center text-xs">
-                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
+                <div className="p-3 rounded-2xl bg-beige-50 border border-warm-300/80 shadow-xs">
                   <strong className="block text-forest-950 font-bold text-sm">7,000 ft</strong>
                   <span className="text-warm-600 text-[11px]">Elevation</span>
                 </div>
-                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
+                <div className="p-3 rounded-2xl bg-beige-50 border border-warm-300/80 shadow-xs">
                   <strong className="block text-forest-950 font-bold text-sm">6 Acres</strong>
                   <span className="text-warm-600 text-[11px]">Fruit Orchards</span>
                 </div>
-                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
+                <div className="p-3 rounded-2xl bg-beige-50 border border-warm-300/80 shadow-xs">
                   <strong className="block text-forest-950 font-bold text-sm">6 Units</strong>
                   <span className="text-warm-600 text-[11px]">Swiss Cottages</span>
                 </div>
-                <div className="p-3 rounded-2xl bg-white border border-warm-200/90 shadow-xs">
-                  <strong className="block text-forest-950 font-bold text-sm">180° Views</strong>
+                <div className="p-3 rounded-2xl bg-beige-50 border border-warm-300/80 shadow-xs">
+                  <strong className="block text-forest-950 font-bold text-sm">360° Views</strong>
                   <span className="text-warm-600 text-[11px]">Panoramic Valley View</span>
                 </div>
               </div>
@@ -320,7 +320,7 @@ export default function HomePage() {
                 </h3>
                 <p className="text-sm sm:text-base text-olive-800 leading-relaxed mb-3">
                   Splendid View Eco Orchard Resort is a serene mountain retreat nestled at an altitude of 7,000
-                  feet in Rajgarh, Himachal Pradesh. Spread across six acres of lush apple, peach, apricot, pear,
+                  feet in Rajgarh(The Peach Valley of Asia), Himachal Pradesh. Spread across six acres of lush apple, peach, apricot, pear,
                   and cherry orchards, our resort offers breathtaking valley views, fresh mountain air, and a
                   peaceful escape from everyday life.
                 </p>
@@ -329,8 +329,20 @@ export default function HomePage() {
                   of the surrounding mountains, we invite you to slow down, reconnect with nature, and create
                   unforgettable memories. Whether it’s a romantic getaway or a relaxing family holiday, Splendid
                   View is where the road ends and peace begins. 🌿
-                </p>
-              </div>
+                </p><br/>
+                <p className="text-sm sm:text-base text-olive-800 leading-relaxed">
+                At Splendid View Eco Orchard Resort, our hospitality reflects the warmth and traditions of 
+                 Himachal Pradesh. We believe in making every guest feel at home through personalised care 
+                 and gracious service.
+                </p><br/>
+                <p className="text-sm sm:text-base text-olive-800 leading-relaxed">
+            From fresh farm produce to delicious, home-style Himachali meals, we bring nature’s goodness
+                 straight to your table whether be diary products, fruits, vegetables, etc. Surrounded by orchards 
+                 and mountains, every meal and every moment is an experience of comfort, freshness, and heartfelt hospitality.
+                 </p><br/>
+                 <p className="text-sm sm:text-base text-olive-800 leading-relaxed">
+                 Fresh from the farm, served with love.</p>
+              </div>  
 
               <div className="space-y-3 pt-1">
                 <h4 className="font-serif text-xs font-bold text-forest-950 uppercase tracking-wider">
@@ -371,7 +383,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/gallery"
-                  className="inline-flex items-center gap-2 bg-white text-forest-900 font-semibold text-xs py-3 px-5 rounded-xl border border-warm-300 hover:border-forest-700 transition-colors shadow-xs"
+                  className="inline-flex items-center gap-2 bg-forest-900 hover:bg-forest-800 text-white font-semibold text-xs py-3 px-5 rounded-xl transition-colors shadow-sm"
                 >
                   <span>View Resort Gallery</span>
                 </Link>
@@ -382,7 +394,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. COTTAGES SHOWCASE (ROOMS) */}
-      <section className="py-12 sm:py-20 bg-warm-100/60 border-t border-warm-200">
+      <section className="py-12 sm:py-20 bg-beige-200/40 border-t border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div className="space-y-2">
@@ -410,7 +422,7 @@ export default function HomePage() {
           </div>
 
           {/* Cottage Feature Card */}
-          <div className="bg-white rounded-3xl border border-warm-200/90 shadow-sm overflow-hidden">
+          <div className="bg-beige-50 rounded-3xl border border-warm-300/80 shadow-sm overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
               {/* Visuals (Left 7 Cols) */}
               <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
@@ -476,11 +488,8 @@ export default function HomePage() {
 
                   <div className="p-4 rounded-2xl bg-forest-950 text-warm-100 text-xs space-y-1.5">
                     <strong className="text-white block font-semibold text-sm">
-                      6 Standalone Cottages on Property
+                      6 Standalone Cottages on Property with maximum occupancy of 18 pax.
                     </strong>
-                    <p className="text-xs text-warm-200 leading-relaxed">
-                    Book a single cottage for up to 3 guests or reserve all six cottages for couples, families, and groups of up to 18 guests.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -490,12 +499,12 @@ export default function HomePage() {
       </section>
 
       {/* 4. GOOGLE REVIEWS SHOWCASE */}
-      <section className="py-12 sm:py-20 bg-warm-50 border-t border-warm-200">
+      <section className="py-12 sm:py-20 bg-beige-100 border-t border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-warm-200 text-xs font-semibold shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-beige-50 border border-warm-300/80 text-xs font-semibold shadow-2xs">
                 <GoogleIcon className="w-4 h-4 shrink-0" />
                 <span className="text-forest-950">Google Verified Guest Reviews</span>
                 <span className="flex items-center text-amber-500 gap-0.5 ml-1">
@@ -518,11 +527,11 @@ export default function HomePage() {
               href={businessDetails.googleMaps.cidUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-forest-900 font-semibold text-xs py-3 px-5 rounded-xl border border-warm-300 hover:border-forest-700 transition-colors shadow-sm shrink-0"
+              className="inline-flex items-center gap-2 bg-forest-900 hover:bg-forest-800 text-white font-semibold text-xs py-3 px-5 rounded-xl transition-colors shadow-sm shrink-0"
             >
               <GoogleIcon className="w-4 h-4 shrink-0" />
               <span>View Google Business Profile</span>
-              <ArrowRightIcon className="w-3.5 h-3.5 text-forest-700" />
+              <ArrowRightIcon className="w-3.5 h-3.5 text-emerald-300" />
             </a>
           </div>
 
@@ -536,7 +545,7 @@ export default function HomePage() {
             {googleReviewsList.map((review) => (
               <div
                 key={review.id}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-warm-200/90 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4"
+                className="bg-beige-50 rounded-2xl p-6 sm:p-7 border border-warm-300/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4"
               >
                 <div className="space-y-3">
                   {/* Top Bar: Stars + Tag */}
@@ -583,18 +592,17 @@ export default function HomePage() {
 
           {/* Social Proof Stats Footer */}
           <div className="mt-8 p-4 sm:p-5 rounded-2xl bg-forest-950 text-warm-100 flex flex-wrap items-center justify-between gap-4 text-xs">
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-              <span className="flex items-center gap-1.5">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <span className="flex items-center gap-1.5 text-white font-medium">
                 <StarIcon className="w-4 h-4 fill-amber-400 text-amber-400 shrink-0" />
-                <strong className="text-white">5.0 Star Rating</strong> on Location & Cleanliness
+                <span>5.0 Star Rating on Location & Cleanliness</span>
               </span>
-              <span className="hidden sm:inline text-warm-400">•</span>
-              <span className="flex items-center gap-1.5">
-                <CheckIcon className="w-4 h-4 text-emerald-400 shrink-0" />
-                <strong className="text-white">100% Genuine</strong> Guest Feedback
-              </span>
-              <span className="hidden sm:inline text-warm-400">•</span>
-              <span>Authentic Himachali Food & Valley Views</span>
+              <span className="text-warm-400">•</span>
+              <span className="text-white font-medium">Accommodation</span>
+              <span className="text-warm-400">•</span>
+              <span className="text-white font-medium">Peace</span>
+              <span className="text-warm-400">•</span>
+              <span className="text-white font-medium">Authentic Himachali Food & Valley Views</span>
             </div>
             <a
               href={businessDetails.googleMaps.cidUrl}
@@ -610,7 +618,7 @@ export default function HomePage() {
 
 
       {/* 4. PROPERTY AMENITIES */}
-      <section className="py-16 sm:py-20 bg-warm-50">
+      <section className="py-16 sm:py-20 bg-beige-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-12 sm:mb-16">
             <span className="text-xs font-bold text-peach-600 uppercase tracking-widest">
@@ -626,12 +634,12 @@ export default function HomePage() {
           </div>
 
           {/* Mobile View: Minimized Single Block with Icons and Title (No Cards/Descriptions) */}
-          <div className="sm:hidden bg-white rounded-2xl p-4 border border-warm-200/90 shadow-sm">
+          <div className="sm:hidden bg-beige-50 rounded-2xl p-4 border border-warm-300/80 shadow-sm">
             <div className="grid grid-cols-2 gap-2.5">
               {featuredAmenities.map((amenity) => (
                 <div
                   key={amenity.id}
-                  className="flex items-center gap-2.5 p-2.5 rounded-xl bg-warm-50/70 border border-warm-200/60"
+                  className="flex items-center gap-2.5 p-2.5 rounded-xl bg-beige-100/80 border border-warm-300/60"
                 >
                   <div className="w-8 h-8 rounded-lg bg-forest-100 text-forest-800 flex items-center justify-center shrink-0 shadow-2xs">
                     {getAmenityIcon(amenity.icon)}
@@ -654,7 +662,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/amenities"
-              className="inline-flex items-center gap-2 bg-white text-forest-900 font-semibold text-sm py-3 px-6 rounded-xl border border-warm-300 hover:border-forest-700 transition-all shadow-sm"
+              className="inline-flex items-center gap-2 bg-forest-900 hover:bg-forest-800 text-white font-semibold text-sm py-3.5 px-6 rounded-xl transition-all shadow-sm"
             >
               <span>Explore All Amenities</span>
               <ArrowRightIcon className="w-4 h-4" />
@@ -664,7 +672,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. LOCAL EXPERIENCES & ATTRACTIONS */}
-      <section className="py-16 sm:py-20 bg-warm-100/60 border-t border-warm-200">
+      <section className="py-16 sm:py-20 bg-beige-200/40 border-t border-warm-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div className="space-y-2">
@@ -703,10 +711,10 @@ export default function HomePage() {
           <div className="mt-8 text-center md:hidden">
             <Link
               href="/experiences"
-              className="inline-flex items-center justify-center gap-2 w-full bg-white text-forest-900 font-semibold text-sm py-3.5 px-6 rounded-xl border border-warm-300 hover:border-forest-700 active:scale-[0.98] transition-all shadow-sm"
+              className="inline-flex items-center justify-center gap-2 w-full bg-forest-900 hover:bg-forest-800 text-white font-semibold text-sm py-3.5 px-6 rounded-xl active:scale-[0.98] transition-all shadow-sm"
             >
               <span>View All Experiences</span>
-              <ArrowRightIcon className="w-4 h-4 text-forest-700" />
+              <ArrowRightIcon className="w-4 h-4" />
             </Link>
           </div>
         </div>

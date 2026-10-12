@@ -131,7 +131,7 @@ export default function RoomsPage() {
         </div>
 
         {/* Private Valley-Facing Cottage Feature Card */}
-        <div className="bg-white rounded-3xl border border-warm-200/90 shadow-sm overflow-hidden mb-16">
+        <div className="bg-beige-50 rounded-3xl border border-warm-300/80 shadow-sm overflow-hidden mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
             {/* Visuals with Auto + Manual Slider */}
             <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
@@ -197,11 +197,8 @@ export default function RoomsPage() {
 
                 <div className="p-4 rounded-2xl bg-forest-950 text-warm-100 text-xs space-y-1.5">
                   <strong className="text-white block font-semibold text-sm">
-                    6 Standalone Cottages on Property
+                    6 Standalone Cottages on Property with maximum occupancy of 18 pax.
                   </strong>
-                  <p className="text-xs text-warm-200 leading-relaxed">
-                    Book a single cottage for up to 3 guests or reserve all six cottages for couples, families, and groups of up to 18 guests.
-                  </p>
                 </div>
               </div>
 
@@ -258,7 +255,7 @@ export default function RoomsPage() {
         </div>
 
         {/* Valley View Kitchen Cottage Feature Card */}
-        <div className="bg-white rounded-3xl border border-warm-200/90 shadow-sm overflow-hidden mb-16">
+        <div className="bg-beige-50 rounded-3xl border border-warm-300/80 shadow-sm overflow-hidden mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
             {/* Visuals with Auto + Manual Slider */}
             <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
@@ -386,7 +383,7 @@ export default function RoomsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-6 border border-warm-200/90 shadow-sm space-y-3">
+            <div className="bg-beige-50 rounded-2xl p-6 border border-warm-300/80 shadow-sm space-y-3">
               <div className="w-10 h-10 rounded-xl bg-forest-100 text-forest-900 flex items-center justify-center font-bold text-sm">
                 01
               </div>
@@ -400,7 +397,7 @@ export default function RoomsPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-warm-200/90 shadow-sm space-y-3">
+            <div className="bg-beige-50 rounded-2xl p-6 border border-warm-300/80 shadow-sm space-y-3">
               <div className="w-10 h-10 rounded-xl bg-forest-100 text-forest-900 flex items-center justify-center font-bold text-sm">
                 02
               </div>
@@ -414,7 +411,7 @@ export default function RoomsPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-warm-200/90 shadow-sm space-y-3">
+            <div className="bg-beige-50 rounded-2xl p-6 border border-warm-300/80 shadow-sm space-y-3">
               <div className="w-10 h-10 rounded-xl bg-forest-100 text-forest-900 flex items-center justify-center font-bold text-sm">
                 03
               </div>
@@ -454,7 +451,7 @@ export default function RoomsPage() {
             {cottageGallery.map((item, idx) => (
               <div
                 key={idx}
-                className="group bg-white rounded-2xl overflow-hidden border border-warm-200/90 shadow-sm hover:shadow-md transition-all duration-300"
+                className="group bg-beige-50 rounded-2xl overflow-hidden border border-warm-300/80 shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <div className="relative aspect-[16/11] w-full overflow-hidden bg-warm-200">
                   <Image
@@ -465,7 +462,7 @@ export default function RoomsPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-4 bg-white">
+                <div className="p-4 bg-beige-50">
                   <p className="text-xs font-medium text-forest-950">{item.title}</p>
                 </div>
               </div>
