@@ -5,6 +5,8 @@ import path from "path";
 import { constructMetadata } from "@/lib/seo/metadata";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CtaBanner } from "@/components/ui/CtaBanner";
+import { fetchGalleryFromSanity } from "@/lib/sanity/queries";
+import { urlForImage } from "@/lib/sanity/image";
 
 export const dynamic = "force-dynamic";
 
@@ -24,12 +26,14 @@ export const metadata = constructMetadata({
 });
 
 interface GalleryItem {
+  id: string;
   src: string;
   title: string;
   alt: string;
+  blurDataURL?: string;
 }
 
-function getGalleryImages(): GalleryItem[] {
+function getLocalGalleryImages(): GalleryItem[] {
   const galleryDir = path.join(process.cwd(), "public", "resort-images", "gallery");
   try {
     if (!fs.existsSync(galleryDir)) {
@@ -74,6 +78,7 @@ function getGalleryImages(): GalleryItem[] {
         .replace(/\b\w/g, (char) => char.toUpperCase());
 
       return {
+        id: file,
         src: `/resort-images/gallery/${file}`,
         title: formattedTitle,
         alt: `${formattedTitle} - Splendid View Rajgarh`,
@@ -85,8 +90,41 @@ function getGalleryImages(): GalleryItem[] {
   }
 }
 
-export default function GalleryPage() {
-  const galleryImages = getGalleryImages();
+export default async function GalleryPage() {
+  // 1. Attempt to fetch live ordered images from Sanity CMS
+  const sanityImages = await fetchGalleryFromSanity();
+
+  let galleryImages: GalleryItem[] = [];
+
+  if (sanityImages && sanityImages.length > 0) {
+    galleryImages = sanityImages
+      .map((item, index) => {
+        const generatedUrl = item.asset
+          ? urlForImage(item)?.width(1200).height(900).fit("crop").url() ||
+            item.asset.url
+          : "";
+
+        if (!generatedUrl) return null;
+
+        const title = item.title || `Resort Photo ${index + 1}`;
+        const alt = item.alt || `${title} - Splendid View Rajgarh`;
+
+        const itemResult: GalleryItem = {
+          id: item._key || `sanity-${index}`,
+          src: generatedUrl,
+          title,
+          alt,
+          blurDataURL: item.asset?.metadata?.lqip,
+        };
+        return itemResult;
+      })
+      .filter((img): img is GalleryItem => img !== null);
+  }
+
+  // 2. Fall back seamlessly to local files if Sanity is not yet seeded
+  if (galleryImages.length === 0) {
+    galleryImages = getLocalGalleryImages();
+  }
 
   return (
     <div className="bg-beige-100 flex-1 py-8 sm:py-12">
@@ -113,7 +151,7 @@ export default function GalleryPage() {
         <div className="grid grid-cols-2 gap-2 sm:hidden mb-12">
           {galleryImages.map((item, idx) => (
             <div
-              key={item.src}
+              key={item.id || item.src}
               className="relative aspect-square overflow-hidden rounded-xl bg-warm-200"
             >
               <Image
@@ -122,6 +160,8 @@ export default function GalleryPage() {
                 fill
                 sizes="(max-width: 640px) 50vw"
                 loading={idx < 6 ? "eager" : "lazy"}
+                placeholder={item.blurDataURL ? "blur" : "empty"}
+                blurDataURL={item.blurDataURL}
                 className="object-cover"
               />
             </div>
@@ -133,7 +173,7 @@ export default function GalleryPage() {
         <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {galleryImages.map((item, idx) => (
             <div
-              key={item.src}
+              key={item.id || item.src}
               className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-warm-200/80 border border-warm-300/50 shadow-xs hover:shadow-xl transition-all duration-300"
             >
               <Image
@@ -142,6 +182,8 @@ export default function GalleryPage() {
                 fill
                 sizes="(max-width: 1024px) 50vw, 33vw"
                 loading={idx < 6 ? "eager" : "lazy"}
+                placeholder={item.blurDataURL ? "blur" : "empty"}
+                blurDataURL={item.blurDataURL}
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
