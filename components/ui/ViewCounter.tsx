@@ -13,6 +13,17 @@ export function ViewCounter() {
       const sessionCounted = sessionStorage.getItem("sv_session_counted");
       const method = sessionCounted ? "GET" : "POST";
 
+      let cachedCount = 930;
+      try {
+        const cached = localStorage.getItem("sv_cached_views");
+        const parsedCached = cached ? parseInt(cached, 10) : NaN;
+        if (!isNaN(parsedCached) && parsedCached >= 930) {
+          cachedCount = parsedCached;
+        }
+      } catch {
+        // ignore storage access errors
+      }
+
       try {
         const response = await fetch("/api/views", {
           method,
@@ -22,9 +33,10 @@ export function ViewCounter() {
         if (response.ok) {
           const data = await response.json();
           if (isMounted && typeof data.views === "number") {
-            setViews(data.views);
+            const resolvedViews = Math.max(data.views, cachedCount);
+            setViews(resolvedViews);
             sessionStorage.setItem("sv_session_counted", "true");
-            localStorage.setItem("sv_cached_views", data.views.toString());
+            localStorage.setItem("sv_cached_views", resolvedViews.toString());
             return;
           }
         }
@@ -35,10 +47,7 @@ export function ViewCounter() {
       // Offline or fallback handling using localStorage
       if (isMounted) {
         try {
-          const cached = localStorage.getItem("sv_cached_views");
-          let count = cached ? parseInt(cached, 10) : 930;
-          if (isNaN(count) || count < 930) count = 930;
-
+          let count = cachedCount;
           if (!sessionStorage.getItem("sv_session_counted")) {
             count += 1;
             sessionStorage.setItem("sv_session_counted", "true");
@@ -71,7 +80,7 @@ export function ViewCounter() {
         Site Visits:
       </span>
       <span className="font-mono font-bold text-white text-xs tracking-wider">
-        {views !== null ? views.toLocaleString() : "930"}
+        {views !== null ? views.toLocaleString() : "..."}
       </span>
     </div>
   );

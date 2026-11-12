@@ -6,7 +6,9 @@ export const dynamic = "force-dynamic";
 
 // Baseline offset: when cloud counter is 1, total is 929 + 1 = 930
 const START_OFFSET = 929;
-let inMemoryLatestViews = 930;
+const BASELINE_VIEWS = START_OFFSET + 1;
+let inMemoryLatestViews = BASELINE_VIEWS;
+let hasSyncedCloudInInstance = false;
 
 function getCounterFilePath(): string {
   const dir = path.join(process.cwd(), "data");
@@ -19,7 +21,7 @@ function readLocalViews(): number {
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, "utf-8");
       const parsed = JSON.parse(content);
-      if (typeof parsed.views === "number" && parsed.views >= 930) {
+      if (typeof parsed.views === "number" && parsed.views >= BASELINE_VIEWS) {
         inMemoryLatestViews = Math.max(parsed.views, inMemoryLatestViews);
         return inMemoryLatestViews;
       }
@@ -30,18 +32,43 @@ function readLocalViews(): number {
   return inMemoryLatestViews;
 }
 
-function writeLocalViews(count: number): void {
-  inMemoryLatestViews = Math.max(inMemoryLatestViews, count);
+function writeLocalViews(count: number): number {
+  const bestCount = Math.max(readLocalViews(), count);
+  inMemoryLatestViews = bestCount;
   try {
     const dir = path.join(process.cwd(), "data");
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
     const filePath = path.join(dir, "views.json");
-    fs.writeFileSync(filePath, JSON.stringify({ views: count }), "utf-8");
+    fs.writeFileSync(filePath, JSON.stringify({ views: bestCount }), "utf-8");
   } catch {
     // Serverless read-only filesystem handled gracefully
   }
+  return bestCount;
+}
+
+/**
+ * Parses visitor counts from visitorbadge.io SVG text, including dot/comma
+ * thousands separators (e.g. "VISITORS: 1.010" -> 1010) and k/M suffixes.
+ */
+function parseVisitorCount(svgText: string): number | null {
+  const match = svgText.match(/VISITORS:\s*([0-9][0-9.,]*)\s*([kKmM])?/i);
+  if (!match) return null;
+
+  const numPart = match[1];
+  const suffix = match[2]?.toLowerCase();
+
+  if (suffix) {
+    const scaled = parseFloat(numPart.replace(/,/g, ""));
+    if (isNaN(scaled) || scaled <= 0) return null;
+    const multiplier = suffix === "m" ? 1_000_000 : 1_000;
+    return Math.round(scaled * multiplier);
+  }
+
+  const digitsOnly = numPart.replace(/[.,]/g, "");
+  const parsed = parseInt(digitsOnly, 10);
+  return !isNaN(parsed) && parsed > 0 ? parsed : null;
 }
 
 async function recordCloudVisit(): Promise<number> {
@@ -55,19 +82,17 @@ async function recordCloudVisit(): Promise<number> {
           "Accept-Language": "en-US,en;q=0.9",
         },
         cache: "no-store",
+        signal: AbortSignal.timeout(5000),
       }
     );
 
     if (res.ok) {
       const text = await res.text();
-      const match = text.match(/VISITORS:\s*(\d+)/i);
-      if (match) {
-        const raw = parseInt(match[1], 10);
-        if (!isNaN(raw) && raw > 0) {
-          const totalViews = START_OFFSET + raw;
-          writeLocalViews(totalViews);
-          return totalViews;
-        }
+      const raw = parseVisitorCount(text);
+      if (raw !== null) {
+        hasSyncedCloudInInstance = true;
+        const totalViews = START_OFFSET + raw;
+        return writeLocalViews(totalViews);
       }
     }
   } catch (err) {
@@ -76,51 +101,37 @@ async function recordCloudVisit(): Promise<number> {
 
   // Graceful local fallback if external service is temporarily unreachable
   const current = readLocalViews();
-  const next = current + 1;
-  writeLocalViews(next);
-  return next;
+  return writeLocalViews(current + 1);
+}
+
+function viewsJsonResponse(views: number) {
+  return NextResponse.json(
+    { views },
+    {
+      headers: {
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+        Pragma: "no-cache",
+      },
+    }
+  );
 }
 
 export async function GET() {
-  // If memory/local is at base default, attempt to fetch current cloud count
-  if (inMemoryLatestViews <= 930) {
+  // Sync with the cloud counter once per serverless/server instance so refreshes
+  // don't serve stale local JSON, while avoiding double-counting within the instance.
+  if (!hasSyncedCloudInInstance) {
     try {
       const views = await recordCloudVisit();
-      return NextResponse.json(
-        { views },
-        {
-          headers: {
-            "Cache-Control": "no-store, no-cache, must-revalidate",
-            Pragma: "no-cache",
-          },
-        }
-      );
+      return viewsJsonResponse(views);
     } catch {
       // ignore
     }
   }
 
-  const views = readLocalViews();
-  return NextResponse.json(
-    { views },
-    {
-      headers: {
-        "Cache-Control": "no-store, no-cache, must-revalidate",
-        Pragma: "no-cache",
-      },
-    }
-  );
+  return viewsJsonResponse(readLocalViews());
 }
 
 export async function POST() {
   const views = await recordCloudVisit();
-  return NextResponse.json(
-    { views },
-    {
-      headers: {
-        "Cache-Control": "no-store, no-cache, must-revalidate",
-        Pragma: "no-cache",
-      },
-    }
-  );
+  return viewsJsonResponse(views);
 }
